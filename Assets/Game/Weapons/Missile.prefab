@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a38088c87469a014a86065c49fcbb57b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 800
+  currentSpeed: 600
   minSpeed: 0
   maxSpeed: 1000
   speedChangeResponseTime: 0.2
@@ -73,7 +73,7 @@ MonoBehaviour:
   closestApproach: 2
   breakOffDistance: 2
   breakOffTolerance: 20
-  turnSpeed: 25
+  turnSpeed: 1
   targetingAccuracy: 10
   laserWeapons: []
 --- !u!114 &563163406112164916

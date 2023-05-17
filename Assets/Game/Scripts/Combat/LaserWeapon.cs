@@ -28,6 +28,8 @@ namespace SC.Combat
         
         public bool IsTargetAquired {  get { return isTargetAquired; } }
 
+
+
         void Update()
         {
             CheckTargeting();
@@ -39,6 +41,11 @@ namespace SC.Combat
             {
                 StartCoroutine(Shooting());
             }
+        }
+
+        public void UpdateTarget(Health target)
+        {
+            currentTarget = target;
         }
 
         private IEnumerator Shooting()

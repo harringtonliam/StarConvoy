@@ -15,9 +15,20 @@ namespace SC.Combat
 
         int missileLauncherIndex;
 
+        TargetSelection targetSelection;
+
         private void Start()
         {
             missileLauncherIndex = 0;
+            targetSelection = GetComponent<TargetSelection>();
+            targetSelection.CurrentTargetChanged += OnTargetChanged;
+
+        }
+
+        private void OnDestroy()
+        {
+            targetSelection.CurrentTargetChanged -= OnTargetChanged;
+
         }
 
         // Update is called once per frame
@@ -46,6 +57,20 @@ namespace SC.Combat
                 }
 
             }
+        }
+
+        private void OnTargetChanged()
+        {
+            foreach (var laserWeapon in laserWeapons)
+            {
+                laserWeapon.UpdateTarget( targetSelection.GetCurrentTarget());
+            }
+
+            foreach (var missileLauncher in missileLaunchers)
+            {
+                missileLauncher.UpdateTarget(targetSelection.GetCurrentTarget());
+            }
+
         }
     }
 

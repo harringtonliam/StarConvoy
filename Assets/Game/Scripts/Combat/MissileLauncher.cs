@@ -53,6 +53,10 @@ namespace SC.Combat
                 StartCoroutine(Shooting());
             }
         }
+        public void UpdateTarget(Health target)
+        {
+            currentTarget = target;
+        }
 
         private IEnumerator Shooting()
         {
