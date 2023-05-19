@@ -15,7 +15,7 @@ namespace SC.Combat
         [SerializeField] float secondsLockLastsFor = 10f;
         [SerializeField] Transform spawnPoint;
         [SerializeField] Transform targetingPoint;
-        [SerializeField] Health currentTarget;
+        [SerializeField] CombatTarget currentTarget;
 
         private int currentNumberOfMissiles;
         bool canShoot = true;
@@ -53,7 +53,7 @@ namespace SC.Combat
                 StartCoroutine(Shooting());
             }
         }
-        public void UpdateTarget(Health target)
+        public void UpdateTarget(CombatTarget target)
         {
             currentTarget = target;
         }

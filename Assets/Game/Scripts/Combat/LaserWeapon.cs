@@ -14,7 +14,7 @@ namespace SC.Combat
         [SerializeField] ParticleSystem muzzleFlash;
         [SerializeField] AudioClip firingSound;
         [SerializeField] GameObject hitVFX;
-        [SerializeField] Health currentTarget;
+        [SerializeField] CombatTarget currentTarget;
 
 
         bool canShoot = true;
@@ -43,7 +43,7 @@ namespace SC.Combat
             }
         }
 
-        public void UpdateTarget(Health target)
+        public void UpdateTarget(CombatTarget target)
         {
             currentTarget = target;
         }

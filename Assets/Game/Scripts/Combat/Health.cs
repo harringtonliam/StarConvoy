@@ -17,35 +17,43 @@ namespace SC.Combat
         public float MaxHealth {  get { return maxHealth; } }
         public float CurrentHealth { get { return currentHealth; } }
 
+        public event Action healthUpdated;
+
+        public event Action onDeath;
+
         // Start is called before the first frame update
         void Start()
         {
             currentHealth = maxHealth;
         }
 
-        
-
-
+ 
         public void TakeDamage(float damage)
         {
             Debug.Log("Take Damage" + gameObject.name + " " + damage.ToString());
             currentHealth -= damage;
-
+            if (healthUpdated != null)
+            {
+                healthUpdated();
+            }
             if (currentHealth <= 0f)
             {
-                DestroyProcedures(); ;
+                DeathProcedures(); ;
             }
-
         }
 
-        private void DestroyProcedures()
+        private void DeathProcedures()
         {
-            PlayDestroyVFX();
-            PlayDestroySFX();
+            if (onDeath != null)
+            {
+                onDeath();
+            }
+            PlayDeathVFX();
+            PlayDeathSFX();
             Destroy(gameObject, destroyDelaySeconds);
         }
 
-        private void PlayDestroyVFX()
+        private void PlayDeathVFX()
         {
             if (destroyVFX != null)
             {
@@ -53,7 +61,7 @@ namespace SC.Combat
             }
         }
 
-        private void PlayDestroySFX()
+        private void PlayDeathSFX()
         {
             if (destroySFX != null)
             {

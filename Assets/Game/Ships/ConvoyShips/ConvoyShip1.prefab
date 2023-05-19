@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5395004501837249330}
   - component: {fileID: 8613206061554606422}
   - component: {fileID: 7538071316179538039}
+  - component: {fileID: -4612383422409239982}
   m_Layer: 0
   m_Name: ConvoyShip1
   m_TagString: Untagged
@@ -100,6 +101,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 40, y: 40, z: 140}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4612383422409239982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5395004501837249329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b1c4f56f150d243874d278e72fa0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifier: 
 --- !u!1 &5395004502052599335
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using System.Linq;
 
 namespace SC.Combat
 {
     public class TargetSelection : MonoBehaviour
     {
-        private Health currentTarget;
+        private CombatTarget currentTarget;
 
         private int currentTargetIndex;
 
         public event Action CurrentTargetChanged;
 
-        public Health GetCurrentTarget ()
+        public CombatTarget GetCurrentTarget ()
         {
             return currentTarget;
         }
@@ -23,8 +24,8 @@ namespace SC.Combat
         void Start ()
         {
             currentTargetIndex = 0;
-            currentTarget = TargetStore.Instance.AvailableTargets[currentTargetIndex];
-            CurrentTargetChanged();
+            currentTarget = null;
+            TargetChanged();
         }
 
         // Update is called once per frame
@@ -40,7 +41,7 @@ namespace SC.Combat
             {
                 currentTargetIndex++;
 
-                if (currentTargetIndex >= TargetStore.Instance.AvailableTargets.Length)
+                if (currentTargetIndex >= TargetStore.Instance.AvailableTargets.Count)
                 {
                     currentTargetIndex = 0;
                     
@@ -52,20 +53,25 @@ namespace SC.Combat
                 currentTargetIndex--;
                 if (currentTargetIndex < 0)
                 {
-                    currentTargetIndex = TargetStore.Instance.AvailableTargets.Length - 1;
+                    currentTargetIndex = TargetStore.Instance.AvailableTargets.Count - 1;
                 }
                 indexChanged = true;
             }
 
             if (indexChanged)
             {
-                currentTarget = TargetStore.Instance.AvailableTargets[currentTargetIndex];
-                if (CurrentTargetChanged != null)
-                {
-                    CurrentTargetChanged();
-                }
+                currentTarget = TargetStore.Instance.AvailableTargets.ElementAt(currentTargetIndex).Value;
+                TargetChanged();
             }
 
+        }
+
+        private void TargetChanged()
+        {
+            if (CurrentTargetChanged != null)
+            {
+                CurrentTargetChanged();
+            }
         }
     }
 

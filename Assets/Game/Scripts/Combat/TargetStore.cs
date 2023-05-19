@@ -6,13 +6,13 @@ namespace SC.Combat
 {
     public class TargetStore : MonoBehaviour
     {
-        [SerializeField] Health[] availableTargets;
+        Dictionary<string, CombatTarget> availableTargets;
         
         private static TargetStore _instance;
 
         public static TargetStore Instance { get { return _instance; } }
 
-        public Health[] AvailableTargets { get { return availableTargets; } }
+        public Dictionary<string, CombatTarget> AvailableTargets { get { return availableTargets; } }
 
         private void Awake()
         {
@@ -24,6 +24,23 @@ namespace SC.Combat
             {
                 _instance = this;
             }
+            availableTargets = new Dictionary<string, CombatTarget>();
+        }
+
+        private void Start()
+        {
+            
+        }
+
+        public bool AddTarget(string targetGuid, CombatTarget combatTarget)
+        {
+            bool added = availableTargets.TryAdd(targetGuid, combatTarget);
+            return added;
+        }
+
+        public void RemoveTarget(string targetGuid)
+        {
+            availableTargets.Remove(targetGuid);
         }
 
 
