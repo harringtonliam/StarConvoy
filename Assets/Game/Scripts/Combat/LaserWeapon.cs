@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using System;
 
 namespace SC.Combat
 {
@@ -15,11 +16,16 @@ namespace SC.Combat
         [SerializeField] AudioClip firingSound;
         [SerializeField] GameObject hitVFX;
         [SerializeField] CombatTarget currentTarget;
-
+        [SerializeField] float maxTemperature = 100f;
+        [SerializeField] float temperatureIncreasePerShot = 5f;
+        [SerializeField] float temperatureCooldownRate = 1f;
+        [SerializeField] float temperatureCooldownTime = 2f;
 
         bool canShoot = true;
+        float currentTemperature = 0f;
 
-  
+        private CombatTarget targetInSights = null;
+
         bool isTargetAquired = false;
 
         public  event Action TargetAquiredUpdated;
@@ -28,16 +34,54 @@ namespace SC.Combat
         
         public bool IsTargetAquired {  get { return isTargetAquired; } }
 
+        private float timeSinceTemperatureReduction = 0f;
 
+        public float GetCurrentTemperature()
+        {
+            return currentTemperature;
+        }
+
+        public float GetMaxTemperature()
+        {
+            return maxTemperature;
+        }
+
+        public event Action temperatureUpdated;
+
+        private void Start()
+        {
+            SignalTemperatureUpdated();
+        }
 
         void Update()
         {
             CheckTargeting();
+            ReduceTemperature();
+        }
+
+        private void  ReduceTemperature()
+        {
+            timeSinceTemperatureReduction += Time.deltaTime;
+            if (timeSinceTemperatureReduction < temperatureCooldownTime) return;
+            if (currentTemperature < 0f)
+            {
+                currentTemperature = 0f;
+            }
+            if (Mathf.Approximately(currentTemperature, 0f)) return;
+
+            currentTemperature = Mathf.Clamp(currentTemperature - temperatureCooldownRate, 0f, GetMaxTemperature());
+            timeSinceTemperatureReduction = 0f; 
+            if (currentTemperature < 0f)
+            {
+                currentTemperature = 0f;
+            }
+            SignalTemperatureUpdated();
+
         }
 
         public void Shoot()
         {
-            if (canShoot)
+            if (canShoot && TemperatureOkToSoot())
             {
                 StartCoroutine(Shooting());
             }
@@ -48,6 +92,11 @@ namespace SC.Combat
             currentTarget = target;
         }
 
+        public CombatTarget GetTargetInSights()
+        {
+            return targetInSights;
+        }
+
         private IEnumerator Shooting()
         {
             Debug.Log("SHooting");
@@ -55,10 +104,16 @@ namespace SC.Combat
             PlayVFX();
             PlayFiringSound();
             ProcessRayCast();
-
+            currentTemperature += temperatureIncreasePerShot;
+            SignalTemperatureUpdated();
             yield return new WaitForSeconds(timeBetweenShots);
             canShoot = true;
 
+        }
+
+        private bool TemperatureOkToSoot()
+        {
+            return currentTemperature < maxTemperature;
         }
 
         private void ProcessRayCast()
@@ -112,7 +167,8 @@ namespace SC.Combat
 
             if (raycastForward)
             {
-                Health target = hit.transform.GetComponent<Health>();
+                CombatTarget target = hit.transform.GetComponent<CombatTarget>();
+                targetInSights = target;
                 if (target != null && target == currentTarget)
                 {
                     hasTargetBeenAquired = true;
@@ -129,6 +185,14 @@ namespace SC.Combat
             }
 
 
+        }
+
+        private void SignalTemperatureUpdated()
+        {
+            if (temperatureUpdated != null)
+            {
+                temperatureUpdated();
+            }
         }
 
 

@@ -9,13 +9,19 @@ namespace SC.Combat
     {
 
         [SerializeField] string uniqueIdentifier = "";
+        [SerializeField] Faction faction = Faction.None;
 
         Health health;
-
 
         public string GetUniqueIdentifier()
         {
             return uniqueIdentifier;
+        }
+
+        public Faction GetFaction()
+        { 
+       
+            return faction;
         }
 
         private void Awake()
@@ -28,7 +34,6 @@ namespace SC.Combat
             health = GetComponent<Health>();
             health.onDeath += RemoveFromTargetStore;
             TargetStore.Instance.AddTarget(uniqueIdentifier, this);
-            
         }
 
         private void OnDisable()

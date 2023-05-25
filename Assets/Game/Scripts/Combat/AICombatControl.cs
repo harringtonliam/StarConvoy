@@ -71,12 +71,18 @@ namespace SC.Combat
 
         private bool IsFaceingCombatTarget()
         {
-            float angleTocombatTarget = Vector3.Angle(transform.position, combatTarget.transform.position);
+            if (combatTarget == null) return false;
+            Vector3 directionToTarget = combatTarget.transform.position - transform.position;
+            float angleTocombatTarget = Vector3.Angle(transform.forward, directionToTarget);
             return angleTocombatTarget <= targetingAccuracy;
         }
 
         private float DistanceToCombatTarget()
         {
+            if (combatTarget == null)
+            {
+                return Mathf.Infinity;
+            }
             return Vector3.Distance(combatTarget.transform.position, transform.position);
         }
 
@@ -129,6 +135,8 @@ namespace SC.Combat
 
         private void CalculateNewMovementTarget()
         {
+            if (combatTarget == null) return;
+            
             int randomBreakoff = Random.Range(0, 3);
             switch (randomBreakoff)
             {

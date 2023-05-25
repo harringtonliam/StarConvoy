@@ -26,8 +26,11 @@ namespace SC.Combat
         float secondsSinceLockAquired;
 
         public event Action TargetAquiredUpdated;
+        public event Action missileNumberUpdated;
 
         public bool IsLockAquired {  get { return isLockAquired; } }
+        public int CurrentNumberOfMissiles {  get { return currentNumberOfMissiles; } }
+        public int MaxNumberOfMissiles { get { return maxNumberOfMissiles; } }
 
         // Start is called before the first frame update
         void Start()
@@ -37,6 +40,7 @@ namespace SC.Combat
             isLockingStarted = false;
             isLockAquired = false;
             currentNumberOfMissiles = maxNumberOfMissiles;
+            MissileNumberUpdate();
         }
 
         // Update is called once per frame
@@ -64,14 +68,14 @@ namespace SC.Combat
 
             if (currentNumberOfMissiles > 0)
             {
+                GameObject newMissile = GameObject.Instantiate(missilePrefab, spawnPoint.position, spawnPoint.rotation);
+                newMissile.GetComponent<AICombatControl>().SetCombatTarget(currentTarget.gameObject);
                 currentNumberOfMissiles--;
+                MissileNumberUpdate();
             }
 
-            GameObject newMissile = GameObject.Instantiate(missilePrefab, spawnPoint.position, spawnPoint.rotation);
-            newMissile.GetComponent<AICombatControl>().SetCombatTarget(currentTarget.gameObject);
             yield return new WaitForSeconds(timeBetweenShots);
             canShoot = true;
-
         }
 
         private void CheckTargeting()
@@ -85,7 +89,7 @@ namespace SC.Combat
 
             if (raycastForward)
             {
-                Health target = hit.transform.GetComponent<Health>();
+                CombatTarget target = hit.transform.GetComponent<CombatTarget>();
                 if (target != null && target == currentTarget)
                 {
                     if (!isLockingStarted)
@@ -127,6 +131,14 @@ namespace SC.Combat
                 TargetAquiredUpdated();
             }
 
+        }
+
+        private void MissileNumberUpdate()
+        {
+            if (missileNumberUpdated != null)
+            {
+                missileNumberUpdated();
+            }
         }
     }
 

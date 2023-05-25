@@ -168,6 +168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
+  faction: 1
 --- !u!1 &2534830515425008040
 GameObject:
   m_ObjectHideFlags: 0

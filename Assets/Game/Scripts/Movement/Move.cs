@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace SC.Movement
 {
@@ -18,10 +19,16 @@ namespace SC.Movement
 
         public bool canChangeSpeed = true;
 
+        public event Action speedUpdated;
+
         // Start is called before the first frame update
         void Start()
         {
             rigidbody = GetComponent<Rigidbody>();
+            if (speedUpdated != null)
+            {
+                speedUpdated();
+            }
         }
 
         // Update is called once per frame
@@ -45,6 +52,10 @@ namespace SC.Movement
             canChangeSpeed = false;
 
             currentSpeed = Mathf.Clamp(currentSpeed + changeToSpeed, minSpeed, maxSpeed);
+            if (speedUpdated != null)
+            {
+                speedUpdated();
+            }
             yield return new WaitForSeconds(speedChangeResponseTime);
             canChangeSpeed = true;
         }

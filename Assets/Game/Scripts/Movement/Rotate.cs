@@ -44,7 +44,7 @@ namespace SC.Movement
             //Debug.Log("Perform rotate towards " + target.x + " " + target.y);
 
             //Vector3 newTarget = mainCamera.ScreenToWorldPoint(new Vector3(target.x, target.y, 50f));
-           
+
 
             //rotationTarget.position = newTarget;
 

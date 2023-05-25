@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace SC.Combat
 {
     public class TargetStore : MonoBehaviour
     {
+        [SerializeField] Faction neutralFaction = Faction.None;
         Dictionary<string, CombatTarget> availableTargets;
         
         private static TargetStore _instance;
@@ -27,11 +29,6 @@ namespace SC.Combat
             availableTargets = new Dictionary<string, CombatTarget>();
         }
 
-        private void Start()
-        {
-            
-        }
-
         public bool AddTarget(string targetGuid, CombatTarget combatTarget)
         {
             bool added = availableTargets.TryAdd(targetGuid, combatTarget);
@@ -41,6 +38,24 @@ namespace SC.Combat
         public void RemoveTarget(string targetGuid)
         {
             availableTargets.Remove(targetGuid);
+        }
+
+        public Dictionary<string, CombatTarget> CombactTargetsInFaction(Faction faction)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                   where kpv.Value.GetFaction() == faction
+                                   select kpv;
+            return filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            
+        }
+
+
+        public Dictionary<string, CombatTarget> CombactTargetsNotInFaction(Faction faction)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                   where kpv.Value.GetFaction() != faction && kpv.Value.GetFaction() != neutralFaction
+                                   select kpv;
+            return filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
         }
 
 

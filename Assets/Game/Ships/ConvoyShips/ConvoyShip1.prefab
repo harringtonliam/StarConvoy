@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8613206061554606422}
   - component: {fileID: 7538071316179538039}
   - component: {fileID: -4612383422409239982}
+  - component: {fileID: 1017146588235422397}
   m_Layer: 0
   m_Name: ConvoyShip1
   m_TagString: Untagged
@@ -114,6 +115,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
+  faction: 0
+--- !u!114 &1017146588235422397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5395004501837249329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3897633fad4b30345ba61791606403af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageReceiver: {fileID: 0}
+  timeToWaitBetweenMessages: 30
+  availableMessages:
+  - messageType: 0
+    messageText: We can't get the engines back on line.  Repeat we can't..
+    timeSinceLastMessage: 10
+  - messageType: 1
+    messageText: We are under attack!
+    timeSinceLastMessage: 10
+  - messageType: 2
+    messageText: Reporting we have reached the jump gate. Jumping imminently. inement
+    timeSinceLastMessage: 10
 --- !u!1 &5395004502052599335
 GameObject:
   m_ObjectHideFlags: 0

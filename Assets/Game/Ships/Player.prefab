@@ -17,6 +17,9 @@ GameObject:
   - component: {fileID: 7299015006416723808}
   - component: {fileID: 5958276570993659257}
   - component: {fileID: 3217239496035892154}
+  - component: {fileID: 1681151057823535608}
+  - component: {fileID: 348960130898522281}
+  - component: {fileID: 3276596187622859870}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -147,6 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a09134d857e28f4aa709adcc93797d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetIdentifier: {fileID: 136415074781837261}
+  targetIdentifierRange: 3000
+  targetIdentifierRadius: 0.5
 --- !u!114 &3217239496035892154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,6 +166,47 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
+  faction: 0
+--- !u!114 &1681151057823535608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136415074212169575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062104a33c40eca448eed4f1d47122cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 500
+  destroyVFX: {fileID: 0}
+  destroySFX: {fileID: 0}
+  destroyDelaySeconds: 1
+--- !u!114 &348960130898522281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136415074212169575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63b68c4484801464c8ef4cca1ec65452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3276596187622859870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136415074212169575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de007e20015caed4eb8220c586fac09b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &136415074781837248
 GameObject:
   m_ObjectHideFlags: 0
@@ -1233,11 +1280,6 @@ PrefabInstance:
       propertyPath: targetingPoint
       value: 
       objectReference: {fileID: 136415074781837261}
-    - target: {fileID: 2845284750393422170, guid: b25d4469a47080040976ff069ca7ef8b,
-        type: 3}
-      propertyPath: targetingRange
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7866059366638712218, guid: b25d4469a47080040976ff069ca7ef8b,
         type: 3}
       propertyPath: m_Name
