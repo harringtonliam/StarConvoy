@@ -7,7 +7,7 @@ namespace SC.Combat
     [RequireComponent(typeof(Health))]
     public class CombatTarget : MonoBehaviour
     {
-
+        [SerializeField] string uniqueIdentifierPrefix = "";
         [SerializeField] string uniqueIdentifier = "";
         [SerializeField] Faction faction = Faction.None;
 
@@ -33,7 +33,7 @@ namespace SC.Combat
         {
             health = GetComponent<Health>();
             health.onDeath += RemoveFromTargetStore;
-            TargetStore.Instance.AddTarget(uniqueIdentifier, this);
+            TargetStore.Instance.AddTarget(GetFullIdentifier(), this);
         }
 
         private void OnDisable()
@@ -43,7 +43,12 @@ namespace SC.Combat
 
         public void RemoveFromTargetStore()
         {
-            TargetStore.Instance.RemoveTarget(uniqueIdentifier);
+            TargetStore.Instance.RemoveTarget(GetFullIdentifier());
+        }
+
+        public string GetFullIdentifier()
+        {
+            return uniqueIdentifierPrefix + uniqueIdentifier;
         }
 
     }

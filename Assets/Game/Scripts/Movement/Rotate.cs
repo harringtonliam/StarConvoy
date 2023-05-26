@@ -17,6 +17,7 @@ namespace SC.Movement
 
         private Camera mainCamera;
 
+        public float TurnSpeed { get { return turnSpeed; } }
 
         // Start is called before the first frame update
         void Start()

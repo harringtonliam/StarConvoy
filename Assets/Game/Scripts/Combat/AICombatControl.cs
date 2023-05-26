@@ -125,6 +125,7 @@ namespace SC.Combat
 
         private void CheckBreakOff()
         {
+            if (combatTarget == null) return;
             float distanceToBreakOffPoint = Vector3.Distance(currentMoveTarget, transform.position);
             if (distanceToBreakOffPoint <= breakOffTolerance)
             {

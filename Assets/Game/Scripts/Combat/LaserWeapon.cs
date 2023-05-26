@@ -33,6 +33,12 @@ namespace SC.Combat
         public float Range { get { return range; } }
         
         public bool IsTargetAquired {  get { return isTargetAquired; } }
+        public float Damage {  get { return damage; } }
+
+        public float GetRateOfFire()
+        {
+            return 1f / timeBetweenShots;
+        }
 
         private float timeSinceTemperatureReduction = 0f;
 

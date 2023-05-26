@@ -25,7 +25,7 @@ namespace SC.Combat
 
         private void GetEnemyCombatTargets()
         {
-            var enemyCombatTargets = TargetStore.Instance.CombactTargetsNotInFaction(combatTarget.GetFaction());
+            var enemyCombatTargets = TargetStore.Instance.CombatTargetsNotInFaction(combatTarget.GetFaction());
             foreach (var item in enemyCombatTargets)
             {
                 Debug.Log("Enemey found " + item.Value.gameObject.name);

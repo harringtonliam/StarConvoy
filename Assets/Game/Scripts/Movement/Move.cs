@@ -21,6 +21,11 @@ namespace SC.Movement
 
         public event Action speedUpdated;
 
+        public float GetRateOfAcceleration()
+        {
+            return 1f / speedChangeResponseTime;
+        }
+
         // Start is called before the first frame update
         void Start()
         {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SC.Combat;
+using SC.Attributes;
 
 namespace SC.Messaging
 {
@@ -20,6 +21,8 @@ namespace SC.Messaging
         }
 
         Health health;
+        ShipInformation shipInformation;
+        CombatTarget combatTarget;
 
         private void Start()
         {
@@ -28,6 +31,8 @@ namespace SC.Messaging
                 messageReceiver = GameObject.FindGameObjectWithTag("Player").GetComponent<MessageReceiver>();
             }
             health = GetComponent<Health>();
+            shipInformation = GetComponent<ShipInformation>();
+            combatTarget = GetComponent<CombatTarget>();
             health.onDeath += TriggerDeathMessage;
             health.healthUpdated += TriggerDamageMessage;
         }
@@ -59,8 +64,8 @@ namespace SC.Messaging
             AvailableMessage messageToSend = GetAvailableMessage(messageType);
             if (messageToSend.messageType != messageType) return;
             if (messageToSend.timeSinceLastMessage < timeToWaitBetweenMessages) return;
-            messageReceiver.ReceiveMessage(gameObject.name + ": " + messageToSend.messageText);
-            messageToSend.timeSinceLastMessage = 0f;
+            messageReceiver.ReceiveMessage(shipInformation, combatTarget.GetFaction(), messageToSend.messageText);
+            ResetTimeSinceLastMessage(messageType);
         }
 
         private AvailableMessage GetAvailableMessage(MessageType messageType)
@@ -74,6 +79,17 @@ namespace SC.Messaging
             }
 
             return availableMessages[0];
+        }
+
+        private void ResetTimeSinceLastMessage(MessageType messageType)
+        {
+            for (int i = 0; i < availableMessages.Length; i++)
+            {
+                if (availableMessages[i].messageType == messageType)
+                {
+                    availableMessages[i].timeSinceLastMessage = 0f;
+                }
+            }
         }
 
         private void UpdateTimeBetweenMessages()

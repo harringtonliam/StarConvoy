@@ -40,7 +40,7 @@ namespace SC.Combat
             availableTargets.Remove(targetGuid);
         }
 
-        public Dictionary<string, CombatTarget> CombactTargetsInFaction(Faction faction)
+        public Dictionary<string, CombatTarget> CombatTargetsInFaction(Faction faction)
         {
             var filteredCombatTargets = from kpv in availableTargets
                                    where kpv.Value.GetFaction() == faction
@@ -50,7 +50,7 @@ namespace SC.Combat
         }
 
 
-        public Dictionary<string, CombatTarget> CombactTargetsNotInFaction(Faction faction)
+        public Dictionary<string, CombatTarget> CombatTargetsNotInFaction(Faction faction)
         {
             var filteredCombatTargets = from kpv in availableTargets
                                    where kpv.Value.GetFaction() != faction && kpv.Value.GetFaction() != neutralFaction

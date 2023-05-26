@@ -33,7 +33,7 @@ namespace SC.UI
 
         private IEnumerator DisplayMessage()
         {
-            messageText.text = messageReceiver.GetCurrentMessage();
+            messageText.text = messageReceiver.GetCurrentMessage().message;
             yield return new WaitForSeconds(messageDisplayTime);
             messageText.text = string.Empty;
         }

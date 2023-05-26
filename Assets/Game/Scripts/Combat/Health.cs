@@ -25,10 +25,6 @@ namespace SC.Combat
         void Start()
         {
             currentHealth = maxHealth;
-            if (healthUpdated != null)
-            {
-                healthUpdated();
-            }
         }
 
  
