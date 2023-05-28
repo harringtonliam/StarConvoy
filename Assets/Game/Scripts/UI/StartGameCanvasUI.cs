@@ -12,12 +12,17 @@ namespace SC.UI
 
 
         // Start is called before the first frame update
-        void Start()
+        void OnEnable()
         {
-            SceneController.Instance.onSceneStarted += ShowStartGAmeUI;
+            SceneController.Instance.onSceneStarted += ShowStartGameUI;
         }
 
-        private void ShowStartGAmeUI()
+        private void OnDisable()
+        {
+            SceneController.Instance.onSceneStarted -= ShowStartGameUI;
+        }
+
+        private void ShowStartGameUI()
         {
             uiCanvas.SetActive(true);
         }

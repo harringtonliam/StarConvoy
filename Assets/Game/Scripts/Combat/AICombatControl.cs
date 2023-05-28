@@ -107,6 +107,7 @@ namespace SC.Combat
 
         private void CheckMoveTarget()
         {
+            if (combatTarget == null) return;
             float distanceToCombatTarget = DistanceToCombatTarget();
             if (distanceToCombatTarget > closestApproach && !movingAwayFromCombatTarget)
             {

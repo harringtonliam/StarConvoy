@@ -10,6 +10,8 @@ namespace SC.Combat
         [SerializeField] string uniqueIdentifierPrefix = "";
         [SerializeField] string uniqueIdentifier = "";
         [SerializeField] Faction faction = Faction.None;
+        [SerializeField] bool isSafe = false;
+        [SerializeField] bool isHidden = false;
 
         Health health;
 
@@ -34,6 +36,26 @@ namespace SC.Combat
             health = GetComponent<Health>();
             health.onDeath += RemoveFromTargetStore;
             TargetStore.Instance.AddTarget(GetFullIdentifier(), this);
+        }
+
+        public bool GetIsSafe()
+        {
+            return isSafe;
+        }
+
+        public bool GetIsHidden()
+        {
+            return isHidden;
+        }
+
+        public void SetIsSafe(bool safe)
+        {
+            isSafe = safe;
+        }
+
+        public void SetIsHidden(bool hidden)
+        {
+            isHidden = hidden;
         }
 
         private void OnDisable()

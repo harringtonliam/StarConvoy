@@ -65,6 +65,23 @@ namespace SC.Movement
             canChangeSpeed = true;
         }
 
+        public void SetCurrentSpeed(float newSpeed)
+        {
+            SetCurrentSpeed(newSpeed, false);
+        }
+
+        public void SetCurrentSpeed(float newSpeed, bool overRideMaxSpeed)
+        {
+            if (overRideMaxSpeed)
+            {
+                currentSpeed = newSpeed;
+            }
+            else
+            {
+                currentSpeed = Mathf.Clamp(newSpeed, 0f, MaxSpeed);
+            }
+        }
+
     }
 
 }
