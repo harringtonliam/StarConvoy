@@ -8,13 +8,13 @@ namespace SC.Combat
     public class TargetStore : MonoBehaviour
     {
         [SerializeField] Faction neutralFaction = Faction.None;
-        Dictionary<string, CombatTarget> availableTargets;
+        SortedDictionary<string, CombatTarget> availableTargets;
         
         private static TargetStore _instance;
 
         public static TargetStore Instance { get { return _instance; } }
 
-        public Dictionary<string, CombatTarget> AvailableTargets { get { return availableTargets; } }
+        public SortedDictionary<string, CombatTarget> AvailableTargets { get { return availableTargets; } }
 
         private void Awake()
         {
@@ -26,7 +26,7 @@ namespace SC.Combat
             {
                 _instance = this;
             }
-            availableTargets = new Dictionary<string, CombatTarget>();
+            availableTargets = new SortedDictionary<string, CombatTarget>();
         }
 
         public bool AddTarget(string targetGuid, CombatTarget combatTarget)
@@ -40,22 +40,51 @@ namespace SC.Combat
             availableTargets.Remove(targetGuid);
         }
 
-        public Dictionary<string, CombatTarget> CombatTargetsInFaction(Faction faction)
+        public SortedDictionary<string, CombatTarget> CombatTargetsInFaction(Faction faction)
         {
             var filteredCombatTargets = from kpv in availableTargets
                                    where kpv.Value.GetFaction() == faction
                                    select kpv;
-            return filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            var filteredDictionary  = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
             
         }
 
+        public SortedDictionary<string, CombatTarget> SafeCombatTargetsInFaction(Faction faction, bool isSafe)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                        where kpv.Value.GetFaction() == faction && kpv.Value.GetIsSafe() == isSafe
+                                        select kpv;
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+        }
 
-        public Dictionary<string, CombatTarget> CombatTargetsNotInFaction(Faction faction)
+        public SortedDictionary<string, CombatTarget> VisibleCombatTargets(Faction faction)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                        where kpv.Value.GetFaction() == faction && kpv.Value.GetIsHidden() == false
+                                        select kpv;
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+        }
+
+
+        public SortedDictionary<string, CombatTarget> CombatTargetsNotInFaction(Faction faction)
         {
             var filteredCombatTargets = from kpv in availableTargets
                                    where kpv.Value.GetFaction() != faction && kpv.Value.GetFaction() != neutralFaction
                                    select kpv;
-            return filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+        }
+
+        public SortedDictionary<string, CombatTarget> ValidCombatTargetsNotInFaction(Faction faction)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                        where kpv.Value.GetFaction() != faction && kpv.Value.GetFaction() != neutralFaction && kpv.Value.GetIsSafe() == false
+                                        select kpv;
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
         }
 
 

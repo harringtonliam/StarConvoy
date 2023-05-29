@@ -64,6 +64,7 @@ namespace SC.SceneControl
 
         public void EndScene()
         {
+            Debug.Log("SCENE ENDED");
             PauseGame();
             if (onSceneEnded != null)
             {

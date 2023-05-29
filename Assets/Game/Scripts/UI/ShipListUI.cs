@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using SC.Combat;
 using SC.Attributes;
 
@@ -9,6 +10,9 @@ namespace SC.UI
     public class ShipListUI : MonoBehaviour
     {
         [SerializeField] ShipDetailUI shipDetailPrefab;
+        [SerializeField] TextMeshProUGUI listCountText;
+        [SerializeField] bool fullList = true;
+        [SerializeField] bool isSafe = true;
 
         GameObject player;
         CombatTarget playerCombatTarget;
@@ -36,7 +40,22 @@ namespace SC.UI
                 Destroy(child.gameObject);
             }
 
-            foreach( var item in TargetStore.Instance.CombatTargetsInFaction(playerCombatTarget.GetFaction()))
+            SortedDictionary<string, CombatTarget> listToDisplay;
+            if (fullList)
+            {
+                listToDisplay = TargetStore.Instance.CombatTargetsInFaction(playerCombatTarget.GetFaction());
+            }
+            else
+            {
+                listToDisplay = TargetStore.Instance.SafeCombatTargetsInFaction(playerCombatTarget.GetFaction(), isSafe);
+            }
+
+            if (listCountText != null)
+            {
+                listCountText.text = listToDisplay.Count.ToString();
+            }
+
+            foreach( var item in listToDisplay)
             {
                 if (item.Value != playerCombatTarget)
                 {

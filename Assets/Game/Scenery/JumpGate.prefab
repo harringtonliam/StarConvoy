@@ -69,7 +69,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b1c4f56f150d243874d278e72fa0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifierPrefix: 
+  uniqueIdentifierPrefix: SCA
   uniqueIdentifier: 
   faction: 2
   isSafe: 0
