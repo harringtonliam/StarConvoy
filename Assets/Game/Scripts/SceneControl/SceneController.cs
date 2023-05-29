@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using SC.Combat;
 
 namespace SC.SceneControl
 {
@@ -11,7 +12,11 @@ namespace SC.SceneControl
 
         public static SceneController Instance {  get { return _instance; } }
 
+        GameObject player;
+        CombatTarget playerCombatTarget;
+
         public event Action onSceneStarted;
+        public event Action onSceneEnded;
 
         private void Awake()
         {
@@ -23,6 +28,18 @@ namespace SC.SceneControl
             {
                 _instance = this;
             }
+        }
+
+        private void OnEnable()
+        {
+            player = GameObject.FindGameObjectWithTag("Player");
+            playerCombatTarget = player.GetComponent<CombatTarget>();
+            playerCombatTarget.onIsHidden += EndScene;
+        }
+
+        private void OnDisable()
+        {
+            playerCombatTarget.onIsHidden -= EndScene;
         }
 
         // Start is called before the first frame update
@@ -40,9 +57,19 @@ namespace SC.SceneControl
             Time.timeScale = 0f;
         }
 
-        public void StartGame()
+        public void StartScene()
         {
             Time.timeScale = 1f;
+        }
+
+        public void EndScene()
+        {
+            PauseGame();
+            if (onSceneEnded != null)
+            {
+                onSceneEnded();
+            }
+
         }
     }
 

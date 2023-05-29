@@ -12,11 +12,13 @@ namespace SC.Movement
         [SerializeField] float speedChangeResponseTime = 0.2f;
 
         Move move;
+        bool isEnabled;
 
 
         // Start is called before the first frame update
         void Start()
         {
+            isEnabled = true;
             move = GetComponent<Move>();
         }
 
@@ -26,9 +28,20 @@ namespace SC.Movement
             RespondToSpeedInput();
         }
 
+        public void SetEnabled(bool enable)
+        {
+            isEnabled = enable;
+        }
+
+        public bool GetEnabled()
+        {
+            return isEnabled;
+        }
+
         private void RespondToSpeedInput()
         {
-     
+            if (!isEnabled) return;     
+
             if (Input.GetKey(KeyCode.Keypad1))
             {
                 move.ChangeSpeed(1f);
@@ -39,6 +52,8 @@ namespace SC.Movement
             }
 
         }
+
+
     }
 
 }

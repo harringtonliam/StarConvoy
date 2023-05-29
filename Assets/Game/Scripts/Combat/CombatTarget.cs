@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 namespace SC.Combat
 {
@@ -14,6 +15,8 @@ namespace SC.Combat
         [SerializeField] bool isHidden = false;
 
         Health health;
+
+        public event Action onIsHidden;
 
         public string GetUniqueIdentifier()
         {
@@ -56,6 +59,10 @@ namespace SC.Combat
         public void SetIsHidden(bool hidden)
         {
             isHidden = hidden;
+            if (onIsHidden != null)
+            {
+                onIsHidden();
+            }
         }
 
         private void OnDisable()

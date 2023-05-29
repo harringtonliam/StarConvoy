@@ -35,7 +35,7 @@ namespace SC.UI
         public void StartButtonClicked()
         {
             ToggleUI();
-            SceneController.Instance.StartGame();
+            SceneController.Instance.StartScene();
         }
 
         public void QuitButtonClicked()

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4350947669705318612}
   - component: {fileID: 4350947669705318619}
+  - component: {fileID: 8032569646917972164}
   m_Layer: 0
   m_Name: JumpDestination
   m_TagString: Untagged
@@ -44,3 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197dfc061f6d1b346ab23fb88fb6688a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!135 &8032569646917972164
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4350947669705318613}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 25
+  m_Center: {x: 0, y: 0, z: 0}

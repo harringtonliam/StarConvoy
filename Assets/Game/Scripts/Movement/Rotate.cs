@@ -19,18 +19,32 @@ namespace SC.Movement
 
         public float TurnSpeed { get { return turnSpeed; } }
 
+        public bool isEnabled;
+    
+
         // Start is called before the first frame update
         void Start()
         {
+            isEnabled = true;
             mainCamera = Camera.main;
         }
+
+
 
         // Update is called once per frame
         void Update()
         {
-
-
             RespondToRotateInput();
+        }
+
+        public void SetEnabled(bool enable)
+        {
+            isEnabled = enable;
+        }
+
+        public bool GetEnabled()
+        {
+            return isEnabled;
         }
 
         private void RespondToRotateInput()
@@ -40,28 +54,9 @@ namespace SC.Movement
             PerformRotation(horizontalInput, verticalInput);
         }
 
-        public void PerformRotateTowards(Vector2 target)
-        {
-            //Debug.Log("Perform rotate towards " + target.x + " " + target.y);
-
-            //Vector3 newTarget = mainCamera.ScreenToWorldPoint(new Vector3(target.x, target.y, 50f));
-
-
-            //rotationTarget.position = newTarget;
-
-
-            //Vector3 targetDirection = newTarget - transform.position;
-
-            //// The step size is equal to speed times frame time.
-            //float singleStep = turnSpeed * Time.deltaTime;
-
-            //// Rotate the forward vector towards the target direction by one step
-            //Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-            //transform.rotation = Quaternion.LookRotation(newDirection);
-        }
-
         public void PerformRotation(float horizontalInput, float verticalInput)
         {
+            if (!isEnabled) return;
 
             float rotationThisFrame = turnSpeed * Time.deltaTime;
             if (horizontalInput < 0f || horizontalInput > 0f)

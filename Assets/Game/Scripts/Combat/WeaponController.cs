@@ -17,8 +17,11 @@ namespace SC.Combat
 
         TargetSelection targetSelection;
 
+        bool isEnabled;
+
         private void Start()
         {
+            isEnabled = true;
             missileLauncherIndex = 0;
             targetSelection = GetComponent<TargetSelection>();
             targetSelection.CurrentTargetChanged += OnTargetChanged;
@@ -37,8 +40,20 @@ namespace SC.Combat
             RespondToWeaponInput();
         }
 
+        public void SetEnabled(bool enable)
+        {
+            isEnabled = enable;
+        }
+
+        public bool GetEnabled()
+        {
+            return isEnabled;
+        }
+
         private void RespondToWeaponInput()
         {
+            if (!isEnabled) return;
+
             if (Input.GetButton("Fire1"))
             {
                 foreach (var laserWeapon in laserWeapons)

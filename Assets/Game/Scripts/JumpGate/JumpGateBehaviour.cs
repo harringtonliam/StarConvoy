@@ -29,7 +29,7 @@ namespace SC.JumpGate
 
         public void StartJumpProcess(float jumpSpeed, Transform jumpDestination)
         {
-            DisablePlayerControls();
+            EnableDisablePlayerControls(false);
             SendJumpingMessage();
 
             transform.LookAt(jumpDestination);
@@ -38,10 +38,15 @@ namespace SC.JumpGate
             combatTarget.SetIsSafe(true);
         }
 
-        private void DisablePlayerControls()
+        private void EnableDisablePlayerControls(bool enable)
         {
             if (gameObject.tag != "Player") return;
-
+            SpeedControl speedControl = GetComponent<SpeedControl>();
+            speedControl.SetEnabled(enable);
+            Rotate rotate = GetComponent<Rotate>();
+            rotate.SetEnabled(enable);
+            WeaponController weaponController = GetComponent<WeaponController>();
+            weaponController.SetEnabled(enable);
         }
 
         private void SendJumpingMessage()
@@ -56,6 +61,7 @@ namespace SC.JumpGate
         {
             MakeHidden();
             BringToAStop();
+            EnableDisablePlayerControls(true);
         }
 
         private void MakeHidden()
