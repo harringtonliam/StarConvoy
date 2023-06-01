@@ -10,8 +10,6 @@ namespace SC.UI
 
         [SerializeField] GameObject uiCanvas = null;
 
-
-        // Start is called before the first frame update
         void OnEnable()
         {
             SceneController.Instance.onSceneStarted += ShowStartGameUI;

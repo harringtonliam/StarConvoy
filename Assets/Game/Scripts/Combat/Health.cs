@@ -30,7 +30,6 @@ namespace SC.Combat
  
         public void TakeDamage(float damage)
         {
-            Debug.Log("Take Damage" + gameObject.name + " " + damage.ToString());
             currentHealth -= damage;
             if (healthUpdated != null)
             {
@@ -44,13 +43,17 @@ namespace SC.Combat
 
         private void DeathProcedures()
         {
-            if (onDeath != null)
-            {
-                onDeath();
-            }
             PlayDeathVFX();
             PlayDeathSFX();
-            Destroy(gameObject, destroyDelaySeconds);
+            if (gameObject.tag != "Player")
+            {
+                NotifyOfDeath();
+                Destroy(gameObject, destroyDelaySeconds);
+            }
+            else
+            {
+                StartCoroutine(DelayedNotifyDeath());
+            }
         }
 
         private void PlayDeathVFX()
@@ -66,6 +69,20 @@ namespace SC.Combat
             if (destroySFX != null)
             {
                 AudioSource.PlayClipAtPoint(destroySFX, transform.position);
+            }
+        }
+
+        private IEnumerator DelayedNotifyDeath()
+        {
+            yield return new WaitForSeconds(destroyDelaySeconds);
+            NotifyOfDeath();
+        }
+
+        private void NotifyOfDeath()
+        {
+            if (onDeath != null)
+            {
+                onDeath();
             }
         }
     }

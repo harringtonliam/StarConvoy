@@ -42,11 +42,11 @@ namespace SC.Movement
         {
             if (!isEnabled) return;     
 
-            if (Input.GetKey(KeyCode.Keypad1))
+            if (Input.GetKey(KeyCode.Z))
             {
                 move.ChangeSpeed(1f);
             }
-            else if (Input.GetKey(KeyCode.Keypad0))
+            else if (Input.GetKey(KeyCode.X))
             {
                 move.ChangeSpeed(-1f);
             }

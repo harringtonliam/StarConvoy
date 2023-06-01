@@ -14,9 +14,11 @@ namespace SC.SceneControl
 
         GameObject player;
         CombatTarget playerCombatTarget;
+        Health playerHealth;
 
         public event Action onSceneStarted;
         public event Action onSceneEnded;
+        public event Action onPlayerDestroyed;
 
         private void Awake()
         {
@@ -34,44 +36,70 @@ namespace SC.SceneControl
         {
             player = GameObject.FindGameObjectWithTag("Player");
             playerCombatTarget = player.GetComponent<CombatTarget>();
+            playerHealth = player.GetComponent<Health>();
             playerCombatTarget.onIsHidden += EndScene;
+            playerHealth.onDeath += PlayerDestroyed;
         }
 
         private void OnDisable()
         {
             playerCombatTarget.onIsHidden -= EndScene;
+            playerHealth.onDeath -= PlayerDestroyed;
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            PauseGame();
+            Debug.Log("***scene control started***");
+            PauseScene();
             if (onSceneStarted != null)
             {
                 onSceneStarted();
             }
         }
 
-        void PauseGame()
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                EndScene();
+            }
+        }
+
+        void PauseScene()
         {
             Time.timeScale = 0f;
         }
+
+        
 
         public void StartScene()
         {
             Time.timeScale = 1f;
         }
+        
 
         public void EndScene()
         {
             Debug.Log("SCENE ENDED");
-            PauseGame();
+            PauseScene();
             if (onSceneEnded != null)
             {
                 onSceneEnded();
             }
 
         }
+
+        private void PlayerDestroyed()
+        {
+            Debug.Log("SCENE ENDED player destroyed");
+            PauseScene();
+            if (onPlayerDestroyed != null)
+            {
+                onPlayerDestroyed();
+            }
+        }
+        
     }
 
 }

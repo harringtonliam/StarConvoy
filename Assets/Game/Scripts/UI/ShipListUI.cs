@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using SC.Combat;
 using SC.Attributes;
+using System;
 
 namespace SC.UI
 {
@@ -13,6 +14,7 @@ namespace SC.UI
         [SerializeField] TextMeshProUGUI listCountText;
         [SerializeField] bool fullList = true;
         [SerializeField] bool isSafe = true;
+        [SerializeField] bool showDestroyedTargets = false;
 
         GameObject player;
         CombatTarget playerCombatTarget;
@@ -23,7 +25,7 @@ namespace SC.UI
              player = GameObject.FindGameObjectWithTag("Player");
              playerCombatTarget = player.GetComponent<CombatTarget>();
              Redraw();
-            StartCoroutine(StartRedraw());
+             StartCoroutine(StartRedraw());
         }
 
 
@@ -38,6 +40,12 @@ namespace SC.UI
             foreach (Transform child in transform)
             {
                 Destroy(child.gameObject);
+            }
+
+            if (showDestroyedTargets)
+            {
+                ListDestroyedTargets();
+                return;
             }
 
             SortedDictionary<string, CombatTarget> listToDisplay;
@@ -67,6 +75,24 @@ namespace SC.UI
                         newShipDetailUI.SetUp(currentShipDetails.captainSprite, currentShipDetails.captainName, currentShipDetails.shipSprite, currentShipDetails.shipName, currentShipDetails.shipType);
                     }
                 }
+            }
+        }
+
+        private void ListDestroyedTargets()
+        {
+            SortedDictionary<string, DestroyedTarget> listToDisplay;
+
+            listToDisplay = TargetStore.Instance.DestroyedTargetsInFaction(playerCombatTarget.GetFaction());
+
+            if (listCountText != null)
+            {
+                listCountText.text = listToDisplay.Count.ToString();
+            }
+
+            foreach (var item in listToDisplay)
+            {
+                var newShipDetailUI = Instantiate(shipDetailPrefab, transform);
+                newShipDetailUI.SetUp(item.Value.captainSprite, item.Value.captainName, item.Value.shipSprite, item.Value.shipName, item.Value.shipType);
             }
         }
     }

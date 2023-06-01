@@ -105,7 +105,6 @@ namespace SC.Combat
 
         private IEnumerator Shooting()
         {
-            Debug.Log("SHooting");
             canShoot = false;
             PlayVFX();
             PlayFiringSound();

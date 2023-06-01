@@ -55,7 +55,6 @@ namespace SC.Messaging
 
         private void TriggerDamageMessage()
         {
-            Debug.Log("Damage message triggered " + gameObject.name);
             TriggerSendMessageProcess(MessageType.DamageTaken);
         }
 

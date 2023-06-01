@@ -37,7 +37,7 @@ namespace SC.Combat
         void Start()
         {
             health = GetComponent<Health>();
-            health.onDeath += RemoveFromTargetStore;
+            health.onDeath += DestroyInTargetStore;
             TargetStore.Instance.AddTarget(GetFullIdentifier(), this);
         }
 
@@ -67,12 +67,17 @@ namespace SC.Combat
 
         private void OnDisable()
         {
-            health.onDeath -= RemoveFromTargetStore;
+            health.onDeath -= DestroyInTargetStore;
         }
 
         public void RemoveFromTargetStore()
         {
             TargetStore.Instance.RemoveTarget(GetFullIdentifier());
+        }
+
+        public void DestroyInTargetStore()
+        {
+            TargetStore.Instance.DestroyTarget(GetFullIdentifier());
         }
 
         public string GetFullIdentifier()

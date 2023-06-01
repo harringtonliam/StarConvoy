@@ -12,6 +12,7 @@ namespace SC.UI
     public class EndSceneCanvasUI : MonoBehaviour
     {
         [SerializeField] GameObject uiCanvas = null;
+        [SerializeField] GameObject playerDestroyedUICanvas = null;
         [SerializeField] TextMeshProUGUI enemyDestroyedText;
         [SerializeField] TextMeshProUGUI totalScoreText;
 
@@ -27,11 +28,13 @@ namespace SC.UI
         {
             yield return new WaitForSeconds(2f);
             SceneController.Instance.onSceneEnded += ShowEndSceneUI;
+            SceneController.Instance.onPlayerDestroyed += ShowPlayerDestroyedUI;
         }
 
         private void OnDisable()
         {
             SceneController.Instance.onSceneEnded -= ShowEndSceneUI;
+            SceneController.Instance.onPlayerDestroyed -= ShowPlayerDestroyedUI;
         }
 
         private void Start()
@@ -45,6 +48,11 @@ namespace SC.UI
             CalculateScore();
         }
 
+        private void ShowPlayerDestroyedUI()
+        {
+            playerDestroyedUICanvas.SetActive(true);
+        }
+
         private void CalculateScore()
         {
             var safeConvoyShips = TargetStore.Instance.SafeCombatTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction(), true);
@@ -55,14 +63,7 @@ namespace SC.UI
             int destroyedConvoyShipsTotal = safeConvoyShips.Count;
 
             var enemyCombatTargets = TargetStore.Instance.CombatTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction());
-            int destroyedEnemyTargetsTotal = 0;
-            foreach (var item in enemyCombatTargets)
-            {
-                if (item.Value.gameObject == null)
-                {
-                    destroyedEnemyTargetsTotal++;
-                }
-            }
+            int destroyedEnemyTargetsTotal = TargetStore.Instance.DestroyedTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction()).Count;
 
             enemyDestroyedText.text = destroyedEnemyTargetsTotal.ToString();
             int totalScore = CalculateTotalScore(savedConvoyShipsTotal, abandonedConvoyShipsTotal, destroyedConvoyShipsTotal, destroyedEnemyTargetsTotal);
