@@ -22,6 +22,7 @@ namespace SC.SceneControl
 
         private void Awake()
         {
+            Debug.Log("***SceneController Awake***");
             if (_instance != null && _instance != this)
             {
                 Destroy(this.gameObject);
@@ -34,6 +35,7 @@ namespace SC.SceneControl
 
         private void OnEnable()
         {
+            Debug.Log("***SceneController onEnable***");
             player = GameObject.FindGameObjectWithTag("Player");
             playerCombatTarget = player.GetComponent<CombatTarget>();
             playerHealth = player.GetComponent<Health>();
@@ -50,10 +52,11 @@ namespace SC.SceneControl
         // Start is called before the first frame update
         void Start()
         {
-            Debug.Log("***scene control started***");
+            Debug.Log("***SceneController Start***");
             PauseScene();
             if (onSceneStarted != null)
             {
+                Debug.Log("***SceneController trigger onSceneStarted***");
                 onSceneStarted();
             }
         }

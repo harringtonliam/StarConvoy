@@ -7,28 +7,45 @@ namespace SC.Attributes
 {
     public class Score : MonoBehaviour, ISaveable
     {
+        [SerializeField] ScoreInformation currentScoreInformation;
 
 
-        // Start is called before the first frame update
-        void Start()
+        [System.Serializable]
+        public struct ScoreInformation
         {
-
+            public int shipsSaved;
+            public int shipsAbandoned;
+            public int shipsLost;
+            public int enemyDestroyed;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
 
+        public ScoreInformation GetScore()
+        {
+            return currentScoreInformation;
+        }
+
+        public void AddToScore(ScoreInformation additionToScore)
+        {
+            currentScoreInformation.shipsSaved += additionToScore.shipsSaved;
+            currentScoreInformation.shipsAbandoned += currentScoreInformation.shipsAbandoned;
+            currentScoreInformation.shipsLost += currentScoreInformation.shipsLost;
+            currentScoreInformation.enemyDestroyed += currentScoreInformation.enemyDestroyed;
+        }
+
+        public int GetTotalScore()
+        {
+            return currentScoreInformation.shipsSaved = currentScoreInformation.shipsAbandoned - currentScoreInformation.shipsLost + currentScoreInformation.enemyDestroyed;
         }
 
         public object CaptureState()
         {
-            throw new System.NotImplementedException();
+            return currentScoreInformation;
         }
 
         public void RestoreState(object state)
         {
-            throw new System.NotImplementedException();
+            currentScoreInformation = (ScoreInformation)state;
         }
     }
 

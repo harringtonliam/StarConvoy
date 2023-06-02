@@ -111,8 +111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: 0}
-  m_SizeDelta: {x: 195, y: -10}
+  m_AnchoredPosition: {x: 155, y: 0}
+  m_SizeDelta: {x: 300, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4540570823600675950
 CanvasRenderer:
@@ -220,7 +220,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1170512862996545105}
-  - component: {fileID: 2652208576613094146}
   - component: {fileID: 5427077167616492751}
   m_Layer: 0
   m_Name: ServiceRecordItem
@@ -250,22 +249,8 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 470, y: 40}
+  m_SizeDelta: {x: 470, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2652208576613094146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2452694852428552161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33d4335139fe5724a9f05c9bd380ab8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemLabel: {fileID: 8513898134015625983}
-  itemValue: {fileID: 5623022858807500454}
 --- !u!114 &5427077167616492751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -281,6 +266,7 @@ MonoBehaviour:
   itemLabel: {fileID: 8513898134015625983}
   itemValue: {fileID: 5623022858807500454}
   backgroundImage: {fileID: 8286768126814017663}
+  defaultBackGroundColor: {r: 0.18039216, g: 0.30588236, b: 0.38431376, a: 0}
 --- !u!1 &3328882632619963226
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,8 +302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 300.15564, y: 0}
-  m_SizeDelta: {x: 195, y: -10}
+  m_AnchoredPosition: {x: 385, y: 0}
+  m_SizeDelta: {x: 150, y: -10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1928371747407679106
 CanvasRenderer:

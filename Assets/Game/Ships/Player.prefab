@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 1335817392556679988}
   - component: {fileID: 1084549719453025930}
   - component: {fileID: 2938340070478351321}
+  - component: {fileID: 2795938032195074042}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -228,7 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipDetails:
-    shipName: Screw You Guys
+    shipName: Screw You Guys P
     captainName: Lt Kosmatka
     shipType: Escort Figher
     shipSprite: {fileID: 21300000, guid: 463622401a4633a4eafce2a3bb41b840, type: 3}
@@ -259,6 +260,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uniqueIdentifier: 
+--- !u!114 &2795938032195074042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136415074212169575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f17bd7af8d30094b84ef30d557ea8bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScoreInformation:
+    shipsSaved: 1
+    shipsAbandoned: 2
+    shipsLost: 3
+    enemyDestroyed: 4
 --- !u!1 &136415074781837248
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,16 +12,24 @@ namespace SC.UI
 
         void OnEnable()
         {
+            Debug.Log("***StartGameCanvasUI onEnable***");
             SceneController.Instance.onSceneStarted += ShowStartGameUI;
         }
 
         private void OnDisable()
         {
+            Debug.Log("***StartGameCanvasUI OnDisable***");
             SceneController.Instance.onSceneStarted -= ShowStartGameUI;
+        }
+
+        private void Start()
+        {
+            ShowStartGameUI();
         }
 
         private void ShowStartGameUI()
         {
+            Debug.Log("***StartGameCanvasUI ShowStartGameUI***");
             uiCanvas.SetActive(true);
         }
 
