@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SC.Movement;
+using SC.Attributes;
 
 
 namespace SC.Combat
 {
     public class AICombatControl : MonoBehaviour
     {
-        [SerializeField] GameObject combatTarget;
+        [SerializeField] CombatTarget combatTarget;
         [SerializeField] float closestApproach = 200f;
         [SerializeField] float breakOffDistance = 500f;
         [SerializeField] float breakOffTolerance = 20f;
@@ -21,10 +22,15 @@ namespace SC.Combat
         bool movingAwayFromCombatTarget;
 
         Move move;
+
+        CombatTarget thisShipCombatTarget;
    
         // Start is called before the first frame update
         void Start()
         {
+            thisShipCombatTarget = GetComponent<CombatTarget>();
+
+            CheckCombatTarget();
             move = GetComponent<Move>();
             currentMoveTarget = combatTarget.transform.position;
             movingAwayFromCombatTarget = false;
@@ -39,9 +45,37 @@ namespace SC.Combat
             ControlShooting();
         }
 
-        public void SetCombatTarget(GameObject target)
+        public void SetCombatTarget(CombatTarget target)
         {
             combatTarget = target;
+        }
+
+        public bool CheckCombatTarget()
+        {
+            if (combatTarget != null) return true;
+            return FindCombatTarget();
+
+        }
+
+        public bool FindCombatTarget()
+        {
+            var targetsToChooseFrom = TargetStore.Instance.CombatTargetsNotInFaction(thisShipCombatTarget.GetFaction());
+            if (targetsToChooseFrom.Count <= 0) return false;
+
+            int randomTarget = Random.Range(0, targetsToChooseFrom.Count - 1);
+            int i = 0;
+            foreach (var item in targetsToChooseFrom)
+            {
+                if (i == randomTarget)
+                {
+                    combatTarget = item.Value;
+                    return true;
+                }
+                i++;
+            }
+
+            return false;
+
         }
 
         private void ControlShooting()
@@ -71,7 +105,7 @@ namespace SC.Combat
 
         private bool IsFaceingCombatTarget()
         {
-            if (combatTarget == null) return false;
+            if (CheckCombatTarget() == false) return false;
             Vector3 directionToTarget = combatTarget.transform.position - transform.position;
             float angleTocombatTarget = Vector3.Angle(transform.forward, directionToTarget);
             return angleTocombatTarget <= targetingAccuracy;
@@ -79,7 +113,7 @@ namespace SC.Combat
 
         private float DistanceToCombatTarget()
         {
-            if (combatTarget == null)
+            if (CheckCombatTarget() == false)
             {
                 return Mathf.Infinity;
             }
@@ -107,7 +141,7 @@ namespace SC.Combat
 
         private void CheckMoveTarget()
         {
-            if (combatTarget == null) return;
+            if (CheckCombatTarget() == false) return;
             float distanceToCombatTarget = DistanceToCombatTarget();
             if (distanceToCombatTarget > closestApproach && !movingAwayFromCombatTarget)
             {
@@ -126,7 +160,7 @@ namespace SC.Combat
 
         private void CheckBreakOff()
         {
-            if (combatTarget == null) return;
+            if (CheckCombatTarget() == false) return;
             float distanceToBreakOffPoint = Vector3.Distance(currentMoveTarget, transform.position);
             if (distanceToBreakOffPoint <= breakOffTolerance)
             {
@@ -137,7 +171,7 @@ namespace SC.Combat
 
         private void CalculateNewMovementTarget()
         {
-            if (combatTarget == null) return;
+            if (CheckCombatTarget() == false) return;
             
             int randomBreakoff = Random.Range(0, 3);
             switch (randomBreakoff)

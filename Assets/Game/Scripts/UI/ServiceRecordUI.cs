@@ -35,7 +35,7 @@ namespace SC.UI
             shipsAbandonedText.text = scoreInformation.shipsAbandoned.ToString();
             shipsLostText.text = scoreInformation.shipsLost.ToString();
             enemyDestroyedText.text = scoreInformation.enemyDestroyed.ToString();
-            totalScoreText.text = playerScore.GetTotalScore().ToString();
+            totalScoreText.text = playerScore.GetCurrentTotalScore().ToString();
         }
 
 

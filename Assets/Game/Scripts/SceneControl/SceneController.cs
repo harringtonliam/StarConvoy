@@ -8,6 +8,8 @@ namespace SC.SceneControl
 {
     public class SceneController : MonoBehaviour
     {
+        [SerializeField] string sceneTitle = "Scene default title";
+
         private static SceneController _instance;
 
         public static SceneController Instance {  get { return _instance; } }
@@ -19,6 +21,9 @@ namespace SC.SceneControl
         public event Action onSceneStarted;
         public event Action onSceneEnded;
         public event Action onPlayerDestroyed;
+
+        public string SceneTitle {  get { return sceneTitle; } }
+
 
         private void Awake()
         {

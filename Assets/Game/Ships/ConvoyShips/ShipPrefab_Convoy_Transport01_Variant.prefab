@@ -810,6 +810,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5395004501837249330, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: m_Mass
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 5395004501837249331, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 8613206061554606422, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: maxHealth
+      value: 300
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d59db73673af4ee40a33f0ab52d9ef74, type: 3}
 --- !u!4 &3843649394945180658 stripped
@@ -837,3 +852,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpVFX: {fileID: 6686705025296011862}
+--- !u!114 &-1927056599215981693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3843649394945180659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904d9796dc0f1fa4682deb3e0492b57d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTarget: {fileID: 0}
+  turnSpeed: 0.5

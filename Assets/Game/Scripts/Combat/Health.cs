@@ -11,8 +11,8 @@ namespace SC.Combat
         [SerializeField] ParticleSystem destroyVFX;
         [SerializeField] AudioClip destroySFX;
         [SerializeField] float destroyDelaySeconds = 1f;
+        [SerializeField] float currentHealth;
 
-        float currentHealth;
 
         public float MaxHealth {  get { return maxHealth; } }
         public float CurrentHealth { get { return currentHealth; } }

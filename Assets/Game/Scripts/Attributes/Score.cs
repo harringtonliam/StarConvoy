@@ -19,6 +19,11 @@ namespace SC.Attributes
             public int enemyDestroyed;
         }
 
+        public static int CalculateTotalScore( ScoreInformation scoreInformation)
+        {
+            return scoreInformation.shipsSaved = scoreInformation.shipsAbandoned - scoreInformation.shipsLost + scoreInformation.enemyDestroyed;
+
+        }
 
         public ScoreInformation GetScore()
         {
@@ -33,9 +38,9 @@ namespace SC.Attributes
             currentScoreInformation.enemyDestroyed += currentScoreInformation.enemyDestroyed;
         }
 
-        public int GetTotalScore()
+        public int GetCurrentTotalScore()
         {
-            return currentScoreInformation.shipsSaved = currentScoreInformation.shipsAbandoned - currentScoreInformation.shipsLost + currentScoreInformation.enemyDestroyed;
+            return CalculateTotalScore(currentScoreInformation);
         }
 
         public object CaptureState()

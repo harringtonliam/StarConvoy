@@ -69,7 +69,7 @@ namespace SC.Combat
             if (currentNumberOfMissiles > 0)
             {
                 GameObject newMissile = GameObject.Instantiate(missilePrefab, spawnPoint.position, spawnPoint.rotation);
-                newMissile.GetComponent<AICombatControl>().SetCombatTarget(currentTarget.gameObject);
+                newMissile.GetComponent<AICombatControl>().SetCombatTarget(currentTarget);
                 currentNumberOfMissiles--;
                 MissileNumberUpdate();
             }

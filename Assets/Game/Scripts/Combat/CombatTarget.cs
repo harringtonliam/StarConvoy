@@ -13,6 +13,7 @@ namespace SC.Combat
         [SerializeField] Faction faction = Faction.None;
         [SerializeField] bool isSafe = false;
         [SerializeField] bool isHidden = false;
+        [SerializeField] bool addToTargetStore = true;
 
         Health health;
 
@@ -38,7 +39,10 @@ namespace SC.Combat
         {
             health = GetComponent<Health>();
             health.onDeath += DestroyInTargetStore;
-            TargetStore.Instance.AddTarget(GetFullIdentifier(), this);
+            if (addToTargetStore)
+            {
+                TargetStore.Instance.AddTarget(GetFullIdentifier(), this);
+            }
         }
 
         public bool GetIsSafe()
@@ -72,12 +76,18 @@ namespace SC.Combat
 
         public void RemoveFromTargetStore()
         {
-            TargetStore.Instance.RemoveTarget(GetFullIdentifier());
+            if (addToTargetStore)
+            {
+                TargetStore.Instance.RemoveTarget(GetFullIdentifier());
+            }
         }
 
         public void DestroyInTargetStore()
         {
-            TargetStore.Instance.DestroyTarget(GetFullIdentifier());
+            if (addToTargetStore)
+            {
+                TargetStore.Instance.DestroyTarget(GetFullIdentifier());
+            }
         }
 
         public string GetFullIdentifier()

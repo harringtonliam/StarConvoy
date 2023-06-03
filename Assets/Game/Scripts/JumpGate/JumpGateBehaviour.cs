@@ -15,6 +15,7 @@ namespace SC.JumpGate
         Move move;
         MessageSender messageSender;
         CombatTarget combatTarget;
+        AIMovementControl aIMovementControl;
 
 
 
@@ -24,18 +25,27 @@ namespace SC.JumpGate
             move = GetComponent<Move>();
             messageSender = GetComponent<MessageSender>();
             combatTarget = GetComponent<CombatTarget>();
+            aIMovementControl = GetComponent<AIMovementControl>();
         }
 
 
         public void StartJumpProcess(float jumpSpeed, Transform jumpDestination)
         {
             EnableDisablePlayerControls(false);
+            SetAIMovementTarget(jumpDestination);
             SendJumpingMessage();
 
             transform.LookAt(jumpDestination);
             PlayJumpVFX();
             move.SetCurrentSpeed(jumpSpeed, true);
             combatTarget.SetIsSafe(true);
+        }
+
+        private void SetAIMovementTarget(Transform jumpDestination)
+        {
+            if (aIMovementControl == null) return;
+            aIMovementControl.SetMovementTarget(jumpDestination);
+            aIMovementControl.SetCanControLSpeed(false);
         }
 
         private void EnableDisablePlayerControls(bool enable)

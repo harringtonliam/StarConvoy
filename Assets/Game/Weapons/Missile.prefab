@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 1362312301565273295}
   - component: {fileID: 1039558611163493602}
   - component: {fileID: 617634643}
+  - component: {fileID: 1976015009459698778}
+  - component: {fileID: 2661860916195374101}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
@@ -92,6 +94,7 @@ MonoBehaviour:
   destroyVFX: {fileID: 1368064505912949508}
   destroySFX: {fileID: 0}
   destroyDelaySeconds: 1
+  currentHealth: 0
 --- !u!54 &1362312301565273295
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -137,6 +140,42 @@ MonoBehaviour:
   damageDoneToOtherOnCollision: 100
   destroySelfOnCollision: 1
   multiplyDamageByVelocity: 0
+--- !u!114 &1976015009459698778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2471883309638708137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b1c4f56f150d243874d278e72fa0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uniqueIdentifierPrefix: 
+  uniqueIdentifier: 
+  faction: 0
+  isSafe: 0
+  isHidden: 0
+  addToTargetStore: 0
+--- !u!114 &2661860916195374101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2471883309638708137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf23d925cb91d5544ac7f7293b694b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDetails:
+    shipName: Missile
+    captainName: Targeting System
+    shipType: Missile
+    shipSprite: {fileID: 0}
+    captainSprite: {fileID: 0}
 --- !u!1 &7904274305167980846
 GameObject:
   m_ObjectHideFlags: 0

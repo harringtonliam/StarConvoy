@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using SC.SceneControl;
 using SC.Combat;
 using TMPro;
-using System;
+using SC.Attributes;
 
 namespace SC.UI
 {
@@ -17,6 +17,9 @@ namespace SC.UI
         [SerializeField] TextMeshProUGUI totalScoreText;
 
         GameObject player;
+
+        Score.ScoreInformation sceneScore;
+
 
         // Start is called before the first frame update
         void OnEnable()
@@ -55,18 +58,20 @@ namespace SC.UI
 
         private void CalculateScore()
         {
+            sceneScore = new Score.ScoreInformation();
+
             var safeConvoyShips = TargetStore.Instance.SafeCombatTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction(), true);
-            int savedConvoyShipsTotal = safeConvoyShips.Count;
+            sceneScore.shipsSaved = safeConvoyShips.Count;
             var abandonedConvoyShips = TargetStore.Instance.SafeCombatTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction(), false);
-            int abandonedConvoyShipsTotal = safeConvoyShips.Count;
+            sceneScore.shipsAbandoned = safeConvoyShips.Count;
             var destroyedConvoyShips = TargetStore.Instance.SafeCombatTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction(), false);
-            int destroyedConvoyShipsTotal = safeConvoyShips.Count;
+            sceneScore.shipsLost = safeConvoyShips.Count;
 
             var enemyCombatTargets = TargetStore.Instance.CombatTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction());
-            int destroyedEnemyTargetsTotal = TargetStore.Instance.DestroyedTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction()).Count;
+            sceneScore.enemyDestroyed = TargetStore.Instance.DestroyedTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction()).Count;
 
-            enemyDestroyedText.text = destroyedEnemyTargetsTotal.ToString();
-            int totalScore = CalculateTotalScore(savedConvoyShipsTotal, abandonedConvoyShipsTotal, destroyedConvoyShipsTotal, destroyedEnemyTargetsTotal);
+            enemyDestroyedText.text = sceneScore.enemyDestroyed.ToString();
+            int totalScore = Score.CalculateTotalScore(sceneScore);
             totalScoreText.text = totalScore.ToString();
         }
 
@@ -75,21 +80,18 @@ namespace SC.UI
             uiCanvas.SetActive(!uiCanvas.activeSelf);
         }
 
-        private int  CalculateTotalScore(int savedConvoyShipsTotal, int abandonedConvoyShipsTotal, int destroyedConvoyShipsTotal, int destroyedEnemyTargetsTotal)
-        {
-            int totalScore = 0;
 
-            totalScore += savedConvoyShipsTotal;
-            totalScore -= abandonedConvoyShipsTotal;
-            totalScore -= (destroyedConvoyShipsTotal * 2);
-            totalScore += destroyedEnemyTargetsTotal;
-
-            return totalScore;
-        }
 
         public void NextSceneButtonClicked()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            AddSceneScoreToPlayerScore();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+
+        private void AddSceneScoreToPlayerScore()
+        {
+            Score playerScore = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
+            playerScore.AddToScore(sceneScore);
         }
 
         public void PlayAgainButtonClicked()
