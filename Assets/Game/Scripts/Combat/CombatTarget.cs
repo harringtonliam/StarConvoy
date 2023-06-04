@@ -71,7 +71,15 @@ namespace SC.Combat
 
         private void OnDisable()
         {
-            health.onDeath -= DestroyInTargetStore;
+            try
+            {
+                health.onDeath -= DestroyInTargetStore;
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("CombatTarget OnDisable " + ex.Message);
+            }
+
         }
 
         public void RemoveFromTargetStore()

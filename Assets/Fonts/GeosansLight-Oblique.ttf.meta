@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 7b5ba19a5cd3c304da5d6d8ff603352b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - GeosansLight
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 00bcd35d6306a4148bc2f1b6b05f786e, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

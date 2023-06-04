@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SC.Combat;
+using System;
 
-    namespace SC.UI
+namespace SC.UI
 {
     public class TargetsUI : MonoBehaviour
     {
@@ -23,8 +24,17 @@ using SC.Combat;
 
         private void OnDisable()
         {
-            targetSelection.CurrentTargetChanged -= Redraw;
-            targetSelection.TargetInSightsChanged -= Redraw;
+            try
+            {
+
+                targetSelection.CurrentTargetChanged -= Redraw;
+                targetSelection.TargetInSightsChanged -= Redraw;
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("TargetsUI OnDisable" + ex.Message);
+            }
+
         }
 
         private void Redraw()

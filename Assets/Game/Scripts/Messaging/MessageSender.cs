@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using SC.Combat;
 using SC.Attributes;
@@ -44,8 +45,16 @@ namespace SC.Messaging
 
         private void OnDisable()
         {
-            health.onDeath -= TriggerDeathMessage;
-            health.healthUpdated -= TriggerDamageMessage;
+            try
+            {
+                health.onDeath -= TriggerDeathMessage;
+                health.healthUpdated -= TriggerDamageMessage;
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("MessageSender OnDisable" + ex.Message);
+            }
+
         }
 
         private void TriggerDeathMessage()

@@ -2969,9 +2969,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1391753133313241081, guid: ef82dec9f3ec30f48a669dd58d6a8850,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391753133313241081, guid: ef82dec9f3ec30f48a669dd58d6a8850,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391753133313241081, guid: ef82dec9f3ec30f48a669dd58d6a8850,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3248953950147865591}
+    - target: {fileID: 1391753133313241081, guid: ef82dec9f3ec30f48a669dd58d6a8850,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391753133313241081, guid: ef82dec9f3ec30f48a669dd58d6a8850,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391753133313241081, guid: ef82dec9f3ec30f48a669dd58d6a8850,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SC.UI.StartGameCanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391753133313241081, guid: ef82dec9f3ec30f48a669dd58d6a8850,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef82dec9f3ec30f48a669dd58d6a8850, type: 3}
 --- !u!224 &3248953950068327239 stripped
@@ -2989,9 +3019,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8275797240190138128, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
         type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275797240190138128, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275797240190138128, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
+        type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3248953950147865591}
+    - target: {fileID: 8275797240190138128, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275797240190138128, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275797240190138128, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SC.UI.StartGameCanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275797240190138128, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8275797240190138134, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
         type: 3}
       propertyPath: m_Name

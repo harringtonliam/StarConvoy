@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using SC.Combat;
+using System;
 
 namespace SC.UI
 {
@@ -19,14 +20,20 @@ namespace SC.UI
             player = GameObject.FindGameObjectWithTag("Player");
             playerTargetSelection = player.GetComponent<TargetSelection>();
             playerTargetSelection.CurrentTargetChanged += Redraw;
-
-
         }
 
 
         private void OnDisable()
         {
-            playerTargetSelection.CurrentTargetChanged += Redraw;
+            try
+            {
+                playerTargetSelection.CurrentTargetChanged += Redraw;
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("CurrentTargetUI OnDisable " + ex.Message);
+            }
+
         }
 
 

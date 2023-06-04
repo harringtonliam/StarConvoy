@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SC.Messaging;
 using TMPro;
+using System;
 
 namespace SC.UI
 {
@@ -23,7 +24,15 @@ namespace SC.UI
 
         private void OnDisable()
         {
-            messageReceiver.onMessageReceived -= StartDisplayMessage;
+            try
+            {
+                messageReceiver.onMessageReceived -= StartDisplayMessage;
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("MessageConsoleUI OnDisable " + ex.Message);
+            }
+
         }
 
         private void StartDisplayMessage()

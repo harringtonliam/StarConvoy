@@ -30,8 +30,14 @@ namespace SC.Combat
 
         private void OnDestroy()
         {
-            targetSelection.CurrentTargetChanged -= OnTargetChanged;
-
+            try
+            {
+                targetSelection.CurrentTargetChanged -= OnTargetChanged;
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("WeaponController OnDestroy " + ex.Message);
+            }
         }
 
         // Update is called once per frame

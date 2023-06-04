@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using SC.Combat;
+using System;
 
 namespace SC.UI
 {
@@ -25,7 +26,14 @@ namespace SC.UI
 
         private void OnDisable()
         {
-            playerHealth.healthUpdated -= Redraw;
+            try
+            {
+                playerHealth.healthUpdated -= Redraw;
+            }
+            catch(Exception ex)
+            {
+                Debug.Log("HealthUI OnDisable " + ex.Message);
+            }
         }
 
         private void Redraw()

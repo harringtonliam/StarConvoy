@@ -29,7 +29,15 @@ namespace SC.UI
 
         private void OnDisable()
         {
-            playerMove.speedUpdated -= Redraw;
+            try
+            {
+                playerMove.speedUpdated -= Redraw;
+            }
+            catch (System.Exception ex)
+            {
+                Debug.Log("SpeedUI OnDisable" + ex.Message);
+            }
+            
         }
 
         private void Redraw()

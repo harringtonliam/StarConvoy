@@ -45,16 +45,22 @@ namespace SC.UI
 
         private void OnDisable()
         {
-            foreach (var laserWeapon in laserWeapons)
-            {
-                laserWeapon.TargetAquiredUpdated -= SetTargetAquiredVisiblity;
-            }
+            try { 
+                foreach (var laserWeapon in laserWeapons)
+                {
+                    laserWeapon.TargetAquiredUpdated -= SetTargetAquiredVisiblity;
+                }
 
-            foreach (var missileLauncher in missileLaunchers)
-            {
-                missileLauncher.TargetAquiredUpdated -= SetMissileLockAquiredVisibility;
+                foreach (var missileLauncher in missileLaunchers)
+                {
+                    missileLauncher.TargetAquiredUpdated -= SetMissileLockAquiredVisibility;
+                }
             }
-        }
+            catch (System.Exception ex)
+            {
+                Debug.Log("TargetingUI OnDisable " + ex.Message);
+            }
+}
 
 
         private void SetTargetAquiredVisiblity()
