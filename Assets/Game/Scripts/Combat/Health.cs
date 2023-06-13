@@ -8,7 +8,8 @@ namespace SC.Combat
     public class Health : MonoBehaviour
     {
         [SerializeField] float maxHealth = 500f;
-        [SerializeField] ParticleSystem destroyVFX;
+        [SerializeField] ParticleSystem[] destroyVFXs;
+        [SerializeField] float delayBetweenDestroyVFX = 0.2f;
         [SerializeField] AudioClip destroySFX;
         [SerializeField] float destroyDelaySeconds = 1f;
         [SerializeField] float currentHealth;
@@ -43,7 +44,7 @@ namespace SC.Combat
 
         private void DeathProcedures()
         {
-            PlayDeathVFX();
+            StartCoroutine(PlayDeathVFX());
             PlayDeathSFX();
             if (gameObject.tag != "Player")
             {
@@ -56,11 +57,12 @@ namespace SC.Combat
             }
         }
 
-        private void PlayDeathVFX()
+        private IEnumerator PlayDeathVFX()
         {
-            if (destroyVFX != null)
+            for (int i = 0; i < destroyVFXs.Length; i++)
             {
-                destroyVFX.Play();
+                destroyVFXs[i].Play();
+                yield return new WaitForSeconds(delayBetweenDestroyVFX);
             }
         }
 

@@ -48,7 +48,10 @@ namespace SC.Movement
             {
                 StartCoroutine(ChangingSpeed(changeToSpeed));
             }
-
+            if (speedUpdated != null)
+            {
+                speedUpdated();
+            }
 
         }
 
@@ -68,6 +71,10 @@ namespace SC.Movement
         public void SetCurrentSpeed(float newSpeed)
         {
             SetCurrentSpeed(newSpeed, false);
+            if (speedUpdated != null)
+            {
+                speedUpdated();
+            }
         }
 
         public void SetCurrentSpeed(float newSpeed, bool overRideMaxSpeed)
@@ -79,6 +86,10 @@ namespace SC.Movement
             else
             {
                 currentSpeed = Mathf.Clamp(newSpeed, 0f, MaxSpeed);
+            }
+            if (speedUpdated != null)
+            {
+                speedUpdated();
             }
         }
 

@@ -32,7 +32,11 @@ namespace SC.Combat
 
             CheckCombatTarget();
             move = GetComponent<Move>();
-            currentMoveTarget = combatTarget.transform.position;
+            if (combatTarget != null)
+            {
+                currentMoveTarget = combatTarget.transform.position;
+            }
+
             movingAwayFromCombatTarget = false;
         }
 

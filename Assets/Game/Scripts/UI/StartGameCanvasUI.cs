@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using SC.SceneControl;
 
+
 namespace SC.UI
 {
     public class StartGameCanvasUI : MonoBehaviour
     {
 
         [SerializeField] GameObject uiCanvas = null;
+
+
+        GameObject player;
 
         void OnEnable()
         {
@@ -25,6 +29,8 @@ namespace SC.UI
         private void Start()
         {
             ShowStartGameUI();
+            player = GameObject.FindGameObjectWithTag("Player");
+
         }
 
         private void ShowStartGameUI()
@@ -42,6 +48,7 @@ namespace SC.UI
         {
             ToggleUI();
             SceneController.Instance.StartScene();
+
         }
 
         public void QuitButtonClicked()

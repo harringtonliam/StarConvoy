@@ -25,7 +25,7 @@ namespace SC.Movement
         // Start is called before the first frame update
         void Start()
         {
-            isEnabled = true;
+            //isEnabled = true;
             mainCamera = Camera.main;
         }
 

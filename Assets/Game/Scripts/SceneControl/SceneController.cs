@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using SC.Combat;
+using SC.JumpGate;
 
 namespace SC.SceneControl
 {
     public class SceneController : MonoBehaviour
     {
         [SerializeField] string sceneTitle = "Scene default title";
+        [SerializeField] bool enablePlayerCntrolsOnSceneStart = true;
 
         private static SceneController _instance;
 
@@ -17,6 +19,7 @@ namespace SC.SceneControl
         GameObject player;
         CombatTarget playerCombatTarget;
         Health playerHealth;
+        JumpGateBehaviour playerJumpGateBehaviour;
 
         public event Action onSceneStarted;
         public event Action onSceneEnded;
@@ -44,6 +47,7 @@ namespace SC.SceneControl
             player = GameObject.FindGameObjectWithTag("Player");
             playerCombatTarget = player.GetComponent<CombatTarget>();
             playerHealth = player.GetComponent<Health>();
+            playerJumpGateBehaviour = player.GetComponent<JumpGateBehaviour>();
             playerCombatTarget.onIsHidden += EndScene;
             playerHealth.onDeath += PlayerDestroyed;
         }
@@ -59,6 +63,7 @@ namespace SC.SceneControl
         {
             Debug.Log("***SceneController Start***");
             PauseScene();
+            playerJumpGateBehaviour.EnableDisablePlayerControls(false);
             if (onSceneStarted != null)
             {
                 Debug.Log("***SceneController trigger onSceneStarted***");
@@ -84,6 +89,7 @@ namespace SC.SceneControl
         public void StartScene()
         {
             Time.timeScale = 1f;
+            playerJumpGateBehaviour.EnableDisablePlayerControls(enablePlayerCntrolsOnSceneStart);
         }
         
 

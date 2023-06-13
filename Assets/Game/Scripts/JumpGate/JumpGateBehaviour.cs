@@ -48,7 +48,7 @@ namespace SC.JumpGate
             aIMovementControl.SetCanControLSpeed(false);
         }
 
-        private void EnableDisablePlayerControls(bool enable)
+        public void EnableDisablePlayerControls(bool enable)
         {
             if (gameObject.tag != "Player") return;
             SpeedControl speedControl = GetComponent<SpeedControl>();

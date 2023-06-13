@@ -12,6 +12,18 @@ PrefabInstance:
       propertyPath: m_text
       value: Next Mission >
       objectReference: {fileID: 0}
+    - target: {fileID: 1391753133077224912, guid: ef82dec9f3ec30f48a669dd58d6a8850,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0,
+        type: 2}
+    - target: {fileID: 1391753133077224912, guid: ef82dec9f3ec30f48a669dd58d6a8850,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
+        type: 2}
     - target: {fileID: 1391753133313241062, guid: ef82dec9f3ec30f48a669dd58d6a8850,
         type: 3}
       propertyPath: m_Pivot.x

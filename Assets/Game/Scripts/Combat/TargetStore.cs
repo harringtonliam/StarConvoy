@@ -64,6 +64,11 @@ namespace SC.Combat
 
         }
 
+        public Faction GetNeutralFaction()
+        {
+            return neutralFaction;
+        }
+
         public SortedDictionary<string, CombatTarget> CombatTargetsInFaction(Faction faction)
         {
             var filteredCombatTargets = from kpv in availableTargets

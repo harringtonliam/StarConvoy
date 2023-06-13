@@ -86,7 +86,7 @@ namespace SC.Messaging
                 }
             }
 
-            return availableMessages[0];
+            return new AvailableMessage();
         }
 
         private void ResetTimeSinceLastMessage(MessageType messageType)

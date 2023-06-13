@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using SC.Combat;
+using SC.Attributes;
 using System;
 
 namespace SC.UI
@@ -42,7 +43,9 @@ namespace SC.UI
         {
             if (playerTargetSelection.GetCurrentTarget() != null)
             {
-                currentTargetName.text = playerTargetSelection.GetCurrentTarget().gameObject.name;
+                CombatTarget cuurentCombatTarget = playerTargetSelection.GetCurrentTarget();
+                ShipInformation currentShipInformation = cuurentCombatTarget.GetComponent<ShipInformation>();
+                currentTargetName.text = currentShipInformation.GetShipDetails().shipName;
             }
             else
             {

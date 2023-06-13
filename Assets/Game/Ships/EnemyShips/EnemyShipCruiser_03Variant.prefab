@@ -281,6 +281,16 @@ PrefabInstance:
       propertyPath: destroyVFX
       value: 
       objectReference: {fileID: 8312451197677225488}
+    - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: destroyVFXs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: destroyVFXs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8312451197677225488}
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: laserWeapons.Array.size

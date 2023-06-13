@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7103122483982026375}
   - component: {fileID: -3810944541471838417}
   - component: {fileID: 5675589442580323071}
+  - component: {fileID: 6875742739009486654}
   m_Layer: 0
   m_Name: JumpGate
   m_TagString: Untagged
@@ -74,6 +75,7 @@ MonoBehaviour:
   faction: 2
   isSafe: 0
   isHidden: 0
+  addToTargetStore: 1
 --- !u!114 &5675589442580323071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,9 +89,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20000
-  destroyVFX: {fileID: 0}
+  destroyVFXs: []
+  delayBetweenDestroyVFX: 0.2
   destroySFX: {fileID: 0}
   destroyDelaySeconds: 1
+  currentHealth: 0
+--- !u!114 &6875742739009486654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433631675140486788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf23d925cb91d5544ac7f7293b694b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDetails:
+    shipName: Sector Jump Gate
+    captainName: Auto Control
+    shipType: Jump Gate
+    shipSprite: {fileID: 21300000, guid: 1708f870e6c187843a87cf7887adcb01, type: 3}
+    captainSprite: {fileID: 21300000, guid: ca13468b66160ce41a52d211f4661457, type: 3}
 --- !u!1001 &3433631674403671354
 PrefabInstance:
   m_ObjectHideFlags: 0

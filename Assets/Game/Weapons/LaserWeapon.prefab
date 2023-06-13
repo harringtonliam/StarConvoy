@@ -55,7 +55,7 @@ MonoBehaviour:
   maxTemperature: 100
   temperatureIncreasePerShot: 5
   temperatureCooldownRate: 1
-  temperatureCooldownTime: 2
+  temperatureCooldownTime: 0.5
 --- !u!1001 &8815914939561710525
 PrefabInstance:
   m_ObjectHideFlags: 0
