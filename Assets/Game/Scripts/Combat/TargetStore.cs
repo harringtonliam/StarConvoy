@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using SC.Attributes;
+using System;
 
 namespace SC.Combat
 {
@@ -18,6 +19,8 @@ namespace SC.Combat
 
         public SortedDictionary<string, CombatTarget> AvailableTargets { get { return availableTargets; } }
 
+        public event Action TargetStoreUpdated;
+
         private void Awake()
         {
             if (_instance != null && _instance != this)
@@ -31,6 +34,43 @@ namespace SC.Combat
             availableTargets = new SortedDictionary<string, CombatTarget>();
             destroyedTargets = new SortedDictionary<string, DestroyedTarget>();
         }
+
+
+
+        private void Start()
+        {
+            AddAllCombatTargets();
+        }
+
+        private void AddAllCombatTargets()
+        {
+            var allCombatTargets = FindObjectsOfType<CombatTarget>();
+            foreach (var item in allCombatTargets)
+            {
+                if (item.IsAddToTargetStore)
+                {
+                    AddTarget(item.GetFullIdentifier(), item);
+                    item.TargetUpdated += HandleCombatTargetUpdate;
+                }
+            }
+        }
+
+        private void OnDisable()
+        {
+            foreach (var item in availableTargets)
+            {
+                try
+                {
+                    item.Value.TargetUpdated -= HandleCombatTargetUpdate;
+                }
+                catch (Exception)
+                {
+
+                    Debug.Log("error removing hanlder for CombatTarget");
+                }
+            }
+        }
+
 
         public bool AddTarget(string targetGuid, CombatTarget combatTarget)
         {
@@ -61,12 +101,25 @@ namespace SC.Combat
                     RemoveTarget(targetGuid);
                 }
             }
-
         }
 
         public Faction GetNeutralFaction()
         {
             return neutralFaction;
+        }
+
+        public void HandleCombatTargetUpdate(CombatTargetUpdateHandlerArgs e)
+        {
+            Debug.Log("Handling combat target update " + e.combatTarget.name);
+            if (e.isDestroyed)
+            {
+                DestroyTarget(e.combatTarget.GetFullIdentifier());
+            }
+            if (e.isRemoveFromTargetStore)
+            {
+                RemoveTarget(e.combatTarget.GetFullIdentifier());
+            }
+            OnTargetStoreUpdated();
         }
 
         public SortedDictionary<string, CombatTarget> CombatTargetsInFaction(Faction faction)
@@ -136,7 +189,22 @@ namespace SC.Combat
             return new SortedDictionary<string, DestroyedTarget>(filteredDictionary);
         }
 
+        public SortedDictionary<string, CombatTarget> ConvoyShipsThatAreNotSafe(Faction faction)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                        where kpv.Value.GetFaction() == faction && kpv.Value.GetFaction() != neutralFaction && kpv.Value.GetIsSafe() == false && kpv.Value.GetIsExcludedFromConvoy() == false
+                                        select kpv;
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+        }
 
+        private void OnTargetStoreUpdated()
+        {
+            if (TargetStoreUpdated != null)
+            {
+                TargetStoreUpdated();
+            }
+        }
     }
 
     public class DestroyedTarget

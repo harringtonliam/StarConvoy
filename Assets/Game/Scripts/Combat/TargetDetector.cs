@@ -15,14 +15,10 @@ namespace SC.Combat
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Target detected trigger enter " + other.name);
-
             CombatTarget otherCombatTarget = other.GetComponent<CombatTarget>();
-
             if (IsValidTarget(otherCombatTarget))
             {
                 aICombatControl.SetCombatTarget(otherCombatTarget);
-                Debug.Log("Target detected " + other.name); 
             }
         }
 

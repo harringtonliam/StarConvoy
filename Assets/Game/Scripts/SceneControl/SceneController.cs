@@ -10,7 +10,19 @@ namespace SC.SceneControl
     public class SceneController : MonoBehaviour
     {
         [SerializeField] string sceneTitle = "Scene default title";
-        [SerializeField] bool enablePlayerCntrolsOnSceneStart = true;
+        [SerializeField] bool enablePlayerControlsOnSceneStart = true;
+        [SerializeField] EndSceneConditions endSceneConditions;
+
+        [Serializable]
+        public struct EndSceneConditions
+        {
+            public bool endOnPlayerDeath;
+            public bool endOnPlayerHidden;
+            public bool endOnAllConvoySafe;
+            public bool endOnAllConvoyDeath;
+            public bool endOnAllEnemyDestoryed;
+            public CombatTarget endOnThisTargetDestroyed;
+        }
 
         private static SceneController _instance;
 
@@ -20,6 +32,7 @@ namespace SC.SceneControl
         CombatTarget playerCombatTarget;
         Health playerHealth;
         JumpGateBehaviour playerJumpGateBehaviour;
+        
 
         public event Action onSceneStarted;
         public event Action onSceneEnded;
@@ -43,30 +56,28 @@ namespace SC.SceneControl
 
         private void OnEnable()
         {
-            Debug.Log("***SceneController onEnable***");
             player = GameObject.FindGameObjectWithTag("Player");
             playerCombatTarget = player.GetComponent<CombatTarget>();
             playerHealth = player.GetComponent<Health>();
             playerJumpGateBehaviour = player.GetComponent<JumpGateBehaviour>();
-            playerCombatTarget.onIsHidden += EndScene;
             playerHealth.onDeath += PlayerDestroyed;
+            TargetStore.Instance.TargetStoreUpdated += CheckEndSceneConditions;
         }
 
         private void OnDisable()
         {
-            playerCombatTarget.onIsHidden -= EndScene;
+            //playerCombatTarget.onIsHidden -= EndScene;
             playerHealth.onDeath -= PlayerDestroyed;
+            TargetStore.Instance.TargetStoreUpdated -= CheckEndSceneConditions;
         }
 
         // Start is called before the first frame update
         void Start()
         {
-            Debug.Log("***SceneController Start***");
             PauseScene();
             playerJumpGateBehaviour.EnableDisablePlayerControls(false);
             if (onSceneStarted != null)
             {
-                Debug.Log("***SceneController trigger onSceneStarted***");
                 onSceneStarted();
             }
         }
@@ -89,13 +100,12 @@ namespace SC.SceneControl
         public void StartScene()
         {
             Time.timeScale = 1f;
-            playerJumpGateBehaviour.EnableDisablePlayerControls(enablePlayerCntrolsOnSceneStart);
+            playerJumpGateBehaviour.EnableDisablePlayerControls(enablePlayerControlsOnSceneStart);
         }
         
 
         public void EndScene()
         {
-            Debug.Log("SCENE ENDED");
             PauseScene();
             if (onSceneEnded != null)
             {
@@ -106,7 +116,7 @@ namespace SC.SceneControl
 
         private void PlayerDestroyed()
         {
-            Debug.Log("SCENE ENDED player destroyed");
+            if (!endSceneConditions.endOnPlayerDeath) return;
             PauseScene();
             if (onPlayerDestroyed != null)
             {
@@ -114,6 +124,31 @@ namespace SC.SceneControl
             }
         }
         
+        private void CheckEndSceneConditions()
+        {
+
+            Debug.Log("Check end scene conditions not safe convoy ships " + TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count.ToString());
+            if (playerCombatTarget.GetIsHidden() && endSceneConditions.endOnPlayerHidden)
+            {
+                Debug.Log("Player hidden end scene");
+                EndScene();
+                return;
+            }
+            if(TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllConvoySafe)
+            {
+                Debug.Log("Convoy safe  end scene");
+                EndScene();
+                return;
+            }
+
+            if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestoryed)
+            {
+                Debug.Log("all enemy destoryed safe  end scene");
+                EndScene();
+                return;
+            }
+        }
+
     }
 
 }

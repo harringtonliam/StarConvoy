@@ -3822,6 +3822,21 @@ PrefabInstance:
       propertyPath: enablePlayerCntrolsOnSceneStart
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5541037580834347968, guid: 92ee87a82f03c474784aafa25d3266de,
+        type: 3}
+      propertyPath: enablePlayerControlsOnSceneStart
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541037580834347968, guid: 92ee87a82f03c474784aafa25d3266de,
+        type: 3}
+      propertyPath: endSceneConditions.endOnPlayerDeath
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541037580834347968, guid: 92ee87a82f03c474784aafa25d3266de,
+        type: 3}
+      propertyPath: endSceneConditions.endOnAllConvoySafe
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8254507025790777213, guid: 92ee87a82f03c474784aafa25d3266de,
         type: 3}
       propertyPath: m_RootOrder

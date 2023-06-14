@@ -172,7 +172,8 @@ MonoBehaviour:
   faction: 0
   isSafe: 0
   isHidden: 0
-  addToTargetStore: 1
+  isAddToTargetStore: 1
+  isExcludedFromConvoy: 1
 --- !u!114 &6490532337898793014
 MonoBehaviour:
   m_ObjectHideFlags: 0

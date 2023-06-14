@@ -13,11 +13,12 @@ namespace SC.Combat
         [SerializeField] Faction faction = Faction.None;
         [SerializeField] bool isSafe = false;
         [SerializeField] bool isHidden = false;
-        [SerializeField] bool addToTargetStore = true;
+        [SerializeField] bool isAddToTargetStore = true;
+        [SerializeField] bool isExcludedFromConvoy = false;
 
         Health health;
 
-        public event Action onIsHidden;
+        public event Action<CombatTargetUpdateHandlerArgs> TargetUpdated;
 
         public string GetUniqueIdentifier()
         {
@@ -25,10 +26,13 @@ namespace SC.Combat
         }
 
         public Faction GetFaction()
-        { 
-       
+        {
+
             return faction;
         }
+
+        public bool IsAddToTargetStore{get { return isAddToTargetStore; } }
+        
 
         private void Awake()
         {
@@ -39,10 +43,6 @@ namespace SC.Combat
         {
             health = GetComponent<Health>();
             health.onDeath += DestroyInTargetStore;
-            if (addToTargetStore)
-            {
-                TargetStore.Instance.AddTarget(GetFullIdentifier(), this);
-            }
         }
 
         public bool GetIsSafe()
@@ -55,18 +55,21 @@ namespace SC.Combat
             return isHidden;
         }
 
+        public bool GetIsExcludedFromConvoy()
+        {
+            return isExcludedFromConvoy;
+        }
+
         public void SetIsSafe(bool safe)
         {
             isSafe = safe;
+            OnTargetUpdated(new CombatTargetUpdateHandlerArgs(this, false, false));
         }
 
         public void SetIsHidden(bool hidden)
         {
             isHidden = hidden;
-            if (onIsHidden != null)
-            {
-                onIsHidden();
-            }
+            OnTargetUpdated(new CombatTargetUpdateHandlerArgs(this, false, false));
         }
 
         private void OnDisable()
@@ -79,22 +82,23 @@ namespace SC.Combat
             {
                 Debug.Log("CombatTarget OnDisable " + ex.Message);
             }
-
         }
 
         public void RemoveFromTargetStore()
         {
-            if (addToTargetStore)
+            if (isAddToTargetStore)
             {
                 TargetStore.Instance.RemoveTarget(GetFullIdentifier());
+                OnTargetUpdated(new CombatTargetUpdateHandlerArgs(this, false, true));
             }
         }
 
         public void DestroyInTargetStore()
         {
-            if (addToTargetStore)
+            if (isAddToTargetStore)
             {
-                TargetStore.Instance.DestroyTarget(GetFullIdentifier());
+                //TargetStore.Instance.DestroyTarget(GetFullIdentifier());
+                OnTargetUpdated(new CombatTargetUpdateHandlerArgs(this, true, false));
             }
         }
 
@@ -103,8 +107,28 @@ namespace SC.Combat
             return uniqueIdentifierPrefix + uniqueIdentifier;
         }
 
+        private void OnTargetUpdated(CombatTargetUpdateHandlerArgs e)
+        {
+            if (TargetUpdated != null)
+            {
+                TargetUpdated(e);
+            }
+        }
     }
 
+    public class CombatTargetUpdateHandlerArgs : EventArgs
+    {
+        public CombatTarget combatTarget;
+        public bool isDestroyed;
+        public bool isRemoveFromTargetStore;
+
+        public  CombatTargetUpdateHandlerArgs (CombatTarget combatTarget, bool isDestroyed, bool isRemoveFromTargetStore)
+        {
+            this.combatTarget = combatTarget;
+            this.isDestroyed = isDestroyed;
+            this.isRemoveFromTargetStore = isRemoveFromTargetStore;
+        }
+    }
 }
 
 
