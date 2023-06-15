@@ -11,6 +11,7 @@ namespace SC.SceneControl
     {
         [SerializeField] string sceneTitle = "Scene default title";
         [SerializeField] bool enablePlayerControlsOnSceneStart = true;
+        [SerializeField] float endSceneDelaySeconds = 2f;
         [SerializeField] EndSceneConditions endSceneConditions;
 
         [Serializable]
@@ -131,22 +132,28 @@ namespace SC.SceneControl
             if (playerCombatTarget.GetIsHidden() && endSceneConditions.endOnPlayerHidden)
             {
                 Debug.Log("Player hidden end scene");
-                EndScene();
+                StartCoroutine(StartEndScene());
                 return;
             }
             if(TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllConvoySafe)
             {
                 Debug.Log("Convoy safe  end scene");
-                EndScene();
+                StartCoroutine(StartEndScene());
                 return;
             }
 
             if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestoryed)
             {
                 Debug.Log("all enemy destoryed safe  end scene");
-                EndScene();
+                StartCoroutine(StartEndScene());
                 return;
             }
+        }
+
+        private IEnumerator StartEndScene()
+        {
+            yield return new WaitForSeconds(endSceneDelaySeconds);
+            EndScene();
         }
 
     }

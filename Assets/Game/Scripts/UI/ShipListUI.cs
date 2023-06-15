@@ -51,11 +51,11 @@ namespace SC.UI
             SortedDictionary<string, CombatTarget> listToDisplay;
             if (fullList)
             {
-                listToDisplay = TargetStore.Instance.CombatTargetsInFaction(playerCombatTarget.GetFaction());
+                listToDisplay = TargetStore.Instance.ConvoyShipsInFaction(playerCombatTarget.GetFaction());
             }
             else
             {
-                listToDisplay = TargetStore.Instance.SafeCombatTargetsInFaction(playerCombatTarget.GetFaction(), isSafe);
+                listToDisplay = TargetStore.Instance.SafeConvoyShipsInFaction(playerCombatTarget.GetFaction(), isSafe);
             }
 
             if (listCountText != null)

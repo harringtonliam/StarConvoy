@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SC.Movement;
+using SC.Combat;
 
 
-namespace SC.Combat
+
+namespace SC.SafeZone
 {
 
-    public class SafeZone : MonoBehaviour
+    public class SafeZoneArea : MonoBehaviour
     {
         [SerializeField] Faction faction;
         [SerializeField] bool ignorePlayer = true;
         [SerializeField] bool bringToStopOnEnter = false;
-
-
 
         private void OnTriggerEnter(Collider other)
         {
@@ -22,20 +21,12 @@ namespace SC.Combat
             if (combatTarget.GetFaction() != faction) return;
             if (combatTarget.gameObject.tag == "Player" && ignorePlayer) return;
 
-            combatTarget.SetIsSafe(true);
-
-            BringToAStop(other);
-
-        }
-
-        private void BringToAStop(Collider other)
-        {
-            Debug.Log("Safe zone bring to a stop");
-            Move move = other.GetComponent<Move>();
-            if (bringToStopOnEnter && move != null)
+            SafeZoneBehaviour safeZoneBehaviour = other.GetComponent<SafeZoneBehaviour>();
+            if (safeZoneBehaviour != null)
             {
-                other.GetComponent<Move>().ChangeSpeed(0f);
+                safeZoneBehaviour.StartArrivalProcess(bringToStopOnEnter);
             }
+
         }
     }
 }

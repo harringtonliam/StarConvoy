@@ -8,7 +8,8 @@ namespace SC.Messaging
     {
         Destroyed,
         DamageTaken,
-        JumpDone
+        JumpDone,
+        ReachedSafety
     }
 
 }

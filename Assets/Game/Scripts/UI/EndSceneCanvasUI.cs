@@ -60,14 +60,14 @@ namespace SC.UI
         {
             sceneScore = new Score.ScoreInformation();
 
-            var safeConvoyShips = TargetStore.Instance.SafeCombatTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction(), true);
+            var safeConvoyShips = TargetStore.Instance.SafeConvoyShipsInFaction(player.GetComponent<CombatTarget>().GetFaction(), true);
             sceneScore.shipsSaved = safeConvoyShips.Count;
-            var abandonedConvoyShips = TargetStore.Instance.SafeCombatTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction(), false);
-            sceneScore.shipsAbandoned = safeConvoyShips.Count;
-            var destroyedConvoyShips = TargetStore.Instance.SafeCombatTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction(), false);
-            sceneScore.shipsLost = safeConvoyShips.Count;
+            var abandonedConvoyShips = TargetStore.Instance.SafeConvoyShipsInFaction(player.GetComponent<CombatTarget>().GetFaction(), false);
+            sceneScore.shipsAbandoned = abandonedConvoyShips.Count;
+            var destroyedConvoyShips = TargetStore.Instance.DestroyedTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction());
+            sceneScore.shipsLost = destroyedConvoyShips.Count;
 
-            var enemyCombatTargets = TargetStore.Instance.CombatTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction());
+            //var enemyCombatTargets = TargetStore.Instance.CombatTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction());
             sceneScore.enemyDestroyed = TargetStore.Instance.DestroyedTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction()).Count;
 
             enemyDestroyedText.text = sceneScore.enemyDestroyed.ToString();

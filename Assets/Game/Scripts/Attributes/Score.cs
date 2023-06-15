@@ -21,8 +21,7 @@ namespace SC.Attributes
 
         public static int CalculateTotalScore( ScoreInformation scoreInformation)
         {
-            return scoreInformation.shipsSaved = scoreInformation.shipsAbandoned - scoreInformation.shipsLost + scoreInformation.enemyDestroyed;
-
+            return scoreInformation.shipsSaved - scoreInformation.shipsAbandoned - scoreInformation.shipsLost + scoreInformation.enemyDestroyed;
         }
 
         public ScoreInformation GetScore()

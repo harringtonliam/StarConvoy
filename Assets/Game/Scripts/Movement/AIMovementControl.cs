@@ -10,6 +10,7 @@ namespace SC.Movement
         [SerializeField] Transform moveTarget;
         [SerializeField] float turnSpeed = 10f;
         [SerializeField] bool canControlSpeed = true;
+        [SerializeField] bool canManeuver = true;
 
 
         Move move;
@@ -40,6 +41,11 @@ namespace SC.Movement
             canControlSpeed = newSetting;
         }
 
+        public void SetCanManeuver(bool newSetting)
+        {
+            canManeuver = newSetting;
+        }
+
         private void ControlSpeed()
             
         {
@@ -53,7 +59,9 @@ namespace SC.Movement
 
         private void FaceTarget()
         {
+            if (!canManeuver) return;
             if (currentMoveTarget == null) return;
+
             Vector3 targetDirection = currentMoveTarget - transform.position;
 
             // The step size is equal to speed times frame time.

@@ -12,6 +12,7 @@ namespace SC.UI
         [SerializeField] Button lauchButton;
         [SerializeField] GameObject uiCanvas;
         [SerializeField] float launchSpeedFraction = 0.75f;
+        [SerializeField] bool isShownAtSceneStart = false;
 
         GameObject player;
 
@@ -26,7 +27,7 @@ namespace SC.UI
 
         private void ShowStartGameUI()
         {
-            uiCanvas.SetActive(true);
+            uiCanvas.SetActive(isShownAtSceneStart);
         }
 
         public void LauchButtonClicked()

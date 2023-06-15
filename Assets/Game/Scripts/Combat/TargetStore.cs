@@ -85,7 +85,6 @@ namespace SC.Combat
 
         public void DestroyTarget(string targetGuid)
         {
-            Debug.Log("Destorying target");
             ShipInformation shipInformation;
             CombatTarget combatTarget;
             bool targetFound = availableTargets.TryGetValue(targetGuid, out combatTarget);
@@ -110,7 +109,6 @@ namespace SC.Combat
 
         public void HandleCombatTargetUpdate(CombatTargetUpdateHandlerArgs e)
         {
-            Debug.Log("Handling combat target update " + e.combatTarget.name);
             if (e.isDestroyed)
             {
                 DestroyTarget(e.combatTarget.GetFullIdentifier());
@@ -196,6 +194,25 @@ namespace SC.Combat
                                         select kpv;
             var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
             return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+        }
+
+        public SortedDictionary<string, CombatTarget> SafeConvoyShipsInFaction(Faction faction, bool isSafe)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                        where kpv.Value.GetFaction() == faction && kpv.Value.GetFaction() != neutralFaction && kpv.Value.GetIsSafe() == isSafe && kpv.Value.GetIsExcludedFromConvoy() == false
+                                        select kpv;
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+        }
+
+        public SortedDictionary<string, CombatTarget> ConvoyShipsInFaction(Faction faction)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                        where kpv.Value.GetFaction() == faction && kpv.Value.GetIsExcludedFromConvoy() == false
+                                        select kpv;
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+
         }
 
         private void OnTargetStoreUpdated()
