@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentSpeed: 0
   minSpeed: 0
-  maxSpeed: 150
+  maxSpeed: 200
   speedChangeResponseTime: 0.2
   canChangeSpeed: 1
 --- !u!114 &136415074212169570

@@ -6,6 +6,7 @@ using SC.SceneControl;
 using SC.Combat;
 using TMPro;
 using SC.Attributes;
+using UnityEngine.UI;
 
 namespace SC.UI
 {

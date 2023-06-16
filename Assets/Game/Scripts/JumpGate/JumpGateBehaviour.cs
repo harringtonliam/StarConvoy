@@ -87,6 +87,11 @@ namespace SC.JumpGate
             if (move.CurrentSpeed > move.MaxSpeed)
             {
                 move.SetCurrentSpeed(move.MaxSpeed);
+           }
+            if (aIMovementControl != null)
+            {
+                aIMovementControl.SetCanControLSpeed(false);
+                aIMovementControl.SetCanManeuver(false);
             }
             move.ChangeSpeed(0f);
         }

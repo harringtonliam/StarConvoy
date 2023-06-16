@@ -4314,6 +4314,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5541037580834347968, guid: 92ee87a82f03c474784aafa25d3266de,
         type: 3}
+      propertyPath: endSceneConditions.endOnPlayerHidden
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5541037580834347968, guid: 92ee87a82f03c474784aafa25d3266de,
+        type: 3}
       propertyPath: endSceneConditions.endOnAllConvoySafe
       value: 1
       objectReference: {fileID: 0}

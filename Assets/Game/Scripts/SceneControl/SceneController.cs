@@ -115,6 +115,11 @@ namespace SC.SceneControl
 
         }
 
+        public void MoveToNextScene()
+        {
+
+        }
+
         private void PlayerDestroyed()
         {
             if (!endSceneConditions.endOnPlayerDeath) return;
