@@ -1,12 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using SC.SceneControl;
-using SC.Combat;
 using TMPro;
 using SC.Attributes;
-using UnityEngine.UI;
 
 namespace SC.UI
 {
@@ -49,7 +46,7 @@ namespace SC.UI
         private void ShowEndSceneUI()
         {
             uiCanvas.SetActive(true);
-            CalculateScore();
+            DisplayScore();
         }
 
         private void ShowPlayerDestroyedUI()
@@ -57,19 +54,9 @@ namespace SC.UI
             playerDestroyedUICanvas.SetActive(true);
         }
 
-        private void CalculateScore()
+        private void DisplayScore()
         {
-            sceneScore = new Score.ScoreInformation();
-
-            var safeConvoyShips = TargetStore.Instance.SafeConvoyShipsInFaction(player.GetComponent<CombatTarget>().GetFaction(), true);
-            sceneScore.shipsSaved = safeConvoyShips.Count;
-            var abandonedConvoyShips = TargetStore.Instance.SafeConvoyShipsInFaction(player.GetComponent<CombatTarget>().GetFaction(), false);
-            sceneScore.shipsAbandoned = abandonedConvoyShips.Count;
-            var destroyedConvoyShips = TargetStore.Instance.DestroyedTargetsInFaction(player.GetComponent<CombatTarget>().GetFaction());
-            sceneScore.shipsLost = destroyedConvoyShips.Count;
-
-            //var enemyCombatTargets = TargetStore.Instance.CombatTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction());
-            sceneScore.enemyDestroyed = TargetStore.Instance.DestroyedTargetsNotInFaction(player.GetComponent<CombatTarget>().GetFaction()).Count;
+            sceneScore = player.GetComponent<Score>().CalculateScoreForScene();
 
             enemyDestroyedText.text = sceneScore.enemyDestroyed.ToString();
             int totalScore = Score.CalculateTotalScore(sceneScore);
@@ -81,28 +68,26 @@ namespace SC.UI
             uiCanvas.SetActive(!uiCanvas.activeSelf);
         }
 
-
-
         public void NextSceneButtonClicked()
         {
-            AddSceneScoreToPlayerScore();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneController.Instance.MoveToNextScene();
         }
 
         private void AddSceneScoreToPlayerScore()
         {
+       
             Score playerScore = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
             playerScore.AddToScore(sceneScore);
         }
 
         public void PlayAgainButtonClicked()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneController.Instance.RestartCurrentScene();
         }
 
         public void QuitButtonClicked()
         {
-            SceneManager.LoadScene(0);
+            SceneController.Instance.LoadMainMenu();
         }
     }
 }

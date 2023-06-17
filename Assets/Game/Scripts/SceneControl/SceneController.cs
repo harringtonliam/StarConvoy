@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using System;
 using SC.Combat;
 using SC.JumpGate;
+using SC.Attributes;
 
 namespace SC.SceneControl
 {
@@ -44,7 +46,6 @@ namespace SC.SceneControl
 
         private void Awake()
         {
-            Debug.Log("***SceneController Awake***");
             if (_instance != null && _instance != this)
             {
                 Destroy(this.gameObject);
@@ -108,6 +109,7 @@ namespace SC.SceneControl
         public void EndScene()
         {
             PauseScene();
+            AddSceneScoreToPlayerScore();
             if (onSceneEnded != null)
             {
                 onSceneEnded();
@@ -117,7 +119,28 @@ namespace SC.SceneControl
 
         public void MoveToNextScene()
         {
+            SavingProcess();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
+        }
+
+        private void SavingProcess()
+        {
+            Fader fader = FindObjectOfType<Fader>();
+            SavingWrapper saveingWrapper = FindObjectOfType<SavingWrapper>();
+            saveingWrapper.AutoSave();
+            saveingWrapper.Load();
+            saveingWrapper.AutoSave();
+        }
+
+        public void RestartCurrentScene()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
+        public void LoadMainMenu()
+        {
+            SceneManager.LoadScene(0);
         }
 
         private void PlayerDestroyed()
@@ -132,27 +155,30 @@ namespace SC.SceneControl
         
         private void CheckEndSceneConditions()
         {
-
-            Debug.Log("Check end scene conditions not safe convoy ships " + TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count.ToString());
             if (playerCombatTarget.GetIsHidden() && endSceneConditions.endOnPlayerHidden)
             {
-                Debug.Log("Player hidden end scene");
                 StartCoroutine(StartEndScene());
                 return;
             }
             if(TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllConvoySafe)
             {
-                Debug.Log("Convoy safe  end scene");
                 StartCoroutine(StartEndScene());
                 return;
             }
 
             if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestoryed)
             {
-                Debug.Log("all enemy destoryed safe  end scene");
                 StartCoroutine(StartEndScene());
                 return;
             }
+        }
+
+        private void AddSceneScoreToPlayerScore()
+        {
+            Score playerScore = GameObject.FindGameObjectWithTag("Player").GetComponent<Score>();
+            var sceneScore = playerScore.CalculateScoreForScene();
+            Debug.Log("AddSceneScoreToPlayerScore " + sceneScore.enemyDestroyed.ToString());
+            playerScore.AddToScore(sceneScore);
         }
 
         private IEnumerator StartEndScene()

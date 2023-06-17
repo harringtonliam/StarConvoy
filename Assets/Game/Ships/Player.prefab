@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b03271ecafddf2d4d972bd8285f97aaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifier: 
+  uniqueIdentifier: Player
 --- !u!114 &2795938032195074042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,10 +276,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScoreInformation:
-    shipsSaved: 1
-    shipsAbandoned: 2
-    shipsLost: 3
-    enemyDestroyed: 4
+    shipsSaved: 0
+    shipsAbandoned: 0
+    shipsLost: 0
+    enemyDestroyed: 0
 --- !u!1 &136415074781837248
 GameObject:
   m_ObjectHideFlags: 0
