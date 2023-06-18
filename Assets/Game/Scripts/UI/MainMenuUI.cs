@@ -24,7 +24,7 @@ namespace SC.UI
 
         public void NewGameButtonClicked()
         {
-            MainMenuController.Instance.StartNewGame();
+            SceneController.Instance.StartNewGame();
         }
 
         public void LoadSavedGameButtonClicked()

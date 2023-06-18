@@ -13,6 +13,17 @@ namespace SC.SceneControl
         SavingWrapper savingWrapper;
         Fader fader;
 
+        private void Start()
+        {
+            savingWrapper = FindObjectOfType<SavingWrapper>();
+        }
+
+        public void StartNewGame(string saveGameName)
+        {
+            savingWrapper.DeleteDefaultSaveFile();
+            TransitionToNextScene(saveGameName);
+        }
+
         public void TransitionToNextScene(string saveGameName)
         {
             Debug.Log("TransitionToNextScene");
@@ -26,7 +37,6 @@ namespace SC.SceneControl
             DontDestroyOnLoad(gameObject);
             Fader fader = FindObjectOfType<Fader>();
             //yield return fader.FadeOut(fadeTime);
-            savingWrapper = FindObjectOfType<SavingWrapper>();
             Debug.Log("Transition fadeout");
             savingWrapper.AutoSave();
             yield return SceneManager.LoadSceneAsync(sceneToLoad);

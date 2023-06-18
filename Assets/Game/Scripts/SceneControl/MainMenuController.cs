@@ -7,6 +7,9 @@ namespace SC.SceneControl
 {
     public class MainMenuController : MonoBehaviour
     {
+        [SerializeField] SceneTransition sceneTransition;
+
+
         private static MainMenuController _instance;
 
         public static MainMenuController Instance { get { return _instance; } }
@@ -38,7 +41,7 @@ namespace SC.SceneControl
 
         public void StartNewGame()
         {
-            SceneManager.LoadScene(1);
+            sceneTransition.TransitionToNextScene("");
         }
 
         public void ExitGame()

@@ -13,7 +13,7 @@ namespace SC.SceneControl
     public class SceneController : MonoBehaviour
     {
         [SerializeField] SceneTransition sceneTransition;
-        [SerializeField] string sceneTitle = "Scene default title";
+        [SerializeField] string sceneTitle = "Main Menu";
         [SerializeField] bool enablePlayerControlsOnSceneStart = true;
         [SerializeField] float endSceneDelaySeconds = 2f;
         [SerializeField] EndSceneConditions endSceneConditions;
@@ -116,8 +116,9 @@ namespace SC.SceneControl
             {
                 onSceneEnded();
             }
-
         }
+
+
 
         public void MoveToNextScene()
         {
@@ -125,10 +126,16 @@ namespace SC.SceneControl
             sceneTransition.TransitionToNextScene(saveGameName);
         }
 
+        public void StartNewGame()
+        {
+            string saveGameName = GetSaveGameName();
+            sceneTransition.StartNewGame(saveGameName);
+        }
+
         private string GetSaveGameName()
         {
             string playerName = player.GetComponent<ShipInformation>().GetShipDetails().captainName;
-            Regex rgx = new Regex("[^a - zA - Z0 - 9 -]");
+            Regex rgx = new Regex("[^a-zA-Z0-9 -]");
             string safePlayerName = rgx.Replace(playerName, "");
             return safePlayerName + SceneManager.GetActiveScene().buildIndex;
         }
