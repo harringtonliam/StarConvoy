@@ -6,11 +6,13 @@ using System;
 using SC.Combat;
 using SC.JumpGate;
 using SC.Attributes;
+using System.Text.RegularExpressions;
 
 namespace SC.SceneControl
 {
     public class SceneController : MonoBehaviour
     {
+        [SerializeField] SceneTransition sceneTransition;
         [SerializeField] string sceneTitle = "Scene default title";
         [SerializeField] bool enablePlayerControlsOnSceneStart = true;
         [SerializeField] float endSceneDelaySeconds = 2f;
@@ -119,19 +121,18 @@ namespace SC.SceneControl
 
         public void MoveToNextScene()
         {
-            SavingProcess();
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-
+            string saveGameName = GetSaveGameName(); 
+            sceneTransition.TransitionToNextScene(saveGameName);
         }
 
-        private void SavingProcess()
+        private string GetSaveGameName()
         {
-            Fader fader = FindObjectOfType<Fader>();
-            SavingWrapper saveingWrapper = FindObjectOfType<SavingWrapper>();
-            saveingWrapper.AutoSave();
-            saveingWrapper.Load();
-            saveingWrapper.AutoSave();
+            string playerName = player.GetComponent<ShipInformation>().GetShipDetails().captainName;
+            Regex rgx = new Regex("[^a - zA - Z0 - 9 -]");
+            string safePlayerName = rgx.Replace(playerName, "");
+            return safePlayerName + SceneManager.GetActiveScene().buildIndex;
         }
+
 
         public void RestartCurrentScene()
         {

@@ -10,16 +10,17 @@ namespace SC.SceneControl
     public class SavingWrapper : MonoBehaviour
     {
         [SerializeField] float fadeTime = 0.2f;
+        [SerializeField] Fader fader;
 
         const string defaultSaveFile = "autosave";
         const string quickSaveFile = "quicksave";
 
         public event Action onSaveUpated;
-        Fader fader;
+
 
          private void Start()
         {
-            fader = FindObjectOfType<Fader>();
+
         }
 
         private IEnumerator LoadLastScene(string savedGame)
