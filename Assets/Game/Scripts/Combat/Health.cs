@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SC.Combat
 {
@@ -13,6 +14,7 @@ namespace SC.Combat
         [SerializeField] AudioClip destroySFX;
         [SerializeField] float destroyDelaySeconds = 1f;
         [SerializeField] float currentHealth;
+        [SerializeField] UnityEvent onDie;
 
 
         public float MaxHealth {  get { return maxHealth; } }
@@ -21,6 +23,8 @@ namespace SC.Combat
         public event Action healthUpdated;
 
         public event Action onDeath;
+
+        
 
         // Start is called before the first frame update
         void Start()
@@ -44,6 +48,7 @@ namespace SC.Combat
 
         private void DeathProcedures()
         {
+            onDie.Invoke();
             StartCoroutine(PlayDeathVFX());
             PlayDeathSFX();
             if (gameObject.tag != "Player")

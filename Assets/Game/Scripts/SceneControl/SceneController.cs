@@ -17,6 +17,7 @@ namespace SC.SceneControl
         [SerializeField] bool enablePlayerControlsOnSceneStart = true;
         [SerializeField] float endSceneDelaySeconds = 2f;
         [SerializeField] EndSceneConditions endSceneConditions;
+        [SerializeField] bool isPauseSceneOnStart = true;
 
         [Serializable]
         public struct EndSceneConditions
@@ -78,7 +79,11 @@ namespace SC.SceneControl
         // Start is called before the first frame update
         void Start()
         {
-            PauseScene();
+            if (isPauseSceneOnStart)
+            {
+                PauseScene();
+            }
+
             playerJumpGateBehaviour.EnableDisablePlayerControls(false);
             if (onSceneStarted != null)
             {
@@ -96,6 +101,7 @@ namespace SC.SceneControl
 
         void PauseScene()
         {
+            
             Time.timeScale = 0f;
         }
 
