@@ -14,13 +14,13 @@ namespace SC.Movement
 
 
         Move move;
-        Vector3 currentMoveTarget;
+        Transform currentMoveTarget;
 
         // Start is called before the first frame update
         void Start()
         {
             move = GetComponent<Move>();
-            currentMoveTarget = moveTarget.position;
+            currentMoveTarget = moveTarget;
         }
 
         // Update is called once per frame
@@ -33,7 +33,7 @@ namespace SC.Movement
         public void SetMovementTarget(Transform newTarget)
         {
             moveTarget = newTarget;
-            currentMoveTarget = moveTarget.position;
+            currentMoveTarget = moveTarget;
         }
 
         public void SetCanControLSpeed(bool newSetting)
@@ -62,7 +62,7 @@ namespace SC.Movement
             if (!canManeuver) return;
             if (currentMoveTarget == null) return;
 
-            Vector3 targetDirection = currentMoveTarget - transform.position;
+            Vector3 targetDirection = currentMoveTarget.position - transform.position;
 
             // The step size is equal to speed times frame time.
             float singleStep = turnSpeed * Time.deltaTime;
@@ -72,6 +72,13 @@ namespace SC.Movement
 
             // Calculate a rotation a step closer to the target and applies rotation to this object
             transform.rotation = Quaternion.LookRotation(newDirection);
+        }
+
+        private void OnCollisionEnter(Collision collision)
+        {
+            Debug.Log("Collidded with somthing " + gameObject.name + " thing=" + collision.gameObject.name);
+            currentMoveTarget = null;
+            moveTarget = null;
         }
     }
 
