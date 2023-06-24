@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SC.Movement;
 using SC.JumpGate;
+using SC.SceneControl;
 
 namespace SC.Cinematics
 {
@@ -31,7 +32,7 @@ namespace SC.Cinematics
             Debug.Log("Apply explosion");
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             var playerRigidBody = player.GetComponent<Rigidbody>();
-            playerRigidBody.AddExplosionForce(explosivePower, debrisprefabSpawnPoint.position, explosionRadius, 3.0f);
+            playerRigidBody.AddExplosionForce(explosivePower, debrisprefabSpawnPoint.position, explosionRadius, -2.0f);
         }
 
         public void Spawn()
@@ -44,6 +45,11 @@ namespace SC.Cinematics
 
 
 
+        }
+
+        public void EndGame()
+        {
+            SceneController.Instance.EndScene();
         }
 
 

@@ -7,7 +7,7 @@ namespace SC.Combat
     [RequireComponent (typeof (Health))]
     public class ReactorCore : MonoBehaviour
     {
-        [SerializeField] Health parentObject;
+        [SerializeField] Health[] parentObjects;
 
         Health health;
 
@@ -30,7 +30,12 @@ namespace SC.Combat
 
         private void DestroyBehaviour()
         {
-            parentObject.TakeDamage(parentObject.CurrentHealth);
+            for (int i = 0; i < parentObjects.Length; i++)
+            {
+                parentObjects[i].TakeDamage(parentObjects[i].CurrentHealth);
+            }
+
+           
         }
     }
 

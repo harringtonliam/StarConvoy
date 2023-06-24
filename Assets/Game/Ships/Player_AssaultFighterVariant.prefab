@@ -157,6 +157,12 @@ PrefabInstance:
       propertyPath: shipDetails.shipType
       value: Assault  Figher
       objectReference: {fileID: 0}
+    - target: {fileID: 1335817392556679988, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: shipDetails.shipSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f6ed0717f639b447b7de048a70d0ec3,
+        type: 3}
     - target: {fileID: 1681151057823535608, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: maxHealth

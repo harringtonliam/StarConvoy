@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1769691029114982720}
   - component: {fileID: 8326115902252718797}
-  - component: {fileID: 5703543331155736316}
   - component: {fileID: 8290825694781912276}
   - component: {fileID: 2510717216445923433}
   - component: {fileID: 6140481940296453664}
@@ -65,19 +64,10 @@ MonoBehaviour:
   destroySFX: {fileID: 0}
   destroyDelaySeconds: 1
   currentHealth: 0
---- !u!114 &5703543331155736316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1274545590816651664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73a932b94ff6d404d8ea58884a5d9741, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  parentObject: {fileID: 0}
+  objectToHideOnDeath: {fileID: 0}
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &8290825694781912276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +103,8 @@ MonoBehaviour:
     shipName: Station Reactor Core
     captainName: Reactor Core
     shipType: Reactor Core
-    shipSprite: {fileID: 0}
-    captainSprite: {fileID: 0}
+    shipSprite: {fileID: 21300000, guid: 1d71a275bebbff540a609dafe15b9366, type: 3}
+    captainSprite: {fileID: 21300000, guid: a43036d048ffee646877e49642e09ec3, type: 3}
 --- !u!135 &6140481940296453664
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -266,15 +256,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4587786598044862, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -15.75
       objectReference: {fileID: 0}
     - target: {fileID: 4587786598044862, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 44.5
+      value: 36.5
       objectReference: {fileID: 0}
     - target: {fileID: 4587786598044862, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -24.75
       objectReference: {fileID: 0}
     - target: {fileID: 4587786598044862, guid: 587eaecaa621be74486f351c78b4f0a8, type: 3}
       propertyPath: m_LocalRotation.w

@@ -14,7 +14,9 @@ namespace SC.Combat
         [SerializeField] AudioClip destroySFX;
         [SerializeField] float destroyDelaySeconds = 1f;
         [SerializeField] float currentHealth;
+        [SerializeField] GameObject objectToHideOnDeath;
         [SerializeField] UnityEvent onDie;
+        
 
 
         public float MaxHealth {  get { return maxHealth; } }
@@ -67,7 +69,20 @@ namespace SC.Combat
             for (int i = 0; i < destroyVFXs.Length; i++)
             {
                 destroyVFXs[i].Play();
+                if (i == destroyVFXs.Length - 1)
+                {
+                    HideVisibleObjectOnLastDeathSFX();
+                }
+
                 yield return new WaitForSeconds(delayBetweenDestroyVFX);
+            }
+        }
+
+        private void HideVisibleObjectOnLastDeathSFX()
+        {
+            if (objectToHideOnDeath != null)
+            {
+                objectToHideOnDeath.SetActive(false);
             }
         }
 
