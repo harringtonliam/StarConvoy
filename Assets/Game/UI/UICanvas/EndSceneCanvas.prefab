@@ -179,7 +179,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Status Unknown
+  m_text: Missing In Action
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1979,15 +1979,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: Game Over
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
+  m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4284895537
+  m_fontColor: {r: 0.19215687, g: 0.31764707, b: 0.4, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2010,7 +2011,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 5
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2892,17 +2893,18 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Missing in Action
+  m_text: Killed In Action
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
+  m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4281944986
+  m_fontColor: {r: 0.6039216, g: 0.29411766, b: 0.22352941, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4180,19 +4182,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '{0} has been reported missing in action following the loss of thier ship.
-
-
-    Search
-    and rescue operations have ceased and altough no body has been recovered we must
-    assume the worst.
-
-
-    {0} was a loyal soldier of the Alliance, and rsiked their
-    life many times on escort duty'
+  m_text: "{0} has been reported killed in action following the loss of thier ship.\n\nSearch
+    and rescue operations have ceased and altough no body has been recovered  examination
+    of the wreakage of their ship leads us to assume the worst.\n\nTheir sacrifice
+    will be recorded  for prosperity in The Alliance\u2019s war records."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
+  m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

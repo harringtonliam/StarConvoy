@@ -12,6 +12,7 @@ namespace SC.UI
         [SerializeField] Button newGameButton;
         [SerializeField] Button loadSavedGameButton;
         [SerializeField] Button exitGameButton;
+        [SerializeField] NewGameUI newGameUI;
  
         // Start is called before the first frame update
         void Start()
@@ -24,7 +25,7 @@ namespace SC.UI
 
         public void NewGameButtonClicked()
         {
-            SceneController.Instance.StartNewGame();
+            newGameUI.ShowHideUI(true);
         }
 
         public void LoadSavedGameButtonClicked()

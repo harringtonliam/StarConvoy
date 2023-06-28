@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 1084549719453025930}
   - component: {fileID: 2938340070478351321}
   - component: {fileID: 2795938032195074042}
+  - component: {fileID: -4893644781950675893}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -182,6 +183,10 @@ MonoBehaviour:
   destroySFX: {fileID: 0}
   destroyDelaySeconds: 1
   currentHealth: 0
+  objectToHideOnDeath: {fileID: 0}
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &348960130898522281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,6 +285,20 @@ MonoBehaviour:
     shipsAbandoned: 0
     shipsLost: 0
     enemyDestroyed: 0
+--- !u!114 &-4893644781950675893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136415074212169575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e28308cec03044b88e179c3a4b0774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerName: default name
+  playerInformation: {fileID: 11400000, guid: d3881de08be24f44bbedc0e30c4cd695, type: 2}
 --- !u!1 &136415074781837248
 GameObject:
   m_ObjectHideFlags: 0

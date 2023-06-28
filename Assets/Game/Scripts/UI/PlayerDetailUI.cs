@@ -34,11 +34,12 @@ namespace SC.UI
         private void SetShipInfo()
         {
             ShipInformation shipInformation = player.GetComponent<ShipInformation>();
+            PlayerInformationStore playerInformationStore = player.GetComponent<PlayerInformationStore>();
 
             var shipDetails = shipInformation.GetShipDetails();
-            captainNameText.text = shipDetails.captainName;
+            captainNameText.text = playerInformationStore.PlayerName;
             shipTypeText.text = shipDetails.shipType;
-            captianImage.sprite = shipDetails.captainSprite;
+            captianImage.sprite = playerInformationStore.PlayerInformation.Portrait; 
             shipImage.sprite = shipDetails.shipSprite;
         }
 
