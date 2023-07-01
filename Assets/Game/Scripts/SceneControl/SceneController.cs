@@ -140,7 +140,7 @@ namespace SC.SceneControl
 
         private string GetSaveGameName()
         {
-            string playerName = player.GetComponent<ShipInformation>().GetShipDetails().captainName;
+            string playerName = player.GetComponent<PlayerInformationStore>().PlayerName;
             Regex rgx = new Regex("[^a-zA-Z0-9 -]");
             string safePlayerName = rgx.Replace(playerName, "");
             return safePlayerName + SceneManager.GetActiveScene().buildIndex;

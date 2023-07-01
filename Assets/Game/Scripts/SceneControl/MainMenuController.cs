@@ -16,7 +16,6 @@ namespace SC.SceneControl
 
         private void Awake()
         {
-            Debug.Log("***SceneController Awake***");
             if (_instance != null && _instance != this)
             {
                 Destroy(this.gameObject);

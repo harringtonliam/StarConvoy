@@ -9,7 +9,8 @@ namespace SC.Messaging
         Destroyed,
         DamageTaken,
         JumpDone,
-        ReachedSafety
+        ReachedSafety,
+        EngineTrouble
     }
 
 }

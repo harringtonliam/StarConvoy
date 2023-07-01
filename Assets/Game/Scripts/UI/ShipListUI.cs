@@ -47,6 +47,7 @@ namespace SC.UI
                 ListDestroyedTargets();
                 return;
             }
+            
 
             SortedDictionary<string, CombatTarget> listToDisplay;
             if (fullList)
