@@ -9,7 +9,7 @@ namespace SC.UI
 {
     public class HealthUI : MonoBehaviour
     {
-        [SerializeField] TextMeshProUGUI healthValueText;
+        [SerializeField] TextMeshProUGUI damageValueText;
         [SerializeField] RectTransform foregroudnHealthBar;
 
         GameObject player;
@@ -38,9 +38,11 @@ namespace SC.UI
 
         private void Redraw()
         {
-            healthValueText.text = playerHealth.CurrentHealth.ToString("###0");
+            
             if (foregroudnHealthBar == null) return;
-            Vector3 newScale = new Vector3(playerHealth.CurrentHealth / playerHealth.MaxHealth, 1, 1);
+            float damageTaken = playerHealth.MaxHealth - playerHealth.CurrentHealth;
+            damageValueText.text = damageTaken.ToString("###0");
+            Vector3 newScale = new Vector3(damageTaken / playerHealth.MaxHealth, 1, 1);
             foregroudnHealthBar.localScale = newScale;
 
         }

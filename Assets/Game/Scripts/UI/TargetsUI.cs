@@ -8,7 +8,9 @@ namespace SC.UI
 {
     public class TargetsUI : MonoBehaviour
     {
-        [SerializeField] TargetDetailsUI targetDetailsUIPrefab;
+        [SerializeField] TargetDetailsUI currentTarget;
+        [SerializeField] TargetDetailsUI targetInSights;
+
 
         GameObject player;
         TargetSelection targetSelection;
@@ -26,7 +28,6 @@ namespace SC.UI
         {
             try
             {
-
                 targetSelection.CurrentTargetChanged -= Redraw;
                 targetSelection.TargetInSightsChanged -= Redraw;
             }
@@ -39,16 +40,8 @@ namespace SC.UI
 
         private void Redraw()
         {
-            foreach (Transform child in transform)
-            {
-                Destroy(child.gameObject);
-            }
-
-            var currentTargetUI = Instantiate(targetDetailsUIPrefab, transform);
-            currentTargetUI.Setup("Current Target", targetSelection.GetCurrentTarget());
-            var targetInSightsUI = Instantiate(targetDetailsUIPrefab, transform);
-            targetInSightsUI.Setup("[T]arget In Sights", targetSelection.GetTargetInSights());
-
+            currentTarget.Setup("Current Target", targetSelection.GetCurrentTarget());
+            targetInSights.Setup("[T]arget In Sights", targetSelection.GetTargetInSights());
         }
 
 

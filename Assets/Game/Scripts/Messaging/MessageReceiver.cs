@@ -37,7 +37,6 @@ namespace SC.Messaging
 
         public void  ReceiveMessage(ShipInformation shipInformation, Faction faction,  string message)
         {
-            Debug.Log("ReceiveMessage " + message + " " + faction.ToString());
             currentMessage.shipInformation = shipInformation;
             currentMessage.faction = faction;
             currentMessage.message = message;
@@ -68,7 +67,6 @@ namespace SC.Messaging
         {
             if (onSameFactionMessageReceived != null)
             {
-                Debug.Log("onSameFactionMessageReceived ");
                 onSameFactionMessageReceived();
             }
         }
