@@ -51,17 +51,17 @@ namespace SC.UI
             Debug.Log("TargetDetailsUI Setup set sprite");
             if (target.GetFaction() == playerFaction)
             {
-                factionBackground.color = sameFactionColor;
+                factionBackground.color = Color.green;
                 Debug.Log("TargetDetailsUI same faction");
             }
             else if(target.GetFaction() == Faction.None)
             {
-                factionBackground.color = neutralFactionColor;
+                factionBackground.color = Color.grey;
                 Debug.Log("TargetDetailsUI neutral faction");
             }
             else
             {
-                factionBackground.color = enemyFactionColor;
+                factionBackground.color = Color.red;
                 Debug.Log("TargetDetailsUI enemy faction");
             }
         }

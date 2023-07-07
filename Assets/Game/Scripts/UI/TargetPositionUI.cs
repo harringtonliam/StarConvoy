@@ -27,7 +27,6 @@ namespace SC.UI
 
         void Update()
         {
-
             xAngleText.text = targetLocator.TargetPositionRelativeToPlayer.x.ToString("####0") + "/" + targetLocator.XAngleToTarget.ToString("##0");
             yAngleText.text = targetLocator.TargetPositionRelativeToPlayer.y.ToString("####0") + "/" + targetLocator.YAngleToTarget.ToString("##0");
             zDistanceText.text = targetLocator.TargetPositionRelativeToPlayer.z.ToString("####0") + "/" + targetLocator.ZAngleToTarget.ToString("##0");
@@ -42,23 +41,29 @@ namespace SC.UI
 
             if (xAngle <= 90f  || xAngle >= -90f)
             {
-                postionOnXAxis = (xAngle / 90f) * 100f;
+                postionOnXAxis = ((xAngle / 90f) * 100f);
             }
             else if (xAngle > 90f)
             {
-                postionOnXAxis = ((180 - xAngle)/ 90f) * 100f;
+                postionOnXAxis = (((180 - xAngle)/ 90f) * 100f);
             }
             else if (xAngle < -90f)
             {
-                postionOnXAxis = ((180 + xAngle) / 90f) * 100f;
+                postionOnXAxis = (((180 + xAngle) / 90f) * 100f);
             }
 
             if (yAngle <= 90f || yAngle >= -90f)
             {
-                postionOnYAxis = (yAngle / 90f) * -100f;
+                postionOnYAxis = ((yAngle / 90f) * -100f);
             }
 
-            targetLocatorUI.localPosition = new Vector3(postionOnXAxis, postionOnYAxis, 0f);
+            targetLocatorUI.localPosition = new Vector3(ClampTargetLocator(postionOnXAxis), ClampTargetLocator(postionOnYAxis), 0f);
+        }
+
+        private float ClampTargetLocator(float value)
+        {
+
+            return Mathf.Clamp(value, -100f, 100f);
         }
     }
 

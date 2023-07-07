@@ -22,6 +22,7 @@ namespace SC.UI
             targetSelection = player.GetComponent<TargetSelection>();
             targetSelection.CurrentTargetChanged += Redraw;
             targetSelection.TargetInSightsChanged += Redraw;
+            Redraw();
         }
 
         private void OnDisable()

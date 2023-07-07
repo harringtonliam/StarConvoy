@@ -41,6 +41,7 @@ namespace SC.Combat
 
         void Update()
         {
+
             RespondToScrollToNextTarget();
             IdentifyTargetInSights();
             RespondToSwitchToTargetInSights();
@@ -91,7 +92,13 @@ namespace SC.Combat
 
         private void RespondToScrollToNextTarget()
         {
+
             bool indexChanged = false;
+            if (currentTarget == null)
+            {
+                currentTargetIndex = 0;
+                indexChanged = true;
+            }
             if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
                 currentTargetIndex++;
