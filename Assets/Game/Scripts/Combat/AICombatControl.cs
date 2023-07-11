@@ -17,11 +17,12 @@ namespace SC.Combat
         [SerializeField] float targetingAccuracy = 10f;
         [SerializeField] LaserWeapon[] laserWeapons;
 
-        Vector3 currentMoveTarget;
+        //Vector3 currentMoveTarget;
 
         bool movingAwayFromCombatTarget;
 
         Move move;
+        AIMovementControl aIMovementControl;
 
         CombatTarget thisShipCombatTarget;
    
@@ -29,12 +30,13 @@ namespace SC.Combat
         void Start()
         {
             thisShipCombatTarget = GetComponent<CombatTarget>();
+            aIMovementControl = GetComponent<AIMovementControl>();
 
             CheckCombatTarget();
             move = GetComponent<Move>();
             if (combatTarget != null)
             {
-                currentMoveTarget = combatTarget.transform.position;
+                aIMovementControl.SetMovementTarget(combatTarget.transform);
             }
 
             movingAwayFromCombatTarget = false;
@@ -45,7 +47,7 @@ namespace SC.Combat
         {
             ControlSpeed();
             CheckMoveTarget();
-            FaceTarget();
+            //FaceTarget();
             ControlShooting();
         }
 
@@ -63,7 +65,7 @@ namespace SC.Combat
 
         public bool FindCombatTarget()
         {
-            var targetsToChooseFrom = TargetStore.Instance.CombatTargetsNotInFaction(thisShipCombatTarget.GetFaction());
+            var targetsToChooseFrom = TargetStore.Instance.ValidCombatTargetsNotInFaction(thisShipCombatTarget.GetFaction());
             if (targetsToChooseFrom.Count <= 0) return false;
 
             int randomTarget = Random.Range(0, targetsToChooseFrom.Count - 1);
@@ -124,24 +126,24 @@ namespace SC.Combat
             return Vector3.Distance(combatTarget.transform.position, transform.position);
         }
 
-        private void FaceTarget()
-        {
-            if (currentMoveTarget == null) return;
-            Vector3 targetDirection = currentMoveTarget - transform.position;
+        //private void FaceTarget()
+        //{
+        //    if (currentMoveTarget == null) return;
+        //    Vector3 targetDirection = currentMoveTarget - transform.position;
 
-            // The step size is equal to speed times frame time.
-            float singleStep = turnSpeed * Time.deltaTime;
+        //    // The step size is equal to speed times frame time.
+        //    float singleStep = turnSpeed * Time.deltaTime;
 
-            // Rotate the forward vector towards the target direction by one step
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
+        //    // Rotate the forward vector towards the target direction by one step
+        //    Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
 
-            // Draw a ray pointing at our target in
-            Debug.DrawRay(transform.position, newDirection, Color.red);
+        //    // Draw a ray pointing at our target in
+        //    Debug.DrawRay(transform.position, newDirection, Color.red);
 
-            // Calculate a rotation a step closer to the target and applies rotation to this object
-            transform.rotation = Quaternion.LookRotation(newDirection);
+        //    // Calculate a rotation a step closer to the target and applies rotation to this object
+        //    transform.rotation = Quaternion.LookRotation(newDirection);
 
-        }
+        //}
 
         private void CheckMoveTarget()
         {
@@ -149,7 +151,7 @@ namespace SC.Combat
             float distanceToCombatTarget = DistanceToCombatTarget();
             if (distanceToCombatTarget > closestApproach && !movingAwayFromCombatTarget)
             {
-                currentMoveTarget = combatTarget.transform.position;
+                aIMovementControl.SetMovementTarget(combatTarget.transform);
             }
             else if(!movingAwayFromCombatTarget)
             {
@@ -165,11 +167,11 @@ namespace SC.Combat
         private void CheckBreakOff()
         {
             if (CheckCombatTarget() == false) return;
-            float distanceToBreakOffPoint = Vector3.Distance(currentMoveTarget, transform.position);
+            float distanceToBreakOffPoint = Vector3.Distance(aIMovementControl.GetCurrentMoveTarget(), transform.position);
             if (distanceToBreakOffPoint <= breakOffTolerance)
             {
                 movingAwayFromCombatTarget = false;
-                currentMoveTarget = combatTarget.transform.position;
+                aIMovementControl.SetCurrentMoveTarget(combatTarget.transform.position);
             }
         }
 
@@ -181,19 +183,19 @@ namespace SC.Combat
             switch (randomBreakoff)
             {
                 case 0:
-                    currentMoveTarget = combatTarget.transform.position + new Vector3(0f, breakOffDistance, 0f);
+                    aIMovementControl.SetCurrentMoveTarget(combatTarget.transform.position + new Vector3(0f, breakOffDistance, 0f));
                     break;
                 case 1:
-                    currentMoveTarget = combatTarget.transform.position + new Vector3(0f, breakOffDistance * -1, 0f);
+                    aIMovementControl.SetCurrentMoveTarget(combatTarget.transform.position + new Vector3(0f, breakOffDistance * -1, 0f));
                     break;
                 case 2:
-                    currentMoveTarget = combatTarget.transform.position + new Vector3(breakOffDistance, breakOffDistance, 0f);
+                    aIMovementControl.SetCurrentMoveTarget(combatTarget.transform.position + new Vector3(breakOffDistance, breakOffDistance, 0f));
                     break;
                 case 3:
-                    currentMoveTarget = combatTarget.transform.position + new Vector3(breakOffDistance * -1, breakOffDistance * -1, 0f);
+                    aIMovementControl.SetCurrentMoveTarget(combatTarget.transform.position + new Vector3(breakOffDistance * -1, breakOffDistance * -1, 0f));
                     break;
                 default:
-                    currentMoveTarget = combatTarget.transform.position + new Vector3(0f, breakOffDistance, 0f);
+                    aIMovementControl.SetCurrentMoveTarget(combatTarget.transform.position + new Vector3(0f, breakOffDistance, 0f));
                     break;
             }
         }
@@ -204,6 +206,12 @@ namespace SC.Combat
             {
                 move.ChangeSpeed(1f);
             }
+        }
+
+        void OnDrawGizmosSelected()
+        {
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(transform.position, closestApproach);
         }
     }
 

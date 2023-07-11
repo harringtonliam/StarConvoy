@@ -160,6 +160,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1335817392556679988, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
+      propertyPath: shipDetails.shipName
+      value: ALF Will of the People
+      objectReference: {fileID: 0}
+    - target: {fileID: 1335817392556679988, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
       propertyPath: shipDetails.shipType
       value: Assault  Figher
       objectReference: {fileID: 0}
@@ -213,6 +218,26 @@ PrefabInstance:
         type: 3}
       propertyPath: maxNumberOfMissiles
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362497563675194476, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: range
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362497563675194476, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406073771361226992, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: range
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 5406073771361226992, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 6108854939554801348, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
@@ -355,7 +380,12 @@ PrefabInstance:
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
       propertyPath: range
-      value: 800
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
@@ -446,7 +476,12 @@ PrefabInstance:
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
       propertyPath: range
-      value: 800
+      value: 900
+      objectReference: {fileID: 0}
+    - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
+        type: 3}
+      propertyPath: timeBetweenShots
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}

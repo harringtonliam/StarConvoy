@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b1c4f56f150d243874d278e72fa0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifierPrefix: 
+  uniqueIdentifierPrefix: ZZZZ
   uniqueIdentifier: 
   faction: 0
   isSafe: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shipDetails:
-    shipName: Screw You Guys P
+    shipName: ALF Spirit of the People
     captainName: Lt Kosmatka
     shipType: Escort Figher
     shipSprite: {fileID: 21300000, guid: 463622401a4633a4eafce2a3bb41b840, type: 3}

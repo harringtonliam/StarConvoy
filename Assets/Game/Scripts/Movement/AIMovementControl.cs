@@ -14,13 +14,19 @@ namespace SC.Movement
 
 
         Move move;
-        Transform currentMoveTarget;
+        Vector3 currentMoveTarget;
+        Vector3 collisionAviodanceDirection;
+        bool collisonAvoidanceOn = false;
 
         // Start is called before the first frame update
         void Start()
         {
             move = GetComponent<Move>();
-            currentMoveTarget = moveTarget;
+            if (moveTarget != null)
+            {
+                currentMoveTarget = moveTarget.position;
+            }
+            
         }
 
         // Update is called once per frame
@@ -30,10 +36,20 @@ namespace SC.Movement
             FaceTarget();
         }
 
+        public Vector3 GetCurrentMoveTarget()
+        {
+            return currentMoveTarget;
+        }
+
+        public void SetCurrentMoveTarget(Vector3 newCurrentMoveTarget)
+        {
+            currentMoveTarget = newCurrentMoveTarget;
+        }
+
         public void SetMovementTarget(Transform newTarget)
         {
             moveTarget = newTarget;
-            currentMoveTarget = moveTarget;
+            currentMoveTarget = moveTarget.position;
         }
 
         public void SetCanControLSpeed(bool newSetting)
@@ -44,6 +60,18 @@ namespace SC.Movement
         public void SetCanManeuver(bool newSetting)
         {
             canManeuver = newSetting;
+        }
+
+        public void SetCollisionAvoidanceDirection(Vector3 direction, bool setOnOff)
+        {
+            
+            collisionAviodanceDirection = direction;
+            collisonAvoidanceOn = setOnOff;
+        }
+
+        public void SetCollisionAvoidanceDirection(bool setOnOff)
+        {
+            collisonAvoidanceOn = setOnOff;
         }
 
         private void ControlSpeed()
@@ -60,9 +88,19 @@ namespace SC.Movement
         private void FaceTarget()
         {
             if (!canManeuver) return;
-            if (currentMoveTarget == null) return;
+            if (currentMoveTarget == null && !collisonAvoidanceOn) return;
 
-            Vector3 targetDirection = currentMoveTarget.position - transform.position;
+            Vector3 targetDirection;
+
+            if (collisonAvoidanceOn)
+            {
+                targetDirection = collisionAviodanceDirection;
+            }
+            else
+            {
+                targetDirection = currentMoveTarget - transform.position;
+            }
+
 
             // The step size is equal to speed times frame time.
             float singleStep = turnSpeed * Time.deltaTime;
@@ -74,12 +112,7 @@ namespace SC.Movement
             transform.rotation = Quaternion.LookRotation(newDirection);
         }
 
-        private void OnCollisionEnter(Collision collision)
-        {
-            Debug.Log("Collidded with somthing " + gameObject.name + " thing=" + collision.gameObject.name);
-            currentMoveTarget = null;
-            moveTarget = null;
-        }
+
     }
 
 }

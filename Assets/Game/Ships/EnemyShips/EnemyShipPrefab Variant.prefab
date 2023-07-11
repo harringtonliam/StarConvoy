@@ -29,7 +29,39 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3003830955616679953}
-  m_RootOrder: 2
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4111058848904043779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3047713338756449907}
+  m_Layer: 0
+  m_Name: Ship
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3047713338756449907
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4111058848904043779}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 65419368628003333}
+  m_Father: {fileID: 3003830955616679953}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6148586806558413153
 GameObject:
@@ -59,8 +91,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3003830955616679953}
-  m_RootOrder: 1
+  m_Father: {fileID: 3047713338756449907}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7463861745466363260
 GameObject:
@@ -109,6 +141,31 @@ PrefabInstance:
         type: 3}
       propertyPath: uniqueIdentifierPrefix
       value: A
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: availableMessages.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: availableMessages.Array.data[0].messageText
+      value: Target Destroyed
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: availableMessages.Array.data[0].messageType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: availableMessages.Array.data[1].messageText
+      value: Reporting we have reached the jump gate. Jumping imminently. inement
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: availableMessages.Array.data[1].messageType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4739238668212051476, guid: d59db73673af4ee40a33f0ab52d9ef74,
         type: 3}
@@ -195,6 +252,11 @@ PrefabInstance:
       propertyPath: currentSpeed
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 6388318705235892364, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8613206061554606422, guid: d59db73673af4ee40a33f0ab52d9ef74,
         type: 3}
       propertyPath: maxHealth
@@ -208,6 +270,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7165552825504547617}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1459283858507810217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3003830955616679952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904d9796dc0f1fa4682deb3e0492b57d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTarget: {fileID: 0}
+  turnSpeed: 0.75
+  canControlSpeed: 1
+  canManeuver: 1
 --- !u!114 &2253552555050320551
 MonoBehaviour:
   m_ObjectHideFlags: 0

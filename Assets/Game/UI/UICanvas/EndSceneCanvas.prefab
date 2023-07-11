@@ -1634,7 +1634,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8336361285427935531}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5602841
+  m_Size: 0.5883992
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2783,7 +2783,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8336361285499497002}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5602841
+  m_Size: 0.5883992
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3265,7 +3265,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 8336361285963554624}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.5602841
+  m_Size: 0.5883992
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -4073,7 +4073,7 @@ RectTransform:
   m_Father: {fileID: 8336361284620179657}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.43971592}
+  m_AnchorMin: {x: 0, y: 0.41160083}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -4288,7 +4288,7 @@ RectTransform:
   m_Father: {fileID: 8336361284213625955}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.43971592}
+  m_AnchorMin: {x: 0, y: 0.41160083}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -6242,7 +6242,7 @@ RectTransform:
   m_Father: {fileID: 8336361284908161857}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.43971592}
+  m_AnchorMin: {x: 0, y: 0.41160083}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -9351,7 +9351,7 @@ PrefabInstance:
     - target: {fileID: 1391753133313241081, guid: 573d3acba53aa44469666cff988bca65,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1391753133313241081, guid: 573d3acba53aa44469666cff988bca65,
         type: 3}
@@ -9367,6 +9367,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SC.UI.EndSceneCanvasUI, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1391753133313241081, guid: 573d3acba53aa44469666cff988bca65,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 573d3acba53aa44469666cff988bca65, type: 3}
@@ -9466,7 +9471,7 @@ PrefabInstance:
     - target: {fileID: 1391753133313241062, guid: 573d3acba53aa44469666cff988bca65,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1245
+      value: 1245.0001
       objectReference: {fileID: 0}
     - target: {fileID: 1391753133313241062, guid: 573d3acba53aa44469666cff988bca65,
         type: 3}
@@ -10281,7 +10286,7 @@ PrefabInstance:
     - target: {fileID: 8275797240190138135, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1470
+      value: 1470.0001
       objectReference: {fileID: 0}
     - target: {fileID: 8275797240190138135, guid: 3494fe4502ae3304f99d826ec6cc2f8e,
         type: 3}

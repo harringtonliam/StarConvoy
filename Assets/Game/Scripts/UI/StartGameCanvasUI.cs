@@ -16,13 +16,11 @@ namespace SC.UI
 
         void OnEnable()
         {
-            Debug.Log("***StartGameCanvasUI onEnable***");
             SceneController.Instance.onSceneStarted += ShowStartGameUI;
         }
 
         private void OnDisable()
         {
-            Debug.Log("***StartGameCanvasUI OnDisable***");
             SceneController.Instance.onSceneStarted -= ShowStartGameUI;
         }
 
@@ -30,12 +28,10 @@ namespace SC.UI
         {
             ShowStartGameUI();
             player = GameObject.FindGameObjectWithTag("Player");
-
         }
 
         private void ShowStartGameUI()
         {
-            Debug.Log("***StartGameCanvasUI ShowStartGameUI***");
             uiCanvas.SetActive(true);
         }
 
@@ -48,7 +44,6 @@ namespace SC.UI
         {
             ToggleUI();
             SceneController.Instance.StartScene();
-
         }
 
         public void QuitButtonClicked()

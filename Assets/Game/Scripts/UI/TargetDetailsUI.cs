@@ -40,29 +40,33 @@ namespace SC.UI
             {
                 targetNameText.text = string.Empty;
                 targetFactionText.text = string.Empty;
-                targetImage.sprite = null;
+                targetImage.enabled = false;
+                factionBackground.enabled = false;
+           
                 return;
             }
+            targetImage.enabled = true;
+            factionBackground.enabled = true;
             ShipInformation shipInformation = target.GetComponent<ShipInformation>();
+            if (shipInformation== null)
+            {
+                Debug.Log("Missing SHip information for " + target.gameObject.name);
+                return;
+            }
             targetNameText.text = shipInformation.GetShipDetails().shipName;
             targetFactionText.text = target.GetFaction().ToString();
-            Debug.Log("TargetDetailsUI Setup");
             targetImage.sprite = shipInformation.GetShipDetails().shipSprite;
-            Debug.Log("TargetDetailsUI Setup set sprite");
             if (target.GetFaction() == playerFaction)
             {
                 factionBackground.color = Color.green;
-                Debug.Log("TargetDetailsUI same faction");
             }
             else if(target.GetFaction() == Faction.None)
             {
                 factionBackground.color = Color.grey;
-                Debug.Log("TargetDetailsUI neutral faction");
             }
             else
             {
                 factionBackground.color = Color.red;
-                Debug.Log("TargetDetailsUI enemy faction");
             }
         }
 

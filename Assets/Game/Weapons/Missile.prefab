@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 617634643}
   - component: {fileID: 1976015009459698778}
   - component: {fileID: 2661860916195374101}
+  - component: {fileID: 5790684609782777970}
   m_Layer: 0
   m_Name: Missile
   m_TagString: Untagged
@@ -91,10 +92,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 10
-  destroyVFX: {fileID: 1368064505912949508}
+  destroyVFXs: []
+  delayBetweenDestroyVFX: 0.2
   destroySFX: {fileID: 0}
   destroyDelaySeconds: 1
   currentHealth: 0
+  objectToHideOnDeath: {fileID: 0}
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!54 &1362312301565273295
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -157,7 +163,8 @@ MonoBehaviour:
   faction: 0
   isSafe: 0
   isHidden: 0
-  addToTargetStore: 0
+  isAddToTargetStore: 1
+  isExcludedFromConvoy: 0
 --- !u!114 &2661860916195374101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,6 +183,22 @@ MonoBehaviour:
     shipType: Missile
     shipSprite: {fileID: 0}
     captainSprite: {fileID: 0}
+--- !u!114 &5790684609782777970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2471883309638708137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 904d9796dc0f1fa4682deb3e0492b57d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveTarget: {fileID: 0}
+  turnSpeed: 1
+  canControlSpeed: 1
+  canManeuver: 1
 --- !u!1 &7904274305167980846
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,12 +343,6 @@ PrefabInstance:
 --- !u!4 &1176392763009716316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4587786598044862, guid: 587eaecaa621be74486f351c78b4f0a8,
-    type: 3}
-  m_PrefabInstance: {fileID: 1171831375845885154}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &1368064505912949508 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198009975391485926, guid: 587eaecaa621be74486f351c78b4f0a8,
     type: 3}
   m_PrefabInstance: {fileID: 1171831375845885154}
   m_PrefabAsset: {fileID: 0}

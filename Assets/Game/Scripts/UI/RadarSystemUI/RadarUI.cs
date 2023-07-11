@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using SC.Combat;
 using System;
@@ -8,8 +9,11 @@ namespace SC.UI.RadarSystemUI
 {
     public class RadarUI : MonoBehaviour
     {
+        [SerializeField] Transform targetLocatorUI;
         [SerializeField] Transform targetLocatorAboveUI;
+        [SerializeField] Transform targetLocatorAboveTopUI;
         [SerializeField] Transform targetLocatorBelowUI;
+        [SerializeField] TextMeshProUGUI distanceText;
         [SerializeField] float xScale = 0.083f;
         [SerializeField] float zScale = 0.016f;
         [SerializeField] float yScale = 0.0066f;
@@ -29,6 +33,13 @@ namespace SC.UI.RadarSystemUI
         void Update()
         {
             PositionTargetLocator(targetLocator.TargetPositionRelativeToPlayer);
+            DisplayDistance(targetLocator.TargetPositionRelativeToPlayer);
+        }
+
+        private void DisplayDistance(Vector3 targetPositionRelativeToPlayer)
+        {
+            float distanceToTarget = Vector3.Distance(new Vector3(0f, 0f, 0f), targetPositionRelativeToPlayer);
+            distanceText.text = distanceToTarget.ToString("########0");
         }
 
         private void PositionTargetLocator(Vector3 targetPositionRelativeToPlayer)
@@ -36,21 +47,17 @@ namespace SC.UI.RadarSystemUI
             Transform targetLocatorToUse = targetLocatorAboveUI;
             if(targetPositionRelativeToPlayer.y < 0f)
             {
-                targetLocatorBelowUI.gameObject.SetActive(true);
                 targetLocatorToUse = targetLocatorBelowUI;
-                targetLocatorAboveUI.gameObject.SetActive(false);
             }
             else
             {
-                targetLocatorAboveUI.gameObject.SetActive(true);
                 targetLocatorToUse = targetLocatorAboveUI;
-                targetLocatorBelowUI.gameObject.SetActive(false);
             }
 
 
             float xLocalPosition = Mathf.Clamp(targetPositionRelativeToPlayer.x * xScale, -250f, 250f);
             float yLocalPosition = Mathf.Clamp(targetPositionRelativeToPlayer.z * zScale, -100f, 100f);
-            targetLocatorToUse.localPosition = new Vector3(xLocalPosition, yLocalPosition, 0f);
+            targetLocatorUI.localPosition = new Vector3(xLocalPosition, yLocalPosition, 0f);
 
             float yLocalScale = Mathf.Clamp(Mathf.Abs(targetPositionRelativeToPlayer.y) * yScale, -20f, 20f);
             targetLocatorToUse.localScale = new Vector3(1f, yLocalScale, 1f);

@@ -44,7 +44,6 @@ namespace SC.Combat
 
         private void AddAllCombatTargets()
         {
-            Debug.Log("******Add Items to target store");
             var allCombatTargets = FindObjectsOfType<CombatTarget>();
             foreach (var item in allCombatTargets)
             {

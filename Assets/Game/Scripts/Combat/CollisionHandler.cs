@@ -25,8 +25,7 @@ namespace SC.Combat
 
         private void OnCollisionEnter(Collision collision)
         {
-            Debug.Log("OnCollisionEnter");
-
+            Debug.Log("Collison has happened  " + gameObject.name + " with " + collision.gameObject.name);
             Health otherHealth = collision.gameObject.GetComponent<Health>();
             if (otherHealth != null)
             {

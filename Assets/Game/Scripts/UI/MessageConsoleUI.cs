@@ -20,6 +20,7 @@ namespace SC.UI
             player = GameObject.FindGameObjectWithTag("Player");
             messageReceiver = player.GetComponent<MessageReceiver>();
             messageReceiver.onMessageReceived += StartDisplayMessage;
+            messageText.text = string.Empty;
         }
 
         private void OnDisable()
@@ -42,7 +43,7 @@ namespace SC.UI
 
         private IEnumerator DisplayMessage()
         {
-            messageText.text = messageReceiver.GetCurrentMessage().message;
+            messageText.text = messageReceiver.GetCurrentMessage().shipInformation.GetShipDetails().shipName + ": " + messageReceiver.GetCurrentMessage().message;
             yield return new WaitForSeconds(messageDisplayTime);
             messageText.text = string.Empty;
         }

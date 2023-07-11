@@ -35,7 +35,7 @@ Transform:
   - {fileID: 5240114222186972663}
   - {fileID: 6108584187088191182}
   m_Father: {fileID: 3843649394945180658}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712290801244416290
 GameObject:
@@ -102,7 +102,7 @@ Transform:
   - {fileID: 895281198827179440}
   - {fileID: 8677619265774571073}
   m_Father: {fileID: 3843649394945180658}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5679276881111502812
 GameObject:
@@ -1342,6 +1342,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
         type: 3}
+      propertyPath: availableMessages.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: availableMessages.Array.data[3].messageText
+      value: We have arrived at the Station safely
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: availableMessages.Array.data[3].messageType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
       propertyPath: availableMessages.Array.data[0].timeSinceLastMessage
       value: 31
       objectReference: {fileID: 0}
@@ -1353,6 +1368,11 @@ PrefabInstance:
     - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
         type: 3}
       propertyPath: availableMessages.Array.data[2].timeSinceLastMessage
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: availableMessages.Array.data[3].timeSinceLastMessage
       value: 31
       objectReference: {fileID: 0}
     - target: {fileID: 4739238668212051476, guid: d59db73673af4ee40a33f0ab52d9ef74,
@@ -1429,6 +1449,11 @@ PrefabInstance:
         type: 3}
       propertyPath: maxSpeed
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6388318705235892364, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8613206061554606422, guid: d59db73673af4ee40a33f0ab52d9ef74,
         type: 3}
@@ -1507,6 +1532,7 @@ MonoBehaviour:
   moveTarget: {fileID: 0}
   turnSpeed: 0.5
   canControlSpeed: 1
+  canManeuver: 1
 --- !u!114 &7083708275973243971
 MonoBehaviour:
   m_ObjectHideFlags: 0
