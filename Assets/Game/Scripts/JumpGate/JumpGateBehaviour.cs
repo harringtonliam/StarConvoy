@@ -90,10 +90,9 @@ namespace SC.JumpGate
            }
             if (aIMovementControl != null)
             {
-                aIMovementControl.SetCanControLSpeed(false);
+                aIMovementControl.SetDesiredSpeed(0f);
                 aIMovementControl.SetCanManeuver(false);
             }
-            move.ChangeSpeed(0f);
         }
 
         private void PlayJumpVFX()

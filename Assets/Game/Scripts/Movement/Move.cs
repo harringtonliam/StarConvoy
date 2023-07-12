@@ -16,6 +16,7 @@ namespace SC.Movement
 
         public float CurrentSpeed { get { return currentSpeed; } }   
         public float MaxSpeed { get { return maxSpeed;  } }
+        public float MinSpeed { get { return minSpeed; } }
 
         public bool canChangeSpeed = true;
 

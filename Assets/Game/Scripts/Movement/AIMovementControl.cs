@@ -11,6 +11,7 @@ namespace SC.Movement
         [SerializeField] float turnSpeed = 10f;
         [SerializeField] bool canControlSpeed = true;
         [SerializeField] bool canManeuver = true;
+        [SerializeField] float desiredSpeed;
 
 
         Move move;
@@ -26,6 +27,7 @@ namespace SC.Movement
             {
                 currentMoveTarget = moveTarget.position;
             }
+            desiredSpeed = move.MaxSpeed;
             
         }
 
@@ -62,6 +64,11 @@ namespace SC.Movement
             canManeuver = newSetting;
         }
 
+        public void SetDesiredSpeed(float newDesiredSpeed)
+        {
+            desiredSpeed = Mathf.Clamp(newDesiredSpeed, move.MinSpeed, move.MaxSpeed);
+        }
+
         public void SetCollisionAvoidanceDirection(Vector3 direction, bool setOnOff)
         {
             
@@ -79,9 +86,13 @@ namespace SC.Movement
         {
             if (!canControlSpeed) return;
 
-            if (move.CurrentSpeed < move.MaxSpeed)
+            if (move.CurrentSpeed < desiredSpeed)
             {
                 move.ChangeSpeed(1f);
+            }
+            else if (move.CurrentSpeed > desiredSpeed)
+            {
+                move.ChangeSpeed(-1f);
             }
         }
 
