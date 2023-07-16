@@ -26,12 +26,6 @@ namespace SC.Messaging
             yield return new WaitForSeconds(sendAfterSeconds);
             messageSender.TriggerSendMessageProcess(messageType);
         }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 
 }

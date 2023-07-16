@@ -800,7 +800,7 @@ PrefabInstance:
     - target: {fileID: 3003830955616679954, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: maxSpeed
-      value: 175
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3047713338756449907, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
