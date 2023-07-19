@@ -30,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 1459283858507810217, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: turnSpeed
-      value: 0.8
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 3003830955616679954, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: maxSpeed
-      value: 170
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3003830955616679954, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
