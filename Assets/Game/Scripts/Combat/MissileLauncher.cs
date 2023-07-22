@@ -62,7 +62,7 @@ namespace SC.Combat
             currentTarget = target;
             isLockAquired = false;
             secondsSpentAquiringLock = 0f;
-            TargetAquiredUpdated();
+            OnTargetAquiredUpdated();
         }
 
         private IEnumerator Shooting()
@@ -127,10 +127,7 @@ namespace SC.Combat
             if (hasTargetBeenAquired && !isLockAquired)
             {
                 isLockAquired = hasTargetBeenAquired;
-                if (TargetAquiredUpdated != null)
-                {
-                    TargetAquiredUpdated();
-                }
+                OnTargetAquiredUpdated();
             }
 
             if (isLockAquired)
@@ -141,7 +138,7 @@ namespace SC.Combat
             if ((secondsSinceLockAquired > secondsLockLastsFor  && isLockAquired)  || (currentTarget == null && isLockAquired))
             {
                 isLockAquired = false;
-                TargetAquiredUpdated();
+                OnTargetAquiredUpdated();
             }
 
         }
@@ -152,6 +149,15 @@ namespace SC.Combat
             {
                 missileNumberUpdated();
             }
+        }
+
+        private void OnTargetAquiredUpdated()
+        {
+            if (TargetAquiredUpdated != null)
+            {
+                TargetAquiredUpdated();
+            }
+
         }
     }
 

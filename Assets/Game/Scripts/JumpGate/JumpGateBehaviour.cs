@@ -4,13 +4,14 @@ using UnityEngine;
 using SC.Messaging;
 using SC.Combat;
 using SC.Movement;
+using SC.Control;
 using System;
 
 namespace SC.JumpGate
 {
     public class JumpGateBehaviour : MonoBehaviour
     {
-        [SerializeField] ParticleSystem jumpVFX;
+        [SerializeField] ParticleSystem[] jumpVFXs;
 
         Move move;
         MessageSender messageSender;
@@ -51,12 +52,11 @@ namespace SC.JumpGate
         public void EnableDisablePlayerControls(bool enable)
         {
             if (gameObject.tag != "Player") return;
-            SpeedControl speedControl = GetComponent<SpeedControl>();
-            speedControl.SetEnabled(enable);
-            Rotate rotate = GetComponent<Rotate>();
-            rotate.SetEnabled(enable);
-            WeaponController weaponController = GetComponent<WeaponController>();
-            weaponController.SetEnabled(enable);
+            PlayerController playerController = GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                playerController.EnableDIsablePlayerControl(enable);
+            }
         }
 
         private void SendJumpingMessage()
@@ -98,17 +98,24 @@ namespace SC.JumpGate
 
         private void PlayJumpVFX()
         {
-            if (jumpVFX != null)
+            for (int i = 0; i < jumpVFXs.Length; i++)
             {
-                jumpVFX.Play();
+                if (jumpVFXs[i] != null)
+                {
+                    jumpVFXs[i].Play();
+                }
             }
+
         }
 
         private void StopJumpVFX()
         {
-            if (jumpVFX != null)
+            for (int i = 0; i < jumpVFXs.Length; i++)
             {
-                jumpVFX.Stop();
+                if (jumpVFXs[i] != null)
+                {
+                    jumpVFXs[i].Stop();
+                }
             }
         }
     }

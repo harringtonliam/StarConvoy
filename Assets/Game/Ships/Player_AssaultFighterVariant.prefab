@@ -261,9 +261,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7299015006416723808, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
-      propertyPath: laserWeapons.Array.data[2]
+      propertyPath: laserWeapons.Array.data[1]
       value: 
       objectReference: {fileID: 8457253607817319132}
+    - target: {fileID: 7299015006416723808, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: laserWeapons.Array.data[2]
+      value: 
+      objectReference: {fileID: 5254832083748475684}
     - target: {fileID: 7299015006416723808, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: laserWeapons.Array.data[3]
@@ -304,6 +309,18 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 182258273173808968}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5254832083748475684 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5362497563675194476, guid: dece10ac34ddb5e4080feaf49490211a,
+    type: 3}
+  m_PrefabInstance: {fileID: 182258273173808968}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eac12059b7e7ce40a12ddd474718b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8638160265163745499 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8459847048569294739, guid: dece10ac34ddb5e4080feaf49490211a,
