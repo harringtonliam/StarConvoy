@@ -91,6 +91,7 @@ namespace SC.JumpGate
             if (aIMovementControl != null)
             {
                 aIMovementControl.SetDesiredSpeed(0f);
+                aIMovementControl.SetCanControLSpeed(true);
                 aIMovementControl.SetCanManeuver(false);
             }
         }

@@ -60,6 +60,9 @@ namespace SC.Combat
         public void UpdateTarget(CombatTarget target)
         {
             currentTarget = target;
+            isLockAquired = false;
+            secondsSpentAquiringLock = 0f;
+            TargetAquiredUpdated();
         }
 
         private IEnumerator Shooting()
@@ -98,6 +101,16 @@ namespace SC.Combat
                     }
                     isLockingStarted = true;
                 }
+                else
+                {
+                    isLockingStarted = false;
+                    secondsSpentAquiringLock = 0f;
+                }
+            }
+            else
+            {
+                isLockingStarted = false;
+                secondsSpentAquiringLock = 0f;
             }
 
             if (isLockingStarted)
@@ -111,7 +124,7 @@ namespace SC.Combat
                 hasTargetBeenAquired = true;
             }
 
-            if (hasTargetBeenAquired != isLockAquired)
+            if (hasTargetBeenAquired && !isLockAquired)
             {
                 isLockAquired = hasTargetBeenAquired;
                 if (TargetAquiredUpdated != null)
@@ -122,7 +135,7 @@ namespace SC.Combat
 
             if (isLockAquired)
             {
-                secondsSinceLockAquired = Time.deltaTime;
+                secondsSinceLockAquired += Time.deltaTime;
             }
 
             if ((secondsSinceLockAquired > secondsLockLastsFor  && isLockAquired)  || (currentTarget == null && isLockAquired))
