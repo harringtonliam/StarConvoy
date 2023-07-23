@@ -888,8 +888,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3248953950415940049}
   m_HandleRect: {fileID: 3248953950415940048}
   m_Direction: 2
-  m_Value: 1.0000006
-  m_Size: 0.8966565
+  m_Value: 1
+  m_Size: 0.8450981
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1595,9 +1595,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDetailItemPrefab: {fileID: 2652208576613094146, guid: 963f276b383348648b354ac8ae727d73,
     type: 3}
-  captainNameText: {fileID: 3248953950012924393}
   shipTypeText: {fileID: 3248953949357173407}
-  captianImage: {fileID: 3248953950407713640}
   shipImage: {fileID: 3248953949601821084}
 --- !u!1 &3248953950045981419
 GameObject:
@@ -2011,7 +2009,7 @@ RectTransform:
   m_Father: {fileID: 3248953949670468406}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.10334349}
+  m_AnchorMin: {x: 0, y: 0.15490192}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -3318,32 +3316,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDetailsContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 6682038647593437149, guid: 15f9ab91db47c934a9d1539f051fa28f,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 76
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15f9ab91db47c934a9d1539f051fa28f, type: 3}
---- !u!114 &3248953950012924393 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6682038646991955490, guid: 15f9ab91db47c934a9d1539f051fa28f,
-    type: 3}
-  m_PrefabInstance: {fileID: 8191419731320522699}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &3248953950407713640 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6682038646613943459, guid: 15f9ab91db47c934a9d1539f051fa28f,
-    type: 3}
-  m_PrefabInstance: {fileID: 8191419731320522699}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &3248953950507612070 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6682038646648336493, guid: 15f9ab91db47c934a9d1539f051fa28f,

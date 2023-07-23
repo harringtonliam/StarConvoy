@@ -11,17 +11,6 @@ namespace SC.Combat
         [SerializeField] bool destroySelfOnCollision = false;
         [SerializeField] bool multiplyDamageByVelocity = true;
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         private void OnCollisionEnter(Collision collision)
         {

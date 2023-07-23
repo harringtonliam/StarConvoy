@@ -2974,7 +2974,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_EscortFighterVariant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5410627249486235308, guid: deaa54149060c8e4a8e7e29703ef031e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: deaa54149060c8e4a8e7e29703ef031e, type: 3}
 --- !u!1001 &2114084368
 PrefabInstance:

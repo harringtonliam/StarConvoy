@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b4239f0de2ed4642a370b9689f6bacd, type: 3}
   m_Name: Player InformationFemale04A
   m_EditorClassIdentifier: 
-  playerinfoID: 957a882c-bb80-4791-9c10-585c96b1cbeb
+  playerinfoID: 13e8ddd5-d8d7-439d-b98c-afa65ff2dd7f
   displayName: Player Images Option 1
   portrait: {fileID: 21300000, guid: 36dc9708156729749b4f9589499a55ae, type: 3}
   fullimage: {fileID: 21300000, guid: 60909732a3a7661408fd20d5ff6a066b, type: 3}

@@ -12,9 +12,7 @@ namespace SC.UI
     public class PlayerDetailUI : MonoBehaviour
     {
         [SerializeField] PlayerDetailItem playerDetailItemPrefab;
-        [SerializeField] TextMeshProUGUI captainNameText;
         [SerializeField] TextMeshProUGUI shipTypeText;
-        [SerializeField] Image captianImage;
         [SerializeField] Image shipImage;
 
 
@@ -34,12 +32,8 @@ namespace SC.UI
         private void SetShipInfo()
         {
             ShipInformation shipInformation = player.GetComponent<ShipInformation>();
-            PlayerInformationStore playerInformationStore = player.GetComponent<PlayerInformationStore>();
-
             var shipDetails = shipInformation.GetShipDetails();
-            captainNameText.text = playerInformationStore.PlayerName;
             shipTypeText.text = shipDetails.shipType;
-            captianImage.sprite = playerInformationStore.PlayerInformation.Portrait; 
             shipImage.sprite = shipDetails.shipSprite;
         }
 

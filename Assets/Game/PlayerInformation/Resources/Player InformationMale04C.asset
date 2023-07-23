@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4239f0de2ed4642a370b9689f6bacd, type: 3}
-  m_Name: Player InformationMale04A
+  m_Name: Player InformationMale04C
   m_EditorClassIdentifier: 
-  playerinfoID: ebd8422c-99d4-4fec-adc8-62fff5617a4d
+  playerinfoID: cd91be54-e17f-4d43-871b-b99646d5f5da
   displayName: Player Images Option 1
-  portrait: {fileID: 21300000, guid: 0487d464b4eea524184db7720d133553, type: 3}
-  fullimage: {fileID: 21300000, guid: 2c09b260b62cc4e43a778b41c8a914c8, type: 3}
+  portrait: {fileID: 21300000, guid: 57d5a0a1a2eb04648a6eea8f7cbe779a, type: 3}
+  fullimage: {fileID: 21300000, guid: ed2309ef7e111f04592a668ff4518556, type: 3}
