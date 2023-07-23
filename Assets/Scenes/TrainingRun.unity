@@ -477,7 +477,7 @@ PrefabInstance:
     - target: {fileID: 8900898718751165999, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9000
+      value: 10120.75
       objectReference: {fileID: 0}
     - target: {fileID: 8900898718751165999, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
@@ -856,6 +856,16 @@ PrefabInstance:
       propertyPath: moveTarget
       value: 
       objectReference: {fileID: 193853230129223788}
+    - target: {fileID: 5766373470398066678, guid: c4f197ceb7a82e6449d902069ebfb876,
+        type: 3}
+      propertyPath: availableMessages.Array.data[2].messageText
+      value: We have reached our destination.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766373470398066678, guid: c4f197ceb7a82e6449d902069ebfb876,
+        type: 3}
+      propertyPath: availableMessages.Array.data[2].messageType
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f197ceb7a82e6449d902069ebfb876, type: 3}
 --- !u!4 &853996854 stripped
@@ -1105,7 +1115,7 @@ PrefabInstance:
     - target: {fileID: 8900898718751165999, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9000
+      value: 9109.25
       objectReference: {fileID: 0}
     - target: {fileID: 8900898718751165999, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
@@ -1275,7 +1285,7 @@ PrefabInstance:
     - target: {fileID: 8900898718751165999, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10000
+      value: 10453.5
       objectReference: {fileID: 0}
     - target: {fileID: 8900898718751165999, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
@@ -1500,7 +1510,7 @@ PrefabInstance:
     - target: {fileID: 8114809568289352459, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
       propertyPath: shipDetails.shipName
-      value: Pratice Target 9
+      value: Pratice Target 19
       objectReference: {fileID: 0}
     - target: {fileID: 8900898718751165998, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
@@ -2166,6 +2176,36 @@ PrefabInstance:
       propertyPath: moveTarget
       value: 
       objectReference: {fileID: 1799418535}
+    - target: {fileID: 5766373470398066678, guid: c4f197ceb7a82e6449d902069ebfb876,
+        type: 3}
+      propertyPath: availableMessages.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766373470398066678, guid: c4f197ceb7a82e6449d902069ebfb876,
+        type: 3}
+      propertyPath: availableMessages.Array.data[2].messageText
+      value: Arrived at the beacons on schedule
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766373470398066678, guid: c4f197ceb7a82e6449d902069ebfb876,
+        type: 3}
+      propertyPath: availableMessages.Array.data[2].messageType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766373470398066678, guid: c4f197ceb7a82e6449d902069ebfb876,
+        type: 3}
+      propertyPath: availableMessages.Array.data[3].messageText
+      value: Reporting we have reached the jump gate. Jumping imminently.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766373470398066678, guid: c4f197ceb7a82e6449d902069ebfb876,
+        type: 3}
+      propertyPath: availableMessages.Array.data[3].messageType
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5766373470398066678, guid: c4f197ceb7a82e6449d902069ebfb876,
+        type: 3}
+      propertyPath: availableMessages.Array.data[3].timeSinceLastMessage
+      value: 31
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f197ceb7a82e6449d902069ebfb876, type: 3}
 --- !u!4 &1574122201 stripped
@@ -2548,7 +2588,7 @@ PrefabInstance:
     - target: {fileID: 8900898718751165999, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9000
+      value: 9585.5
       objectReference: {fileID: 0}
     - target: {fileID: 8900898718751165999, guid: 685966533b8ef414f9c66c25c0990575,
         type: 3}
@@ -4792,6 +4832,11 @@ PrefabInstance:
       propertyPath: sceneTransition
       value: 
       objectReference: {fileID: 1091152456}
+    - target: {fileID: 4095333640363654751, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
+        type: 3}
+      propertyPath: endSceneDelaySeconds
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7758067363223438214, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
         type: 3}
       propertyPath: m_Name

@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 628275853294948412}
   - component: {fileID: 427583997949944573}
   - component: {fileID: 6490532337898793014}
+  - component: {fileID: 564956065432676723}
   m_Layer: 0
   m_Name: AllianceStation
   m_TagString: Untagged
@@ -199,6 +200,21 @@ MonoBehaviour:
     shipType: Aubrey
     shipSprite: {fileID: 21300000, guid: 1e8e3932db18acf4cb43f51869bdc01e, type: 3}
     captainSprite: {fileID: 21300000, guid: 8845b2ce3448519499f3bca50a3cc816, type: 3}
+--- !u!114 &564956065432676723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778295881249760153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!1 &4778295881407874368
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +1946,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d8dfda64987cff5419b3497636a384d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b2dea197ce2524f8fad180d568d80a, type: 3}
+--- !u!1 &8935199092647120991 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1445680428104048, guid: 85b2dea197ce2524f8fad180d568d80a,
+    type: 3}
+  m_PrefabInstance: {fileID: 8936574244343507247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &883492826697173681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8935199092647120991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!4 &8940905995614418337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4904150697385102, guid: 85b2dea197ce2524f8fad180d568d80a,

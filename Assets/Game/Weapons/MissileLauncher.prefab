@@ -78,7 +78,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   missilePrefab: {fileID: 2471883309638708137, guid: 6388ed42315b71d45be7ef76e8ef0d83,
     type: 3}
-  targetingRange: 1000
+  targetingRange: 2000
   timeBetweenShots: 2
   maxNumberOfMissiles: 2
   secondsNeededForMissileLock: 2
