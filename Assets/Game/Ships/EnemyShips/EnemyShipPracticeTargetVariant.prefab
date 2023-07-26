@@ -1654,7 +1654,7 @@ PrefabInstance:
     - target: {fileID: 65419368628003333, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 773549695718595229, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -1764,7 +1764,7 @@ PrefabInstance:
     - target: {fileID: 2500623838923840821, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: shipDetails.shipName
-      value: Pratice Target
+      value: Practice Target
       objectReference: {fileID: 0}
     - target: {fileID: 2500623838923840821, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -1857,6 +1857,11 @@ PrefabInstance:
       propertyPath: currentSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3047713338756449907, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3985022169583691331, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_IsActive
@@ -1870,7 +1875,7 @@ PrefabInstance:
     - target: {fileID: 5397628054040721169, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6668896336619458931, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -1890,7 +1895,17 @@ PrefabInstance:
     - target: {fileID: 7884827932692781468, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: availableMessages.Array.size
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884827932692781468, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: availableMessages.Array.data[0].messageText
+      value: Target Destroyed
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884827932692781468, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: availableMessages.Array.data[0].timeSinceLastMessage
+      value: 31
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7f27e1e2ee67be4b9ced45146c70129, type: 3}

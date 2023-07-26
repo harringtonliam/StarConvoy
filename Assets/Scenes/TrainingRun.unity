@@ -2972,7 +2972,7 @@ PrefabInstance:
     - target: {fileID: 5835599846456356168, guid: deaa54149060c8e4a8e7e29703ef031e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -976.5
+      value: -962.5
       objectReference: {fileID: 0}
     - target: {fileID: 5835599846456356168, guid: deaa54149060c8e4a8e7e29703ef031e,
         type: 3}
@@ -4738,6 +4738,26 @@ PrefabInstance:
       propertyPath: uniqueIdentifierPrefix
       value: STAT
       objectReference: {fileID: 0}
+    - target: {fileID: 443872946335952348, guid: f1c9e0f18582bb64998d2262a01700a7,
+        type: 3}
+      propertyPath: availableMessages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 443872946335952348, guid: f1c9e0f18582bb64998d2262a01700a7,
+        type: 3}
+      propertyPath: availableMessages.Array.data[1].messageText
+      value: Training run begins.  Launch when you are ready.
+      objectReference: {fileID: 0}
+    - target: {fileID: 443872946335952348, guid: f1c9e0f18582bb64998d2262a01700a7,
+        type: 3}
+      propertyPath: availableMessages.Array.data[1].messageType
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 443872946335952348, guid: f1c9e0f18582bb64998d2262a01700a7,
+        type: 3}
+      propertyPath: availableMessages.Array.data[1].timeSinceLastMessage
+      value: 31
+      objectReference: {fileID: 0}
     - target: {fileID: 4778295881249760153, guid: f1c9e0f18582bb64998d2262a01700a7,
         type: 3}
       propertyPath: m_Name
@@ -4815,6 +4835,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1c9e0f18582bb64998d2262a01700a7, type: 3}
+--- !u!1 &4778295882235102605 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4778295881249760153, guid: f1c9e0f18582bb64998d2262a01700a7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4778295882235102604}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4778295882235102606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778295882235102605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f4d73710161e404b9fe0c595e40a3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageType: 6
+  sendAfterSeconds: 1
 --- !u!1001 &7758067363888702226
 PrefabInstance:
   m_ObjectHideFlags: 0

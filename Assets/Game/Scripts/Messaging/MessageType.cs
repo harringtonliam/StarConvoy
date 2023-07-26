@@ -11,7 +11,8 @@ namespace SC.Messaging
         JumpDone,
         ReachedSafety,
         EngineTrouble,
-        IncomingObject
+        IncomingObject,
+        SceneStart
     }
 
 }

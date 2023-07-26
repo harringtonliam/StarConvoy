@@ -114,6 +114,7 @@ GameObject:
   - component: {fileID: 427583997949944573}
   - component: {fileID: 6490532337898793014}
   - component: {fileID: 564956065432676723}
+  - component: {fileID: 443872946335952348}
   m_Layer: 0
   m_Name: AllianceStation
   m_TagString: Untagged
@@ -215,6 +216,24 @@ MonoBehaviour:
   damageDoneToOtherOnCollision: 5000
   destroySelfOnCollision: 0
   multiplyDamageByVelocity: 1
+--- !u!114 &443872946335952348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778295881249760153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3897633fad4b30345ba61791606403af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageReceiver: {fileID: 0}
+  timeToWaitBetweenMessages: 30
+  availableMessages:
+  - messageType: 0
+    messageText: 
+    timeSinceLastMessage: 0
 --- !u!1 &4778295881407874368
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +585,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d8dfda64987cff5419b3497636a384d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b2dea197ce2524f8fad180d568d80a, type: 3}
+--- !u!1 &958631628399696546 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1445680428104048, guid: 85b2dea197ce2524f8fad180d568d80a,
+    type: 3}
+  m_PrefabInstance: {fileID: 957187224793244626}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1555703179777707390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958631628399696546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!4 &962064948553973596 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4904150697385102, guid: 85b2dea197ce2524f8fad180d568d80a,
@@ -727,6 +767,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3122571073227114500}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3121200212215656820 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1445680428104048, guid: 85b2dea197ce2524f8fad180d568d80a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3122571073227114500}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4691515362594193239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3121200212215656820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!1001 &3734344039722980261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -951,6 +1012,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d8dfda64987cff5419b3497636a384d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 85b2dea197ce2524f8fad180d568d80a, type: 3}
+--- !u!1 &3884132363838376064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1445680428104048, guid: 85b2dea197ce2524f8fad180d568d80a,
+    type: 3}
+  m_PrefabInstance: {fileID: 3882691224809730544}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5645905114320319837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3884132363838376064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!4 &3887586505860935038 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4904150697385102, guid: 85b2dea197ce2524f8fad180d568d80a,
@@ -1642,6 +1724,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7103570828869744520}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7102694340203089656 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1445680428104048, guid: 85b2dea197ce2524f8fad180d568d80a,
+    type: 3}
+  m_PrefabInstance: {fileID: 7103570828869744520}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2515771484557208103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7102694340203089656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!1001 &7257883453212902150
 PrefabInstance:
   m_ObjectHideFlags: 0

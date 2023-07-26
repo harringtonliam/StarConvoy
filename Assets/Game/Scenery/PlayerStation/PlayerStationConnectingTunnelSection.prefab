@@ -111,6 +111,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d8dfda64987cff5419b3497636a384d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6159d34043c40e2489056722c7071e49, type: 3}
+--- !u!1 &711675216440035661 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1758027998243264, guid: 6159d34043c40e2489056722c7071e49,
+    type: 3}
+  m_PrefabInstance: {fileID: 713361204873830541}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3321050962396896726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711675216440035661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!4 &718282410600087367 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4930448529956810, guid: 6159d34043c40e2489056722c7071e49,
@@ -197,6 +218,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1113335805309313316}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1113906360681515236 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1758027998243264, guid: 6159d34043c40e2489056722c7071e49,
+    type: 3}
+  m_PrefabInstance: {fileID: 1113335805309313316}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5946262827997419039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1113906360681515236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!1001 &2285265649964746542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -277,6 +319,27 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2285265649964746542}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2283566813337497326 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1758027998243264, guid: 6159d34043c40e2489056722c7071e49,
+    type: 3}
+  m_PrefabInstance: {fileID: 2285265649964746542}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7723008443162962441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2283566813337497326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!1001 &3506808375856947129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -494,6 +557,27 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d8dfda64987cff5419b3497636a384d6, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6159d34043c40e2489056722c7071e49, type: 3}
+--- !u!1 &8656810510249352518 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1758027998243264, guid: 6159d34043c40e2489056722c7071e49,
+    type: 3}
+  m_PrefabInstance: {fileID: 8657349643632440454}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3736448796994301002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656810510249352518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cc00d11ca7c4e46ae10f6413e7bbc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageDoneToOtherOnCollision: 5000
+  destroySelfOnCollision: 0
+  multiplyDamageByVelocity: 1
 --- !u!4 &8661708058317482828 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4930448529956810, guid: 6159d34043c40e2489056722c7071e49,
