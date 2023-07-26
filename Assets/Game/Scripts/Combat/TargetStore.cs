@@ -167,6 +167,15 @@ namespace SC.Combat
             return new SortedDictionary<string, CombatTarget>(filteredDictionary);
         }
 
+        public SortedDictionary<string, CombatTarget> PlayerCombatTargetList()
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                        where kpv.Value.GetIsHidden() == false && kpv.Value.gameObject.tag != "Player"
+                                        select kpv;
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+        }
+
         public SortedDictionary<string, DestroyedTarget> DestroyedTargetsInFaction(Faction faction)
         {
             var filteredCombatTargets = from kpv in destroyedTargets
@@ -191,6 +200,15 @@ namespace SC.Combat
         {
             var filteredCombatTargets = from kpv in availableTargets
                                         where kpv.Value.GetFaction() == faction && kpv.Value.GetFaction() != neutralFaction && kpv.Value.GetIsSafe() == false && kpv.Value.GetIsExcludedFromConvoy() == false
+                                        select kpv;
+            var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
+            return new SortedDictionary<string, CombatTarget>(filteredDictionary);
+        }
+
+        public SortedDictionary<string, CombatTarget> ConvoyShipsThatAreNotSafeExceptPlayer(Faction faction)
+        {
+            var filteredCombatTargets = from kpv in availableTargets
+                                        where kpv.Value.GetFaction() == faction && kpv.Value.GetFaction() != neutralFaction && kpv.Value.GetIsSafe() == false && kpv.Value.GetIsExcludedFromConvoy() == false && kpv.Value.gameObject.tag != "Player"
                                         select kpv;
             var filteredDictionary = filteredCombatTargets.ToDictionary(kpv => kpv.Key, kpv => kpv.Value);
             return new SortedDictionary<string, CombatTarget>(filteredDictionary);

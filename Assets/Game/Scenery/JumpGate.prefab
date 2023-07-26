@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: -3810944541471838417}
   - component: {fileID: 5675589442580323071}
   - component: {fileID: 6875742739009486654}
+  - component: {fileID: 7093760415473251742}
   m_Layer: 0
   m_Name: JumpGate
   m_TagString: Untagged
@@ -100,6 +101,24 @@ MonoBehaviour:
     shipType: Jump Gate
     shipSprite: {fileID: 21300000, guid: 1708f870e6c187843a87cf7887adcb01, type: 3}
     captainSprite: {fileID: 21300000, guid: ca13468b66160ce41a52d211f4661457, type: 3}
+--- !u!114 &7093760415473251742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3433631675140486788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3897633fad4b30345ba61791606403af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messageReceiver: {fileID: 0}
+  timeToWaitBetweenMessages: 30
+  availableMessages:
+  - messageType: 2
+    messageText: All ships jumped.  Proceed to Jump Gate
+    timeSinceLastMessage: 31
 --- !u!1001 &3433631674403671354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -612,6 +631,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7130063166217705981, guid: c86325a64a480494db81fa9fc9f38232,
+        type: 3}
+      propertyPath: messageSender
+      value: 
+      objectReference: {fileID: 7093760415473251742}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c86325a64a480494db81fa9fc9f38232, type: 3}
 --- !u!4 &4171149575858853329 stripped

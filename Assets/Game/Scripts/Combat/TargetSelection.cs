@@ -103,7 +103,7 @@ namespace SC.Combat
             {
                 currentTargetIndex++;
 
-                if (currentTargetIndex >= TargetStore.Instance.AvailableTargets.Count)
+                if (currentTargetIndex >= TargetStore.Instance.PlayerCombatTargetList().Count)
                 {
                     currentTargetIndex = 0;
                     
@@ -115,14 +115,14 @@ namespace SC.Combat
                 currentTargetIndex--;
                 if (currentTargetIndex < 0)
                 {
-                    currentTargetIndex = TargetStore.Instance.AvailableTargets.Count - 1;
+                    currentTargetIndex = TargetStore.Instance.PlayerCombatTargetList().Count - 1;
                 }
                 indexChanged = true;
             }
 
             if (indexChanged)
             {
-                currentTarget = TargetStore.Instance.AvailableTargets.ElementAt(currentTargetIndex).Value;
+                currentTarget = TargetStore.Instance.PlayerCombatTargetList().ElementAt(currentTargetIndex).Value;
                 TargetChanged();
             }
 

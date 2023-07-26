@@ -1115,12 +1115,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b1fbf5c6e21dcb4bb773f085e667393, type: 3}
---- !u!198 &6686705025296011862 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 198950722453169886, guid: 1b1fbf5c6e21dcb4bb773f085e667393,
-    type: 3}
-  m_PrefabInstance: {fileID: 6775984953910260872}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6780375761125890698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4954118487911938, guid: 1b1fbf5c6e21dcb4bb773f085e667393,
@@ -1347,6 +1341,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
         type: 3}
+      propertyPath: availableMessages.Array.data[2].messageText
+      value: We have reached the jump gate. Jumping imminently.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1017146588235422397, guid: d59db73673af4ee40a33f0ab52d9ef74,
+        type: 3}
       propertyPath: availableMessages.Array.data[3].messageText
       value: We have arrived at the Station safely
       objectReference: {fileID: 0}
@@ -1516,7 +1515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b575766ab3e0204496a2c0d48321486, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVFX: {fileID: 6686705025296011862}
+  jumpVFXs: []
 --- !u!114 &-1927056599215981693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1533,6 +1532,7 @@ MonoBehaviour:
   turnSpeed: 0.5
   canControlSpeed: 1
   canManeuver: 1
+  desiredSpeed: 0
 --- !u!114 &7083708275973243971
 MonoBehaviour:
   m_ObjectHideFlags: 0

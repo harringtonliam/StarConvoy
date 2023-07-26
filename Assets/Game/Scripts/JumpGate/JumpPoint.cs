@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SC.Combat;
+using SC.Messaging;
 
 
 namespace SC.JumpGate
@@ -9,6 +11,7 @@ namespace SC.JumpGate
     {
         [SerializeField] float jumpSpeed = 3000f;
         [SerializeField] Transform[] jumpDestinations;
+        [SerializeField] MessageSender messageSender;
 
 
         int jumpDestiationIndex;
@@ -19,11 +22,7 @@ namespace SC.JumpGate
             jumpDestiationIndex = 0;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
 
-        }
 
         private void OnTriggerEnter(Collider other)
         {
@@ -36,8 +35,18 @@ namespace SC.JumpGate
             {
                 jumpDestiationIndex = 0;
             }
+            CheckHowManyShipsLeftToJump();
 
         }
+
+        private void CheckHowManyShipsLeftToJump()
+        {
+            if (TargetStore.Instance.ConvoyShipsThatAreNotSafeExceptPlayer(Faction.Alliance).Count == 0)
+            {
+                messageSender.TriggerSendMessageProcess(MessageType.JumpDone);
+            }
+        }
+
     }
 
 }
