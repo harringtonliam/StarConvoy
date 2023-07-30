@@ -26,7 +26,7 @@ namespace SC.SceneControl
             public bool endOnPlayerHidden;
             public bool endOnAllConvoySafe;
             public bool endOnAllConvoyDeath;
-            public bool endOnAllEnemyDestoryed;
+            public bool endOnAllEnemyDestroyed;
             public CombatTarget endOnThisTargetDestroyed;
         }
 
@@ -180,7 +180,7 @@ namespace SC.SceneControl
                 return;
             }
 
-            if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestoryed)
+            if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestroyed)
             {
                 StartCoroutine(StartEndScene());
                 return;

@@ -51,7 +51,7 @@ PrefabInstance:
     - target: {fileID: 136415074212169571, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 136415074212169571, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
@@ -61,12 +61,12 @@ PrefabInstance:
     - target: {fileID: 136415074212169571, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 136415074212169571, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 136415074212169571, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
@@ -76,7 +76,7 @@ PrefabInstance:
     - target: {fileID: 136415074212169571, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 136415074212169571, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
@@ -97,6 +97,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player_AssaultFighterVariant
+      objectReference: {fileID: 0}
+    - target: {fileID: 136415074781837248, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 136415074781837261, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
@@ -224,6 +229,11 @@ PrefabInstance:
       propertyPath: InitialModule.maxNumParticles
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 3537704776192154833, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4138577766110046398, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: maxNumberOfMissiles
@@ -264,6 +274,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 6974398942538826730, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7299015006416723808, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: laserWeapons.Array.size
@@ -284,6 +299,11 @@ PrefabInstance:
       propertyPath: laserWeapons.Array.data[3]
       value: 
       objectReference: {fileID: 6502333558751767265}
+    - target: {fileID: 7436565040990994463, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7516818398828968783, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: maxNumberOfMissiles

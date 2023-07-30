@@ -768,6 +768,107 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   peristentObjectPrefab: {fileID: 7453485004358287116, guid: 5548131f5ba2d69408e33acc48cbb71d,
     type: 3}
+--- !u!1001 &1437663836
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1462843077}
+    m_Modifications:
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3843649394945180659, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: m_Name
+      value: ShipPrefab_Convoy_Transport01_Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
+--- !u!1 &1462843076
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1462843077}
+  m_Layer: 0
+  m_Name: ConvoyShips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1462843077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462843076}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1819400701}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1747253273 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4655544071076216508, guid: 2384cdcf7df64e446bc2af5c58a31b03,
@@ -785,6 +886,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6256485379251001210, guid: b245778c20489524bb46804d62d5c9fe,
     type: 3}
   m_PrefabInstance: {fileID: 1118731736}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1819400701 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
+    type: 3}
+  m_PrefabInstance: {fileID: 1437663836}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1913230840
 PrefabInstance:
