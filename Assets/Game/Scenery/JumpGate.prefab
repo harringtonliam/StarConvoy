@@ -139,6 +139,8 @@ MonoBehaviour:
   - {fileID: 3996754401566326249}
   - {fileID: 6971063027970996736}
   isEnabled: 1
+  enableAfterTime: 0
+  enableTimeDelay: 60
 --- !u!1001 &3433631674403671354
 PrefabInstance:
   m_ObjectHideFlags: 0

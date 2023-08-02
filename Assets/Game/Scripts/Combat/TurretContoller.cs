@@ -69,6 +69,7 @@ namespace SC.Combat
 
         private float DistanceToTarget(CombatTarget combatTarget)
         {
+            if (combatTarget == null) return 2000f;
             return Vector3.Distance(this.transform.position, combatTarget.transform.position);
         }
 

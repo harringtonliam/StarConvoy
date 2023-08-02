@@ -75,6 +75,7 @@ namespace SC.Combat
         public bool AddTarget(string targetGuid, CombatTarget combatTarget)
         {
             bool added = availableTargets.TryAdd(targetGuid, combatTarget);
+            OnTargetStoreUpdated();
             return added;
         }
 
