@@ -72,11 +72,11 @@ MonoBehaviour:
 
     If you are attacked your first duty is
     still to defend the convoy, but you have permission to aggressively track down
-    and destroy enemy craft if you can do so without endangering any convoy ships.
+    and destroy enemy craft.  But only if you can do so without endangering any convoy
+    ships.
 
 
-    Rear
-    Admiral de Gama
+    Rear Admiral de Gama
 
 '
   m_isRightToLeft: 0
@@ -279,8 +279,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Escort convoy Gumo to Alliance Station Ehi.   Be aware that some of the
-    ships in the convoy are due an overhaul.
+  m_text: "Escort convoy Gamao to Alliance Station Ehi.   \nSome of the ships in
+    the convoy are due an overhaul, so allowances will needed for them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,

@@ -35,7 +35,11 @@ namespace SC.JumpGate
             {
                 jumpDestiationIndex = 0;
             }
-            CheckHowManyShipsLeftToJump();
+            if(other.gameObject.tag != "Player")
+            {
+                CheckHowManyShipsLeftToJump();
+            }
+
 
         }
 

@@ -12,6 +12,7 @@ namespace SC.JumpGate
     public class JumpGateBehaviour : MonoBehaviour
     {
         [SerializeField] ParticleSystem[] jumpVFXs;
+        
 
         Move move;
         MessageSender messageSender;

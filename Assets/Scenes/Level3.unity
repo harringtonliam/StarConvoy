@@ -5045,8 +5045,14 @@ PrefabInstance:
     - target: {fileID: 6490532337898793014, guid: f1c9e0f18582bb64998d2262a01700a7,
         type: 3}
       propertyPath: shipDetails.captainName
-      value: Commodore Aubrey
+      value: Rear Admiral de Gama
       objectReference: {fileID: 0}
+    - target: {fileID: 6490532337898793014, guid: f1c9e0f18582bb64998d2262a01700a7,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 231b95527073e524a9ac2c009b6e2bf5,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1c9e0f18582bb64998d2262a01700a7, type: 3}
 --- !u!1 &4778295882235102605 stripped

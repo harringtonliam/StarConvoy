@@ -27,6 +27,7 @@ namespace SC.SceneControl
             public bool endOnAllConvoySafe;
             public bool endOnAllConvoyDeath;
             public bool endOnAllEnemyDestroyed;
+            public bool endOnAllEnemyDestroyedAndAllConvoySafe;
             public CombatTarget endOnThisTargetDestroyed;
         }
 
@@ -174,17 +175,31 @@ namespace SC.SceneControl
                 StartCoroutine(StartEndScene());
                 return;
             }
-            if(TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllConvoySafe)
-            {
-                StartCoroutine(StartEndScene());
-                return;
-            }
 
-            if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestroyed)
+            if(endSceneConditions.endOnAllEnemyDestroyedAndAllConvoySafe)
             {
-                StartCoroutine(StartEndScene());
-                return;
+                if(TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0)
+                {
+                    StartCoroutine(StartEndScene());
+                    return;
+                }
+
             }
+       
+                if (TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllConvoySafe)
+                {
+                    StartCoroutine(StartEndScene());
+                    return;
+                }
+
+                if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestroyed)
+                {
+                    StartCoroutine(StartEndScene());
+                    return;
+                }
+         
+
+
         }
 
         private void AddSceneScoreToPlayerScore()

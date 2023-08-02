@@ -3603,6 +3603,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6490532337898793014, guid: 2dd5b722f8bea244888fb6e3299da92e,
+        type: 3}
+      propertyPath: shipDetails.shipType
+      value: Alliance Station
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490532337898793014, guid: 2dd5b722f8bea244888fb6e3299da92e,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Commadore Arckady
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490532337898793014, guid: 2dd5b722f8bea244888fb6e3299da92e,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a98af77a2e03f864baa81c8010c2df47,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dd5b722f8bea244888fb6e3299da92e, type: 3}
 --- !u!1 &1850235513

@@ -1193,12 +1193,27 @@ PrefabInstance:
       objectReference: {fileID: 120903887}
     - target: {fileID: 4095333640363654751, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
         type: 3}
+      propertyPath: isPauseSceneOnStart
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095333640363654751, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
+        type: 3}
       propertyPath: enablePlayerControlsOnSceneStart
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4095333640363654751, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
         type: 3}
       propertyPath: endSceneConditions.endOnPlayerHidden
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095333640363654751, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
+        type: 3}
+      propertyPath: endSceneConditions.endOnAllConvoySafe
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4095333640363654751, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
+        type: 3}
+      propertyPath: endSceneConditions.endOnAllEnemyDestroyedAndAllConvoySafe
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7758067363223438214, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
@@ -2277,9 +2292,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6490532337898793014, guid: f1c9e0f18582bb64998d2262a01700a7,
         type: 3}
+      propertyPath: shipDetails.shipType
+      value: Alliance Station
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490532337898793014, guid: f1c9e0f18582bb64998d2262a01700a7,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Rear Admiral de Gama
+      objectReference: {fileID: 0}
+    - target: {fileID: 6490532337898793014, guid: f1c9e0f18582bb64998d2262a01700a7,
+        type: 3}
       propertyPath: shipDetails.captainSprite
       value: 
-      objectReference: {fileID: 21300000, guid: b1bca90387e16914caceaab095fb9314,
+      objectReference: {fileID: 21300000, guid: 231b95527073e524a9ac2c009b6e2bf5,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1c9e0f18582bb64998d2262a01700a7, type: 3}
