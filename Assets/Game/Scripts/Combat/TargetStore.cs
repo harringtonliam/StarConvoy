@@ -188,8 +188,6 @@ namespace SC.Combat
 
         public SortedDictionary<string, DestroyedTarget> DestroyedTargetsNotInFaction(Faction faction)
         {
-
-            Debug.Log("Total destoryed Targets" + destroyedTargets.Count());
             var filteredCombatTargets = from kpv in destroyedTargets
                                         where kpv.Value.faction != faction && kpv.Value.faction != neutralFaction
                                         select kpv;

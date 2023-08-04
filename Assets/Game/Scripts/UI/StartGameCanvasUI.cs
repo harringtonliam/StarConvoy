@@ -10,6 +10,8 @@ namespace SC.UI
     {
 
         [SerializeField] GameObject uiCanvas = null;
+        [SerializeField] public Texture2D onEnableCursorTexture2D;
+        [SerializeField] public Vector2 cursorHotspot;
 
 
         GameObject player;
@@ -17,11 +19,13 @@ namespace SC.UI
         void OnEnable()
         {
             SceneController.Instance.onSceneStarted += ShowStartGameUI;
+
         }
 
         private void OnDisable()
         {
             SceneController.Instance.onSceneStarted -= ShowStartGameUI;
+
         }
 
         private void Start()
@@ -32,6 +36,7 @@ namespace SC.UI
 
         private void ShowStartGameUI()
         {
+            CursorControl.Instance.SetNewCursor(CursorType.UICursor);
             uiCanvas.SetActive(true);
         }
 
@@ -43,6 +48,7 @@ namespace SC.UI
         public void StartButtonClicked()
         {
             ToggleUI();
+            CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
             SceneController.Instance.StartScene();
         }
 

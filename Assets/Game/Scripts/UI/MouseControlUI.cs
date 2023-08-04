@@ -14,6 +14,7 @@ namespace SC.UI
 
 
 
+
         bool isMousePointerOver = false;
 
         private Vector2 screenCenter;

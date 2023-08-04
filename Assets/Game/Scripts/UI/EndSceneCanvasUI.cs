@@ -23,6 +23,7 @@ namespace SC.UI
         void OnEnable()
         {
             StartCoroutine(EnabledBehaviour());
+
         }
 
         IEnumerator EnabledBehaviour()
@@ -36,6 +37,7 @@ namespace SC.UI
         {
             SceneController.Instance.onSceneEnded -= ShowEndSceneUI;
             SceneController.Instance.onPlayerDestroyed -= ShowPlayerDestroyedUI;
+
         }
 
         private void Start()
@@ -46,6 +48,7 @@ namespace SC.UI
         private void ShowEndSceneUI()
         {
             uiCanvas.SetActive(true);
+            CursorControl.Instance.SetNewCursor(CursorType.UICursor);
             DisplayScore();
         }
 

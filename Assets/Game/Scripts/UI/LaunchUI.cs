@@ -16,6 +16,7 @@ namespace SC.UI
 
         GameObject player;
 
+
         // Start is called before the first frame update
         void Start()
         {
@@ -27,12 +28,14 @@ namespace SC.UI
 
         private void ShowStartGameUI()
         {
+            CursorControl.Instance.SetNewCursor(CursorType.UICursor);
             uiCanvas.SetActive(isShownAtSceneStart);
         }
 
         public void LauchButtonClicked()
         {
             uiCanvas.SetActive(false);
+            CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
             Move playerMove = player.GetComponent<Move>();
             playerMove.SetCurrentSpeed(playerMove.MaxSpeed * launchSpeedFraction);
             
