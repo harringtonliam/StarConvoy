@@ -454,12 +454,12 @@ PrefabInstance:
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: closestApproach
-      value: 200
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: breakOffDistance
-      value: 1100
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -525,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 3003830955616679953, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3003830955616679953, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -535,7 +535,7 @@ PrefabInstance:
     - target: {fileID: 3003830955616679953, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3003830955616679953, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -550,7 +550,7 @@ PrefabInstance:
     - target: {fileID: 3003830955616679953, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3003830955616679953, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}

@@ -59,6 +59,7 @@ namespace SC.Combat
                 TargetStore.Instance.AddTarget(newShipCombatTarget.GetUniqueIdentifier(), newShipCombatTarget);
 
             }
+            TargetStore.Instance.OnTargetStoreUpdated();
         }
     }
 

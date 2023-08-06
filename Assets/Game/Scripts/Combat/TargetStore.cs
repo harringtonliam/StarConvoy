@@ -75,7 +75,7 @@ namespace SC.Combat
         public bool AddTarget(string targetGuid, CombatTarget combatTarget)
         {
             bool added = availableTargets.TryAdd(targetGuid, combatTarget);
-            OnTargetStoreUpdated();
+           // OnTargetStoreUpdated();
             return added;
         }
 
@@ -232,7 +232,7 @@ namespace SC.Combat
 
         }
 
-        private void OnTargetStoreUpdated()
+        public  void OnTargetStoreUpdated()
         {
             if (TargetStoreUpdated != null)
             {

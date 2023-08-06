@@ -32,6 +32,7 @@ namespace SC.Combat
         // Update is called once per frame
         void Update()
         {
+            if (targetSelection.GetCurrentTarget() == null) return;
             currentTarget = targetSelection.GetCurrentTarget();
             if (currentTarget == null) return;
 

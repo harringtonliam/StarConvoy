@@ -337,6 +337,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -264.75
       objectReference: {fileID: 0}
+    - target: {fileID: 1354320835552138715, guid: 6b8ba38237cfc1b4d936191927d132b8,
+        type: 3}
+      propertyPath: destroySelfOnCollision
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1663254519184582837, guid: 6b8ba38237cfc1b4d936191927d132b8,
         type: 3}
       propertyPath: m_Size.x
@@ -356,6 +361,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Center.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3149430218592574880, guid: 6b8ba38237cfc1b4d936191927d132b8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3843649394945180656, guid: 6b8ba38237cfc1b4d936191927d132b8,
         type: 3}
@@ -426,6 +436,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 350
+      objectReference: {fileID: 0}
+    - target: {fileID: 4297975901995608259, guid: 6b8ba38237cfc1b4d936191927d132b8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4489141830007203542, guid: 6b8ba38237cfc1b4d936191927d132b8,
         type: 3}

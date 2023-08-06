@@ -172,6 +172,7 @@ namespace SC.SceneControl
         {
             if (playerCombatTarget.GetIsHidden() && endSceneConditions.endOnPlayerHidden)
             {
+                Debug.Log("***END SCENE *** endOnPlayerHidden");
                 StartCoroutine(StartEndScene());
                 return;
             }
@@ -180,23 +181,26 @@ namespace SC.SceneControl
             {
                 if(TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0)
                 {
+                    Debug.Log("***END SCENE *** endOnAllEnemyDestroyedAndAllConvoySafe");
                     StartCoroutine(StartEndScene());
                     return;
                 }
 
             }
        
-                if (TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllConvoySafe)
-                {
-                    StartCoroutine(StartEndScene());
-                    return;
-                }
+            if (TargetStore.Instance.ConvoyShipsThatAreNotSafe(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllConvoySafe)
+            {
+            Debug.Log("***END SCENE *** endOnAllConvoySafe");
+            StartCoroutine(StartEndScene());
+                return;
+            }
 
-                if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestroyed)
-                {
-                    StartCoroutine(StartEndScene());
-                    return;
-                }
+            if (TargetStore.Instance.CombatTargetsNotInFaction(playerCombatTarget.GetFaction()).Count == 0 && endSceneConditions.endOnAllEnemyDestroyed)
+            {
+                Debug.Log("***END SCENE *** endOnAllEnemyDestroyed");
+                StartCoroutine(StartEndScene());
+                return;
+            }
          
 
 

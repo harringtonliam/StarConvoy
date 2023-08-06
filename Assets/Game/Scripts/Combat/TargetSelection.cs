@@ -120,7 +120,7 @@ namespace SC.Combat
                 indexChanged = true;
             }
 
-            if (indexChanged)
+            if (indexChanged && TargetStore.Instance.PlayerCombatTargetList().ElementAt(currentTargetIndex).Value != null)
             {
                 currentTarget = TargetStore.Instance.PlayerCombatTargetList().ElementAt(currentTargetIndex).Value;
                 TargetChanged();
