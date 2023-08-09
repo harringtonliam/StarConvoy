@@ -60,6 +60,15 @@ namespace SC.JumpGate
             }
         }
 
+        internal void DirectToJumpPoint(JumpPoint jumpPoint)
+        {
+            if (aIMovementControl == null) return;
+            aIMovementControl.SetMovementTarget(jumpPoint.transform);
+            aIMovementControl.SetCanControLSpeed(true);
+            aIMovementControl.SetCanManeuver(true);
+            aIMovementControl.SetDesiredSpeed(move.MaxSpeed);
+        }
+
         private void SendJumpingMessage()
         {
             if (messageSender != null)

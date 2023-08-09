@@ -42,6 +42,7 @@ namespace SC.Combat
             AddAllCombatTargets();
         }
 
+
         private void AddAllCombatTargets()
         {
             var allCombatTargets = FindObjectsOfType<CombatTarget>();
@@ -65,14 +66,21 @@ namespace SC.Combat
                 }
                 catch (Exception)
                 {
-
                     Debug.Log("error removing hanlder for CombatTarget");
                 }
             }
         }
 
 
-        public bool AddTarget(string targetGuid, CombatTarget combatTarget)
+        public void AddSpawnedTarget(string targetGuid, CombatTarget combatTarget)
+        {
+            if (AddTarget( targetGuid, combatTarget))
+            {
+                combatTarget.TargetUpdated += HandleCombatTargetUpdate;
+            }
+        }
+
+        private bool AddTarget(string targetGuid, CombatTarget combatTarget)
         {
             bool added = availableTargets.TryAdd(targetGuid, combatTarget);
            // OnTargetStoreUpdated();
@@ -239,6 +247,15 @@ namespace SC.Combat
                 TargetStoreUpdated();
             }
         }
+
+        public void PrintTargetStore()
+        {
+            foreach (var item in AvailableTargets)
+            {
+                Debug.Log("Target store " + item.Key + " : " + item.Value.GetFaction() + " isSafe:" + item.Value.GetIsSafe() + " " + " isHidden:" + item.Value.GetIsHidden() + " " + item.Value.gameObject.tag + " " + item.Value.GetComponent<ShipInformation>().GetShipDetails().shipName);
+            }
+        }
+
     }
 
     public class DestroyedTarget

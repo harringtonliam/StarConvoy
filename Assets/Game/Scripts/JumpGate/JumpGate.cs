@@ -7,9 +7,11 @@ namespace SC.JumpGate
     public class JumpGate : MonoBehaviour
     {
         [SerializeField] GameObject[] objectsToEnable;
+        [SerializeField] JumpPoint jumpPoint;
         [SerializeField] bool isEnabled = true;
         [SerializeField] bool enableAfterTime = false;
         [SerializeField] float enableTimeDelay = 840;
+        [SerializeField] JumpGateBehaviour[] shipsToDirectToJumpPoint;
 
         public bool IsEnabled {  get { return isEnabled; } }
 
@@ -33,12 +35,27 @@ namespace SC.JumpGate
                 objectsToEnable[i].SetActive(isEnabled);
             }
 
+            if (isEnabled && enableAfterTime)
+            {
+                DirectShipsToJumpPoint();
+            }
         }
 
         private IEnumerator EnableAfterTimeDelay()
         {
             yield return new WaitForSeconds(enableTimeDelay);
             EnableDisableJumpGate(!isEnabled);
+        }
+
+        private void DirectShipsToJumpPoint()
+        {
+            for (int i = 0; i < shipsToDirectToJumpPoint.Length; i++)
+            {
+                if (shipsToDirectToJumpPoint[i] != null)
+                {
+                    shipsToDirectToJumpPoint[i].DirectToJumpPoint(jumpPoint);
+                }
+            }
         }
 
     }

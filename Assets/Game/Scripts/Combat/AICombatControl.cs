@@ -58,9 +58,8 @@ namespace SC.Combat
 
         public bool CheckCombatTarget()
         {
-            if (combatTarget != null) return true;
+            if (combatTarget != null  && !combatTarget.GetIsHidden()) return true;
             return FindCombatTarget();
-
         }
 
         public bool FindCombatTarget()

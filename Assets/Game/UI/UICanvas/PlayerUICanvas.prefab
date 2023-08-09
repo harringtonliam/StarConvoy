@@ -3760,6 +3760,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: DamageUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3639585761891153420, guid: 7712d21b4e511ab458f8e5d79bfccac2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 7807330761332358047, guid: 7712d21b4e511ab458f8e5d79bfccac2,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 185
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7712d21b4e511ab458f8e5d79bfccac2, type: 3}
 --- !u!224 &236427279001464992 stripped
@@ -4025,6 +4035,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1160111077411244280}
     m_Modifications:
+    - target: {fileID: 3931740550102962219, guid: 2fc54a5498032db43937f11897ab2573,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 185
+      objectReference: {fileID: 0}
     - target: {fileID: 5591318214807239896, guid: 2fc54a5498032db43937f11897ab2573,
         type: 3}
       propertyPath: m_Name
@@ -4134,6 +4149,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7515112716999351736, guid: 2fc54a5498032db43937f11897ab2573,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 185
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fc54a5498032db43937f11897ab2573, type: 3}

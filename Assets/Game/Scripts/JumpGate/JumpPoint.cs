@@ -22,6 +22,8 @@ namespace SC.JumpGate
             jumpDestiationIndex = 0;
         }
 
+        
+
 
 
         private void OnTriggerEnter(Collider other)

@@ -24,6 +24,11 @@ namespace SC.Attributes
             return shipDetails;
         }
 
+        public void SetShipName(string newName)
+        {
+            shipDetails.shipName = newName;
+        }
+
 
     }
 

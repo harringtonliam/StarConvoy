@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
+using SC.Attributes;
 
 
 namespace SC.Combat
@@ -12,6 +13,7 @@ namespace SC.Combat
         [SerializeField] float spawnFrequecy = 90f;
         [SerializeField] SpawnCollection spawnCollection;
         [SerializeField] bool spawningEnabled = true;
+        [SerializeField] int maxNumberOfSpawns = 10;
 
         [Serializable]
         public struct SpawnCollection
@@ -21,6 +23,8 @@ namespace SC.Combat
             public CombatTarget[] combatTargets;
         }
 
+
+        private int spawnNumber = 0;
 
         // Start is called before the first frame update
         void Start()
@@ -37,6 +41,10 @@ namespace SC.Combat
 
         private IEnumerator SpawnProcess()
         {
+            if (spawnNumber >= maxNumberOfSpawns)
+            {
+                spawningEnabled = false;
+            }
             while(spawningEnabled)
             {
                 SpawnGameObjects();
@@ -47,6 +55,7 @@ namespace SC.Combat
 
         private void SpawnGameObjects()
         {
+            spawnNumber++;
             for (int i = 0; i < spawnCollection.shipToSpawnPrefabs.Length; i++)
             {
                 var newShip = GameObject.Instantiate(spawnCollection.shipToSpawnPrefabs[i], spawnCollection.spawnPoints[i].position, spawnCollection.spawnPoints[i].rotation);
@@ -56,7 +65,10 @@ namespace SC.Combat
                     newShip.GetComponent<AICombatControl>().SetCombatTarget(spawnCollection.combatTargets[i]);
                 }
                 CombatTarget newShipCombatTarget = newShip.GetComponent<CombatTarget>();
-                TargetStore.Instance.AddTarget(newShipCombatTarget.GetUniqueIdentifier(), newShipCombatTarget);
+                ShipInformation newshipInformation = newShip.GetComponent<ShipInformation>();
+                string newShipName = newshipInformation.GetShipDetails().shipName + "-" + spawnNumber.ToString() + i.ToString();
+                newshipInformation.SetShipName(newShipName);
+                TargetStore.Instance.AddSpawnedTarget(newShipCombatTarget.GetFullIdentifier(), newShipCombatTarget);
 
             }
             TargetStore.Instance.OnTargetStoreUpdated();

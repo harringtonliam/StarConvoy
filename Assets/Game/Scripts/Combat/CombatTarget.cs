@@ -25,6 +25,11 @@ namespace SC.Combat
             return uniqueIdentifier;
         }
 
+        public void SetUniqueIdentifer(string newId)
+        {
+            uniqueIdentifier = newId;
+        }
+
         public Faction GetFaction()
         {
 
@@ -84,20 +89,10 @@ namespace SC.Combat
             }
         }
 
-        public void RemoveFromTargetStore()
-        {
-            if (isAddToTargetStore)
-            {
-                TargetStore.Instance.RemoveTarget(GetFullIdentifier());
-                OnTargetUpdated(new CombatTargetUpdateHandlerArgs(this, false, true));
-            }
-        }
-
         public void DestroyInTargetStore()
         {
             if (isAddToTargetStore)
             {
-                //TargetStore.Instance.DestroyTarget(GetFullIdentifier());
                 OnTargetUpdated(new CombatTargetUpdateHandlerArgs(this, true, false));
             }
         }

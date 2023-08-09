@@ -138,9 +138,11 @@ MonoBehaviour:
   - {fileID: 3431996560548422429}
   - {fileID: 3996754401566326249}
   - {fileID: 6971063027970996736}
+  jumpPoint: {fileID: 1321909932530350954}
   isEnabled: 1
   enableAfterTime: 0
   enableTimeDelay: 60
+  shipsToDirectToJumpPoint: []
 --- !u!1001 &3433631674403671354
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -684,6 +686,18 @@ PrefabInstance:
       objectReference: {fileID: 7093760415473251742}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c86325a64a480494db81fa9fc9f38232, type: 3}
+--- !u!114 &1321909932530350954 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7130063166217705981, guid: c86325a64a480494db81fa9fc9f38232,
+    type: 3}
+  m_PrefabInstance: {fileID: 8118667107380028055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6971063027970996736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2fbda50561ff37408dd93082df320bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &4171149575858853329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5280939817245243206, guid: c86325a64a480494db81fa9fc9f38232,
