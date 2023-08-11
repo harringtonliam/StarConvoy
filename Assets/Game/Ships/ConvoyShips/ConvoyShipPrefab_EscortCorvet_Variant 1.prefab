@@ -610,7 +610,7 @@ PrefabInstance:
     - target: {fileID: 4489141830007203542, guid: 6b8ba38237cfc1b4d936191927d132b8,
         type: 3}
       propertyPath: shipDetails.shipName
-      value: ALC Kastelo
+      value: ALC Roko
       objectReference: {fileID: 0}
     - target: {fileID: 4489141830007203542, guid: 6b8ba38237cfc1b4d936191927d132b8,
         type: 3}
