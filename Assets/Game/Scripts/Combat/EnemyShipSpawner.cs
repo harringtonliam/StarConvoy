@@ -41,10 +41,7 @@ namespace SC.Combat
 
         private IEnumerator SpawnProcess()
         {
-            if (spawnNumber >= maxNumberOfSpawns)
-            {
-                spawningEnabled = false;
-            }
+
             while(spawningEnabled)
             {
                 SpawnGameObjects();
@@ -72,6 +69,10 @@ namespace SC.Combat
 
             }
             TargetStore.Instance.OnTargetStoreUpdated();
+            if (spawnNumber >= maxNumberOfSpawns)
+            {
+                spawningEnabled = false;
+            }
         }
     }
 

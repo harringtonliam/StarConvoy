@@ -436,6 +436,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Life is Golden
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Oakes
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dcccb73fe96634d48996d63fbb85eedc,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVAD
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
 --- !u!4 &78592884 stripped
@@ -451,6 +472,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 816220614}
     m_Modifications:
+    - target: {fileID: 1055308570048161613, guid: e55778c8f4422004093a16b2f1a9ac7a,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: ABB
+      objectReference: {fileID: 0}
     - target: {fileID: 8114809568289352459, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: shipDetails.shipName
@@ -672,6 +698,125 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 362187415}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &385479179
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 44635731194047362}
+    m_Modifications:
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 480
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 800
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3095203102142646627, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3885914257361752726, guid: dafea255e1d348d4087c75638cf0f59e,
+        type: 3}
+      propertyPath: m_Name
+      value: MissionLevel8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: dafea255e1d348d4087c75638cf0f59e, type: 3}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -957,7 +1102,7 @@ PrefabInstance:
     - target: {fileID: 3261828741004392312, guid: f51d0171104c07e46aee5d12c23772c4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35000
+      value: 40000
       objectReference: {fileID: 0}
     - target: {fileID: 3261828741004392312, guid: f51d0171104c07e46aee5d12c23772c4,
         type: 3}
@@ -1003,6 +1148,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShipPrefab Bomber Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: f51d0171104c07e46aee5d12c23772c4,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: ACB
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51d0171104c07e46aee5d12c23772c4, type: 3}
@@ -1117,9 +1267,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2296500484439468895, guid: 09e43a63107afae45896dc0783b0f33f,
         type: 3}
-      propertyPath: shipDetails.captainName
-      value: Commander Amaya
+      propertyPath: shipDetails.shipName
+      value: ALC Nitrate
       objectReference: {fileID: 0}
+    - target: {fileID: 2296500484439468895, guid: 09e43a63107afae45896dc0783b0f33f,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Commander Anderson
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296500484439468895, guid: 09e43a63107afae45896dc0783b0f33f,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0b9601949b258054680c0531d5cc5e79,
+        type: 3}
     - target: {fileID: 4959542411664782858, guid: 09e43a63107afae45896dc0783b0f33f,
         type: 3}
       propertyPath: moveTarget
@@ -1134,6 +1295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: availableMessages.Array.data[2].messageType
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7054434471121020697, guid: 09e43a63107afae45896dc0783b0f33f,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVAA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09e43a63107afae45896dc0783b0f33f, type: 3}
@@ -1581,6 +1747,11 @@ PrefabInstance:
       propertyPath: availableMessages.Array.data[2].messageType
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7054434471121020697, guid: 09e43a63107afae45896dc0783b0f33f,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVCA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09e43a63107afae45896dc0783b0f33f, type: 3}
 --- !u!4 &649629308 stripped
@@ -1764,7 +1935,7 @@ PrefabInstance:
     - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
@@ -1820,6 +1991,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Born To Die
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Del Ray
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c9cb1896068511c4d80f5a0b8fd7043a,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVBC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
@@ -2098,125 +2290,18 @@ Transform:
   m_Father: {fileID: 779885035}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &951909649
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 44635731194047362}
-    m_Modifications:
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 480
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 800
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3095203102142646627, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885914257361752726, guid: 659573f68d82e9242b825d4b5b65264b,
-        type: 3}
-      propertyPath: m_Name
-      value: MissionLevel7
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 659573f68d82e9242b825d4b5b65264b, type: 3}
+--- !u!114 &960085913 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7054434471121020697, guid: 09e43a63107afae45896dc0783b0f33f,
+    type: 3}
+  m_PrefabInstance: {fileID: 462249640}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b1c4f56f150d243874d278e72fa0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1019288696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2289,6 +2374,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: New Generation
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Osman
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7e81d9ec6772d0b45975d3d70757b88c,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVAB
+      objectReference: {fileID: 0}
     - target: {fileID: 8184214452975690367, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
       propertyPath: availableMessages.Array.data[3].messageText
@@ -2309,6 +2415,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 816220614}
     m_Modifications:
+    - target: {fileID: 1055308570048161613, guid: e55778c8f4422004093a16b2f1a9ac7a,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: ABA
+      objectReference: {fileID: 0}
     - target: {fileID: 8114809568289352459, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: shipDetails.shipName
@@ -2506,7 +2617,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1954822437}
   - {fileID: 1232375294}
   - {fileID: 727520700}
   - {fileID: 2142868049}
@@ -2751,6 +2861,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 416485458}
     m_Modifications:
+    - target: {fileID: 1994441217744670158, guid: f51d0171104c07e46aee5d12c23772c4,
+        type: 3}
+      propertyPath: combatTarget
+      value: 
+      objectReference: {fileID: 960085913}
     - target: {fileID: 2765095282450272860, guid: f51d0171104c07e46aee5d12c23772c4,
         type: 3}
       propertyPath: shipDetails.shipName
@@ -2815,6 +2930,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShipPrefab Bomber Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: f51d0171104c07e46aee5d12c23772c4,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: AAA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51d0171104c07e46aee5d12c23772c4, type: 3}
@@ -2896,6 +3016,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Shes In Fashion
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Codling
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9857f95611f499948ab009c1271e61dd,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVAE
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
 --- !u!4 &1201409783 stripped
@@ -2919,7 +3060,7 @@ PrefabInstance:
     - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
@@ -2976,6 +3117,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Comeback Kid
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Van Etten
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 70c52ca5a2c428444bef1ee54bbf8c9f,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVBB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
 --- !u!4 &1232375294 stripped
@@ -3009,7 +3171,7 @@ PrefabInstance:
     - target: {fileID: 3261828741004392312, guid: f51d0171104c07e46aee5d12c23772c4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35000
+      value: 40000
       objectReference: {fileID: 0}
     - target: {fileID: 3261828741004392312, guid: f51d0171104c07e46aee5d12c23772c4,
         type: 3}
@@ -3055,6 +3217,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShipPrefab Bomber Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: f51d0171104c07e46aee5d12c23772c4,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: ACA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51d0171104c07e46aee5d12c23772c4, type: 3}
@@ -3316,6 +3483,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Pearl's Dream
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Khan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: acfc0440c4a34314d829f981cf85bae1,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVCC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
 --- !u!4 &1358896251 stripped
@@ -3349,7 +3537,7 @@ PrefabInstance:
     - target: {fileID: 3261828741004392312, guid: f51d0171104c07e46aee5d12c23772c4,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 35000
+      value: 40000
       objectReference: {fileID: 0}
     - target: {fileID: 3261828741004392312, guid: f51d0171104c07e46aee5d12c23772c4,
         type: 3}
@@ -3395,6 +3583,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShipPrefab Bomber Variant (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: f51d0171104c07e46aee5d12c23772c4,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: ACC
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51d0171104c07e46aee5d12c23772c4, type: 3}
@@ -3476,6 +3669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShipPrefab Bomber Variant (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: f51d0171104c07e46aee5d12c23772c4,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: AAC
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51d0171104c07e46aee5d12c23772c4, type: 3}
 --- !u!4 &1445046934 stripped
@@ -3499,7 +3697,7 @@ PrefabInstance:
     - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
@@ -3555,6 +3753,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: South London For Ever
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Welch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 2930c8ea6c866d8478468a8ec2b7802b,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVBE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
@@ -3868,6 +4087,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Beautiful Ones
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Gilbert
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 38c75e95cf45d6d4693e68a3314c62a9,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVAC
+      objectReference: {fileID: 0}
     - target: {fileID: 8184214452975690367, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
       propertyPath: availableMessages.Array.data[3].messageText
@@ -3915,6 +4155,18 @@ Transform:
   m_Father: {fileID: 1977833196}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1862304501 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7054434471121020697, guid: 09e43a63107afae45896dc0783b0f33f,
+    type: 3}
+  m_PrefabInstance: {fileID: 649629307}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5b1c4f56f150d243874d278e72fa0d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1908647708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4002,6 +4254,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 416485458}
     m_Modifications:
+    - target: {fileID: 1994441217744670158, guid: f51d0171104c07e46aee5d12c23772c4,
+        type: 3}
+      propertyPath: combatTarget
+      value: 
+      objectReference: {fileID: 1862304501}
     - target: {fileID: 2765095282450272860, guid: f51d0171104c07e46aee5d12c23772c4,
         type: 3}
       propertyPath: shipDetails.shipName
@@ -4067,6 +4324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShipPrefab Bomber Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: f51d0171104c07e46aee5d12c23772c4,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: AAB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f51d0171104c07e46aee5d12c23772c4, type: 3}
 --- !u!4 &1917539011 stripped
@@ -4074,112 +4336,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3261828741004392312, guid: f51d0171104c07e46aee5d12c23772c4,
     type: 3}
   m_PrefabInstance: {fileID: 1917539010}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1954822436
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1098645737}
-    m_Modifications:
-    - target: {fileID: 1496619436972543610, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_Name
-      value: ConvoyShipPrefab_EscortCorvet_Variant 1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 21603.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296500484439468895, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: shipDetails.shipName
-      value: ALC Monto
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296500484439468895, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: shipDetails.captainName
-      value: Commander Asa
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296500484439468895, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: shipDetails.captainSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 537ad673bb9ddd04fa46a4ea553b5767,
-        type: 3}
-    - target: {fileID: 4959542411664782858, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: moveTarget
-      value: 
-      objectReference: {fileID: 362187416}
-    - target: {fileID: 5766373470398066678, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: availableMessages.Array.data[2].messageText
-      value: Arrived at the habitat
-      objectReference: {fileID: 0}
-    - target: {fileID: 5766373470398066678, guid: 09e43a63107afae45896dc0783b0f33f,
-        type: 3}
-      propertyPath: availableMessages.Array.data[2].messageType
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 09e43a63107afae45896dc0783b0f33f, type: 3}
---- !u!4 &1954822437 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1496619436972543611, guid: 09e43a63107afae45896dc0783b0f33f,
-    type: 3}
-  m_PrefabInstance: {fileID: 1954822436}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1973806687
 PrefabInstance:
@@ -4252,6 +4408,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Come As You Are
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d0ff516aa6521a248a23c3c9b66ca803,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVCE
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
@@ -4448,6 +4625,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Big Exit
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Harvey
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e67c93186ed1d4b44ae09bb7b8c9454d,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVCD
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
 --- !u!4 &2050064046 stripped
@@ -4527,6 +4725,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Waking the Witch
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Bush
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 468e031554fb39f459009a2b9b618585,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVCB
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
@@ -4723,6 +4942,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 816220614}
     m_Modifications:
+    - target: {fileID: 1055308570048161613, guid: e55778c8f4422004093a16b2f1a9ac7a,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: ABC
+      objectReference: {fileID: 0}
     - target: {fileID: 8114809568289352459, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: shipDetails.shipName
@@ -4811,7 +5035,7 @@ PrefabInstance:
     - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3843649394945180658, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
@@ -4867,6 +5091,27 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: ShipPrefab_Convoy_Transport01_Variant (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.shipName
+      value: Do You Want The Truth
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainName
+      value: Captain Faith
+      objectReference: {fileID: 0}
+    - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 074f59e9e47966b49b25e2d193382731,
+        type: 3}
+    - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: CONVBD
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
@@ -6356,12 +6601,12 @@ PrefabInstance:
     - target: {fileID: 778517003880926484, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 778517003880926484, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12000
+      value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 778517003880926484, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
@@ -6470,17 +6715,17 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnCollection.combatTargets.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 960085913}
     - target: {fileID: 2970170501950672862, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: spawnCollection.combatTargets.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1862304501}
     - target: {fileID: 2970170501950672862, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: spawnCollection.combatTargets.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1862304501}
     - target: {fileID: 2970170501950672862, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: spawnCollection.shipToSpawnPrefabs.Array.size
@@ -6490,19 +6735,19 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnCollection.shipToSpawnPrefabs.Array.data[0]
       value: 
-      objectReference: {fileID: 8900898718751165998, guid: e55778c8f4422004093a16b2f1a9ac7a,
+      objectReference: {fileID: 5688017147409755876, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
     - target: {fileID: 2970170501950672862, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: spawnCollection.shipToSpawnPrefabs.Array.data[1]
       value: 
-      objectReference: {fileID: 8900898718751165998, guid: e55778c8f4422004093a16b2f1a9ac7a,
+      objectReference: {fileID: 5688017147409755876, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
     - target: {fileID: 2970170501950672862, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: spawnCollection.shipToSpawnPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 8900898718751165998, guid: e55778c8f4422004093a16b2f1a9ac7a,
+      objectReference: {fileID: 5688017147409755876, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
     - target: {fileID: 4319289585215102891, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
