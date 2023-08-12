@@ -12,6 +12,7 @@ namespace SC.JumpGate
     public class JumpGateBehaviour : MonoBehaviour
     {
         [SerializeField] ParticleSystem[] jumpVFXs;
+        [SerializeField] bool makeHiddenOnArrival = true;
         
 
         Move move;
@@ -87,7 +88,7 @@ namespace SC.JumpGate
         private void MakeHidden()
         {
             if (combatTarget == null) return;
-            combatTarget.SetIsHidden(true);
+            combatTarget.SetIsHidden(makeHiddenOnArrival);
         }
 
         private void BringToAStop()

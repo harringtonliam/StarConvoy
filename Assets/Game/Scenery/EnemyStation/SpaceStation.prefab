@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b1c4f56f150d243874d278e72fa0d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueIdentifierPrefix: 
+  uniqueIdentifierPrefix: AAA
   uniqueIdentifier: 
   faction: 1
   isSafe: 0
@@ -472,6 +472,11 @@ PrefabInstance:
         type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 9058906226557905977, guid: 8c96ef1d427b7f546b48c5212c127cd5,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: ZZZ
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8c96ef1d427b7f546b48c5212c127cd5, type: 3}
