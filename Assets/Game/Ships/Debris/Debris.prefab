@@ -66,8 +66,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveTarget: {fileID: 0}
   turnSpeed: 10
-  canControlSpeed: 1
-  canManeuver: 1
+  canControlSpeed: 0
+  canManeuver: 0
+  desiredSpeed: 0
 --- !u!114 &5941870780751791644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +85,7 @@ MonoBehaviour:
   minSpeed: 0
   maxSpeed: 400
   speedChangeResponseTime: 0.2
-  canChangeSpeed: 1
+  canChangeSpeed: 0
 --- !u!135 &4298885388207533845
 SphereCollider:
   m_ObjectHideFlags: 0

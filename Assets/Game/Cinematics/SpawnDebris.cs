@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SC.Movement;
-using SC.JumpGate;
+using SC.Control;
 using SC.SceneControl;
 
 namespace SC.Cinematics
@@ -20,8 +20,8 @@ namespace SC.Cinematics
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Move playerMove = player.GetComponent<Move>();
-            JumpGateBehaviour jumpGateBehaviour = player.GetComponent<JumpGateBehaviour>();
-            jumpGateBehaviour.EnableDisablePlayerControls(false);
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            playerController.EnableDIsablePlayerControl(false);
             player.transform.position = positionShipAt.position;
             player.transform.rotation = positionShipAt.rotation;
             playerMove.SetCurrentSpeed(playerMove.MaxSpeed);
