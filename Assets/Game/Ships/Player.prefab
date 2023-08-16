@@ -228,6 +228,8 @@ MonoBehaviour:
   jumpVFXs:
   - {fileID: 7653960067849792719}
   - {fileID: 1502395902319981372}
+  makeHiddenOnArrival: 1
+  jumpTimeScale: 2
 --- !u!114 &1335817392556679988
 MonoBehaviour:
   m_ObjectHideFlags: 0

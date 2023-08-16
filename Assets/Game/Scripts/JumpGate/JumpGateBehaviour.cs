@@ -13,6 +13,7 @@ namespace SC.JumpGate
     {
         [SerializeField] ParticleSystem[] jumpVFXs;
         [SerializeField] bool makeHiddenOnArrival = true;
+        [SerializeField] float jumpTimeScale = 1f;
         
 
         Move move;
@@ -42,6 +43,7 @@ namespace SC.JumpGate
             PlayJumpVFX();
             move.SetCurrentSpeed(jumpSpeed, true);
             combatTarget.SetIsSafe(true);
+            Time.timeScale = jumpTimeScale;
         }
 
         private void SetAIMovementTarget(Transform jumpDestination)
@@ -80,6 +82,7 @@ namespace SC.JumpGate
 
         public void StartArrivalProcess()
         {
+            Time.timeScale = 1f;
             MakeHidden();
             BringToAStop();
             EnableDisablePlayerControls(true);
