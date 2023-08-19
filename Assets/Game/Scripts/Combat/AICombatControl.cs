@@ -15,7 +15,9 @@ namespace SC.Combat
         [SerializeField] float breakOffTolerance = 20f;
         [SerializeField] float turnSpeed = 10f;
         [SerializeField] float targetingAccuracy = 10f;
+        [SerializeField] bool useRandomTargetSelection = true;
         [SerializeField] LaserWeapon[] laserWeapons;
+        [SerializeField] bool debugLogs = false;
 
         //Vector3 currentMoveTarget;
 
@@ -47,7 +49,6 @@ namespace SC.Combat
         {
             ControlSpeed();
             CheckMoveTarget();
-            //FaceTarget();
             ControlShooting();
         }
 
@@ -64,16 +65,24 @@ namespace SC.Combat
 
         public bool FindCombatTarget()
         {
+            
             var targetsToChooseFrom = TargetStore.Instance.ValidCombatTargetsNotInFaction(thisShipCombatTarget.GetFaction());
             if (targetsToChooseFrom.Count <= 0) return false;
 
-            int randomTarget = Random.Range(0, targetsToChooseFrom.Count - 1);
+            int newTargetIndex = 0;
+            if (useRandomTargetSelection)
+            {
+                newTargetIndex = Random.Range(0, targetsToChooseFrom.Count - 1);
+            }
             int i = 0;
             foreach (var item in targetsToChooseFrom)
             {
-                if (i == randomTarget)
+                if (i == newTargetIndex)
                 {
                     combatTarget = item.Value;
+                    LogDebugStatement("Found new combat target " + combatTarget.gameObject.name);
+                    aIMovementControl.SetMovementTarget(combatTarget.transform);
+                    movingAwayFromCombatTarget = false;
                     return true;
                 }
                 i++;
@@ -125,27 +134,10 @@ namespace SC.Combat
             return Vector3.Distance(combatTarget.transform.position, transform.position);
         }
 
-        //private void FaceTarget()
-        //{
-        //    if (currentMoveTarget == null) return;
-        //    Vector3 targetDirection = currentMoveTarget - transform.position;
-
-        //    // The step size is equal to speed times frame time.
-        //    float singleStep = turnSpeed * Time.deltaTime;
-
-        //    // Rotate the forward vector towards the target direction by one step
-        //    Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
-        //    // Draw a ray pointing at our target in
-        //    Debug.DrawRay(transform.position, newDirection, Color.red);
-
-        //    // Calculate a rotation a step closer to the target and applies rotation to this object
-        //    transform.rotation = Quaternion.LookRotation(newDirection);
-
-        //}
 
         private void CheckMoveTarget()
         {
+
             if (CheckCombatTarget() == false) return;
             float distanceToCombatTarget = DistanceToCombatTarget();
             if (distanceToCombatTarget > closestApproach && !movingAwayFromCombatTarget)
@@ -167,6 +159,7 @@ namespace SC.Combat
         {
             if (CheckCombatTarget() == false) return;
             float distanceToBreakOffPoint = Vector3.Distance(aIMovementControl.GetCurrentMoveTarget(), transform.position);
+            LogDebugStatement("Check breakoff distance " +  distanceToBreakOffPoint.ToString() + " <? " + breakOffTolerance.ToString());
             if (distanceToBreakOffPoint <= breakOffTolerance)
             {
                 movingAwayFromCombatTarget = false;
@@ -176,8 +169,9 @@ namespace SC.Combat
 
         private void CalculateNewMovementTarget()
         {
-            if (CheckCombatTarget() == false) return;
-            
+            LogDebugStatement("CalculateNewMovementTarget");
+            if (CheckCombatTarget() == false) return; 
+            LogDebugStatement("CalculateNewMovementTarget after false check, combat target = " + combatTarget.gameObject.name );
             int randomBreakoff = Random.Range(0, 3);
             switch (randomBreakoff)
             {
@@ -204,6 +198,14 @@ namespace SC.Combat
             if (move.CurrentSpeed < move.MaxSpeed)
             {
                 move.ChangeSpeed(1f);
+            }
+        }
+
+        private void LogDebugStatement(string stetament)
+        {
+            if (debugLogs)
+            {
+                Debug.Log(name + " AICombatControl : " + stetament);
             }
         }
 

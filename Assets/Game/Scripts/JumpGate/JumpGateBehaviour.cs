@@ -13,6 +13,7 @@ namespace SC.JumpGate
     {
         [SerializeField] ParticleSystem[] jumpVFXs;
         [SerializeField] bool makeHiddenOnArrival = true;
+        [SerializeField] bool makeSafeOnJump = true;
         [SerializeField] float jumpTimeScale = 1f;
         
 
@@ -42,7 +43,7 @@ namespace SC.JumpGate
             transform.LookAt(jumpDestination);
             PlayJumpVFX();
             move.SetCurrentSpeed(jumpSpeed, true);
-            combatTarget.SetIsSafe(true);
+            combatTarget.SetIsSafe(makeSafeOnJump);
             Time.timeScale = jumpTimeScale;
         }
 

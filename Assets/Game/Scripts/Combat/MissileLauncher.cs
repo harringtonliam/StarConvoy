@@ -72,9 +72,17 @@ namespace SC.Combat
             if (currentNumberOfMissiles > 0)
             {
                 GameObject newMissile = GameObject.Instantiate(missilePrefab, spawnPoint.position, spawnPoint.rotation);
-                newMissile.GetComponent<AICombatControl>().SetCombatTarget(currentTarget);
-                currentNumberOfMissiles--;
-                MissileNumberUpdate();
+                if (currentTarget == null || currentTarget.gameObject == null)
+                {
+                    Debug.Log("Misslie Launcher unable to shoot");
+                }
+                else
+                {
+                    newMissile.GetComponent<AICombatControl>().SetCombatTarget(currentTarget);
+                    currentNumberOfMissiles--;
+                    MissileNumberUpdate();
+                }
+
             }
 
             yield return new WaitForSeconds(timeBetweenShots);
