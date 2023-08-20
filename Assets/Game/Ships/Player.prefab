@@ -188,7 +188,19 @@ MonoBehaviour:
   objectToHideOnDeath: {fileID: 0}
   onDie:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 136415074212169575}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &348960130898522281
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +241,7 @@ MonoBehaviour:
   - {fileID: 7653960067849792719}
   - {fileID: 1502395902319981372}
   makeHiddenOnArrival: 1
+  makeSafeOnJump: 1
   jumpTimeScale: 2
 --- !u!114 &1335817392556679988
 MonoBehaviour:

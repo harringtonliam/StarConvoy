@@ -16,6 +16,7 @@ namespace SC.Combat
         [SerializeField] float currentHealth;
         [SerializeField] GameObject objectToHideOnDeath;
         [SerializeField] UnityEvent onDie;
+
         
 
 
