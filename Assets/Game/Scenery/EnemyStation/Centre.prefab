@@ -55,7 +55,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 062104a33c40eca448eed4f1d47122cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 300
   destroyVFXs:
   - {fileID: 1484443884651923003}
   - {fileID: 4495681671106056113}
@@ -63,7 +63,7 @@ MonoBehaviour:
   delayBetweenDestroyVFX: 0.2
   destroySFX: {fileID: 0}
   destroyDelaySeconds: 1
-  currentHealth: 0
+  currentHealth: 300
   objectToHideOnDeath: {fileID: 0}
   onDie:
     m_PersistentCalls:

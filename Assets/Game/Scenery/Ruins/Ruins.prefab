@@ -72,7 +72,7 @@ MonoBehaviour:
   delayBetweenDestroyVFX: 0.2
   destroySFX: {fileID: 0}
   destroyDelaySeconds: 1
-  currentHealth: 0
+  currentHealth: 5000
   objectToHideOnDeath: {fileID: 0}
   onDie:
     m_PersistentCalls:
@@ -245,6 +245,28 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7735320691996712109}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1005997342216684032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737052810380562063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 062104a33c40eca448eed4f1d47122cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 5000
+  destroyVFXs: []
+  delayBetweenDestroyVFX: 0.2
+  destroySFX: {fileID: 0}
+  destroyDelaySeconds: 1
+  currentHealth: 5000
+  objectToHideOnDeath: {fileID: 0}
+  onDie:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1892379042822059643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,28 +282,6 @@ MonoBehaviour:
   damageDoneToOtherOnCollision: 1000
   destroySelfOnCollision: 0
   multiplyDamageByVelocity: 1
---- !u!114 &1005997342216684032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7737052810380562063}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 062104a33c40eca448eed4f1d47122cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 50000
-  destroyVFXs: []
-  delayBetweenDestroyVFX: 0.2
-  destroySFX: {fileID: 0}
-  destroyDelaySeconds: 1
-  currentHealth: 0
-  objectToHideOnDeath: {fileID: 0}
-  onDie:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &3456790441941356460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +301,24 @@ MonoBehaviour:
   isHidden: 1
   isAddToTargetStore: 0
   isExcludedFromConvoy: 0
+--- !u!114 &1880410576390648222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737052810380562063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf23d925cb91d5544ac7f7293b694b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shipDetails:
+    shipName: Imperial Era Ruins
+    captainName: Ruins
+    shipType: Ruins
+    shipSprite: {fileID: 21300000, guid: 89e699df8c70c4d40934c7e494e60cec, type: 3}
+    captainSprite: {fileID: 21300000, guid: fce97fa36a6004542975ef44447961d8, type: 3}
 --- !u!1001 &8708039647124206524
 PrefabInstance:
   m_ObjectHideFlags: 0
