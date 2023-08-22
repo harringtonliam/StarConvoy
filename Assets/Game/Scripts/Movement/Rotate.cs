@@ -68,11 +68,11 @@ namespace SC.Movement
                 transform.Rotate(Vector3.right * rotationThisFrame * verticalInput);
             }
 
-            if (Input.GetKey(KeyCode.O))
+            if (Input.GetKey(KeyCode.G))
             {
                 transform.Rotate(-Vector3.forward * rotationThisFrame);
             }
-            else if (Input.GetKey(KeyCode.P))
+            else if (Input.GetKey(KeyCode.J))
             {
                 transform.Rotate(Vector3.forward * rotationThisFrame);
             }

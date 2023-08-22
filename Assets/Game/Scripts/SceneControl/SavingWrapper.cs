@@ -17,6 +17,9 @@ namespace SC.SceneControl
 
         public event Action onSaveUpated;
 
+        string mostRecentSavedGame;
+
+        public string MostRecentSavedGame { get {return  mostRecentSavedGame; } }
 
          private void Start()
         {
@@ -30,12 +33,10 @@ namespace SC.SceneControl
             yield return fader.FadeIn(fadeTime); ;
         }
     
-
         public void LoadSavedGame(string savedGame)
         {
             StartCoroutine(LoadLastScene(savedGame));
         }
-
 
         public void Load()
         {
@@ -44,6 +45,7 @@ namespace SC.SceneControl
 
         public void Save(string fileName)
         {
+            mostRecentSavedGame = fileName;
             GetComponent<SavingSystem>().Save(fileName);
             if (onSaveUpated!= null)
             {

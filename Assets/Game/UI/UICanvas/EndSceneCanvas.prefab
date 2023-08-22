@@ -766,11 +766,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Contact was lost with {0}'s fighter during a mission against a suspected
-    rebel base. \n\nUnfortunately enemy activity in the sector make search and rescue
-    operations impossible.\r\n\nWe continue to hope for their {0}'s return, but should
-    the worst have happened know their sacrifice will not have been in vain.  \r\n\nWe
-    strive for ultimate victory no mater what the cost!\r\n"
+  m_text: "Contact was lost with our soldier's fighter during a mission against a
+    suspected Raider base. \n\nUnfortunately enemy activity in the sector make search
+    and rescue operations impossible.\r\n\nWe continue to hope for our soldiers return,
+    but should the worst have happened know our hero's sacrifice will not have been
+    in vain.  \r\n\nWe strive for ultimate victory no matter what the cost!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4030,10 +4030,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "{0} has been reported killed in action following the loss of thier ship.\n\nSearch
-    and rescue operations have ceased and altough no body has been recovered  examination
-    of the wreakage of their ship leads us to assume the worst.\n\nTheir sacrifice
-    will be recorded  for prosperity in The Alliance\u2019s war records."
+  m_text: "Our soldier has been reported killed in action following the loss of their
+    ship.\r\n\r\nSearch and rescue operations have ceased, and although no body has
+    been recovered, examination of the wreckage leads us to assume the worst.\r\n\r\nOur
+    hero's sacrifice will be recorded for prosperity in The Alliance\u2019s war records.\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,

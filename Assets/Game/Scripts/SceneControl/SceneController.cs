@@ -6,6 +6,7 @@ using System;
 using SC.Combat;
 using SC.JumpGate;
 using SC.Attributes;
+using SC.Saving;
 using System.Text.RegularExpressions;
 
 namespace SC.SceneControl
@@ -150,7 +151,9 @@ namespace SC.SceneControl
 
         public void RestartCurrentScene()
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
+            savingWrapper.LoadSavedGame(savingWrapper.MostRecentSavedGame);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         public void LoadMainMenu()

@@ -11,30 +11,16 @@ namespace SC.UI
         [SerializeField] float deadZoneRadius = 10f;
         [SerializeField] Rotate rotate;
 
-
-
-
-
         bool isMousePointerOver = false;
 
         private Vector2 screenCenter;
 
-        private void Awake()
-        {
-            screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
-        }
-
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
 
         // Update is called once per frame
         void Update()
         {
             Vector2 mouse = Input.mousePosition;
-
+            screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
             Vector2 centred = mouse - screenCenter;
 
             float distanceFromScreenCentre = Vector2.Distance(screenCenter, mouse);
