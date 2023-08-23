@@ -7,7 +7,7 @@ namespace SC.Combat
     public enum Faction
     {
         Alliance,
-        Rebel,
+        Raider,
         None
     }
 }

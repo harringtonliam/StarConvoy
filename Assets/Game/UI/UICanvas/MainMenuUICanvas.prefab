@@ -117,6 +117,8 @@ MonoBehaviour:
   newGameButton: {fileID: 1468579814036371227}
   loadSavedGameButton: {fileID: 297584852835377081}
   exitGameButton: {fileID: 1468579814569666720}
+  newGameUI: {fileID: 0}
+  loadGameUI: {fileID: 0}
 --- !u!1 &1468579813109532691
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,6 +1052,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExitGameButton
       objectReference: {fileID: 0}
+    - target: {fileID: 3994256125029297741, guid: 2c1505599a58b8842bf56107e743ec29,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3994256125029297742, guid: 2c1505599a58b8842bf56107e743ec29,
         type: 3}
       propertyPath: m_Pivot.x
@@ -1073,7 +1080,7 @@ PrefabInstance:
     - target: {fileID: 3994256125029297742, guid: 2c1505599a58b8842bf56107e743ec29,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3994256125029297742, guid: 2c1505599a58b8842bf56107e743ec29,
         type: 3}
@@ -1083,7 +1090,7 @@ PrefabInstance:
     - target: {fileID: 3994256125029297742, guid: 2c1505599a58b8842bf56107e743ec29,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3994256125029297742, guid: 2c1505599a58b8842bf56107e743ec29,
         type: 3}
@@ -1133,12 +1140,12 @@ PrefabInstance:
     - target: {fileID: 3994256125029297742, guid: 2c1505599a58b8842bf56107e743ec29,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 3994256125029297742, guid: 2c1505599a58b8842bf56107e743ec29,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -270
       objectReference: {fileID: 0}
     - target: {fileID: 3994256125029297742, guid: 2c1505599a58b8842bf56107e743ec29,
         type: 3}

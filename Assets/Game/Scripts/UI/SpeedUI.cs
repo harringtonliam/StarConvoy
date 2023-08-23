@@ -42,9 +42,17 @@ namespace SC.UI
 
         private void Redraw()
         {
-            moveValueText.text = playerMove.CurrentSpeed.ToString("###0");
+            if (playerMove.CurrentSpeed <= playerMove.MaxSpeed)
+            {
+                moveValueText.text = playerMove.CurrentSpeed.ToString("###0");
+            }
+            else
+            {
+                moveValueText.text = string.Empty;
+            }
+           
             if (foregroudnHealthBar == null) return;
-            Vector3 newScale = new Vector3(playerMove.CurrentSpeed / playerMove.MaxSpeed, 1, 1);
+            Vector3 newScale = new Vector3(Mathf.Clamp(playerMove.CurrentSpeed / playerMove.MaxSpeed, 0f, 1f), 1, 1);
             foregroudnHealthBar.localScale = newScale;
 
         }

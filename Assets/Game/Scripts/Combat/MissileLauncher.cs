@@ -16,6 +16,7 @@ namespace SC.Combat
         [SerializeField] Transform spawnPoint;
         [SerializeField] Transform targetingPoint;
         [SerializeField] CombatTarget currentTarget;
+        [SerializeField] AudioClip firingSound;
 
         private int currentNumberOfMissiles;
         bool canShoot = true;
@@ -72,6 +73,7 @@ namespace SC.Combat
             if (currentNumberOfMissiles > 0)
             {
                 GameObject newMissile = GameObject.Instantiate(missilePrefab, spawnPoint.position, spawnPoint.rotation);
+                PlayFiringSound();
                 if (currentTarget == null || currentTarget.gameObject == null)
                 {
                     Debug.Log("Misslie Launcher unable to shoot");
@@ -166,6 +168,14 @@ namespace SC.Combat
                 TargetAquiredUpdated();
             }
 
+        }
+
+        private void PlayFiringSound()
+        {
+            if (firingSound != null)
+            {
+                AudioSource.PlayClipAtPoint(firingSound, transform.position);
+            }
         }
     }
 

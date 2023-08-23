@@ -12,6 +12,7 @@ namespace SC.Combat
         [SerializeField] ParticleSystem[] destroyVFXs;
         [SerializeField] float delayBetweenDestroyVFX = 0.2f;
         [SerializeField] AudioClip destroySFX;
+        [SerializeField] AudioClip hitSFX;
         [SerializeField] float destroyDelaySeconds = 1f;
         [SerializeField] float currentHealth;
         [SerializeField] GameObject objectToHideOnDeath;
@@ -39,6 +40,7 @@ namespace SC.Combat
         public void TakeDamage(float damage)
         {
             currentHealth -= damage;
+            PlayHitSFX();
             if (healthUpdated != null)
             {
                 healthUpdated();
@@ -92,6 +94,14 @@ namespace SC.Combat
             if (destroySFX != null)
             {
                 AudioSource.PlayClipAtPoint(destroySFX, transform.position);
+            }
+        }
+
+        private void PlayHitSFX()
+        {
+            if (hitSFX != null)
+            {
+                AudioSource.PlayClipAtPoint(hitSFX, transform.position);
             }
         }
 

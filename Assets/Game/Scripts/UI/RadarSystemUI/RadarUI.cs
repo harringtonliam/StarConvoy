@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using SC.Combat;
+using SC.Attributes;
 using System;
 
 namespace SC.UI.RadarSystemUI
@@ -21,12 +22,14 @@ namespace SC.UI.RadarSystemUI
 
         GameObject player;
         TargetLocator targetLocator;
+        TargetSelection targetSelection;
 
         // Start is called before the first frame update
         void Start()
         {
             player = GameObject.FindGameObjectWithTag("Player");
             targetLocator = player.GetComponent<TargetLocator>();
+            targetSelection = player.GetComponent<TargetSelection>();
         }
 
         // Update is called once per frame

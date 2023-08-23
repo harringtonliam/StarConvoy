@@ -86,3 +86,4 @@ MonoBehaviour:
   spawnPoint: {fileID: 3380649057399803997}
   targetingPoint: {fileID: 0}
   currentTarget: {fileID: 0}
+  firingSound: {fileID: 8300000, guid: 49630d86bef22460d9fba2e638c70288, type: 3}

@@ -182,7 +182,8 @@ MonoBehaviour:
   destroyVFXs:
   - {fileID: 2239221611346307998}
   delayBetweenDestroyVFX: 0.2
-  destroySFX: {fileID: 0}
+  destroySFX: {fileID: 8300000, guid: 950361b51d02a43f381c840822ff3db4, type: 3}
+  hitSFX: {fileID: 8300000, guid: 03f5e86c9f8af40468e062c1662b3436, type: 3}
   destroyDelaySeconds: 1
   currentHealth: 0
   objectToHideOnDeath: {fileID: 0}
@@ -243,6 +244,7 @@ MonoBehaviour:
   makeHiddenOnArrival: 1
   makeSafeOnJump: 1
   jumpTimeScale: 2
+  jumpSound: {fileID: 8300000, guid: 82aa12fdb090a4ab2b6a151f0488ab72, type: 3}
 --- !u!114 &1335817392556679988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1230,6 +1232,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
+        type: 3}
+      propertyPath: firingSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 69445cce8a60f47a59a639a565185c15, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4057d2f45b93184e8e20b56339de696, type: 3}
 --- !u!4 &1226386952769779579 stripped

@@ -15,7 +15,8 @@ namespace SC.JumpGate
         [SerializeField] bool makeHiddenOnArrival = true;
         [SerializeField] bool makeSafeOnJump = true;
         [SerializeField] float jumpTimeScale = 1f;
-        
+        [SerializeField] AudioClip jumpSound;
+
 
         Move move;
         MessageSender messageSender;
@@ -42,6 +43,7 @@ namespace SC.JumpGate
 
             transform.LookAt(jumpDestination);
             PlayJumpVFX();
+            PlayJumpSound();
             move.SetCurrentSpeed(jumpSpeed, true);
             combatTarget.SetIsSafe(makeSafeOnJump);
             Time.timeScale = jumpTimeScale;
@@ -131,6 +133,14 @@ namespace SC.JumpGate
                 {
                     jumpVFXs[i].Stop();
                 }
+            }
+        }
+
+        private void PlayJumpSound()
+        {
+            if (jumpSound != null)
+            {
+                AudioSource.PlayClipAtPoint(jumpSound, transform.position);
             }
         }
     }
