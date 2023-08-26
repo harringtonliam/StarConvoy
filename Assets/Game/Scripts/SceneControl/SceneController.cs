@@ -142,10 +142,7 @@ namespace SC.SceneControl
 
         private string GetSaveGameName()
         {
-            string playerName = player.GetComponent<PlayerInformationStore>().PlayerName;
-            Regex rgx = new Regex("[^a-zA-Z0-9 -]");
-            string safePlayerName = rgx.Replace(playerName, "");
-            return safePlayerName + SceneManager.GetActiveScene().buildIndex;
+            return SceneManager.GetActiveScene().name;
         }
 
 
@@ -153,7 +150,6 @@ namespace SC.SceneControl
         {
             SavingWrapper savingWrapper = FindObjectOfType<SavingWrapper>();
             savingWrapper.LoadSavedGame(savingWrapper.MostRecentSavedGame);
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         public void LoadMainMenu()

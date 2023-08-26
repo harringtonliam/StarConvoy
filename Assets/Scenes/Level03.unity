@@ -240,6 +240,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: MissionLevel2
       objectReference: {fileID: 0}
+    - target: {fileID: 4255152089024534100, guid: 41cb9c2498afde344983a5ebf387213c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255152089024534100, guid: 41cb9c2498afde344983a5ebf387213c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255152089024534100, guid: 41cb9c2498afde344983a5ebf387213c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4255152089024534100, guid: 41cb9c2498afde344983a5ebf387213c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764689650119372646, guid: 41cb9c2498afde344983a5ebf387213c,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764689650119372646, guid: 41cb9c2498afde344983a5ebf387213c,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764689650119372646, guid: 41cb9c2498afde344983a5ebf387213c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7764689650119372646, guid: 41cb9c2498afde344983a5ebf387213c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41cb9c2498afde344983a5ebf387213c, type: 3}
 --- !u!1001 &120903886
@@ -257,7 +297,7 @@ PrefabInstance:
     - target: {fileID: 844216026498780776, guid: cd10157f46778ea499c88f8234325873,
         type: 3}
       propertyPath: sceneToLoad
-      value: Level3
+      value: Level04
       objectReference: {fileID: 0}
     - target: {fileID: 844216026498780776, guid: cd10157f46778ea499c88f8234325873,
         type: 3}
@@ -1184,7 +1224,7 @@ PrefabInstance:
     - target: {fileID: 4095333640363654751, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
         type: 3}
       propertyPath: sceneTitle
-      value: Convoy Duty 2
+      value: Escort to Station
       objectReference: {fileID: 0}
     - target: {fileID: 4095333640363654751, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
         type: 3}

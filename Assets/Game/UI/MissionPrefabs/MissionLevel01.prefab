@@ -69,8 +69,8 @@ MonoBehaviour:
   m_text: "These will fire at you and the freighters.   Once you launch from the
     station, fly ahead of the freighters, and use your targeting systems and weapons
     to locate and destroy the targets.\n  \r\nYour mission ends when the freighters
-    have either reached the beacons, or have been destroyed by the practice targets.\r\n\nGood
-    Luck\r\n\nCommodore Aubrey\n"
+    have either reached the beacons, or have been destroyed by the practice targets.\r\n\nLet's
+    get this done!\n\nCommodore Aubrey\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using SC.SceneControl;
+using UnityEngine.SceneManagement;
 
 namespace SC.UI
 {
@@ -15,7 +16,7 @@ namespace SC.UI
         {
             if (SceneController.Instance == null || sceneTitletext == null) return;
 
-            sceneTitletext.text = SceneController.Instance.SceneTitle;
+            sceneTitletext.text = SceneManager.GetActiveScene().name + " - " + SceneController.Instance.SceneTitle;
         }
 
         // Update is called once per frame
