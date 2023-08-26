@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3772455724821779902}
     m_Modifications:
+    - target: {fileID: 269194988901016576, guid: d4057d2f45b93184e8e20b56339de696,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f2821fc1d23646259af2167fc82a481, type: 3}
     - target: {fileID: 701227192715568346, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
       propertyPath: m_Name
@@ -84,6 +89,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
+      propertyPath: firingAudioSource
+      value: 
+      objectReference: {fileID: 5105926916493917396}
+    - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
+        type: 3}
       propertyPath: temperatureIncreasePerShot
       value: 6
       objectReference: {fileID: 0}
@@ -101,6 +111,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eac12059b7e7ce40a12ddd474718b23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!82 &5105926916493917396 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 269194988901016576, guid: d4057d2f45b93184e8e20b56339de696,
+    type: 3}
+  m_PrefabInstance: {fileID: 5001170492900186324}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5843583166173293099
 PrefabInstance:
   m_ObjectHideFlags: 0

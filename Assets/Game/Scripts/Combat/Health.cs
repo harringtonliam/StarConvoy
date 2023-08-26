@@ -11,8 +11,8 @@ namespace SC.Combat
         [SerializeField] float maxHealth = 500f;
         [SerializeField] ParticleSystem[] destroyVFXs;
         [SerializeField] float delayBetweenDestroyVFX = 0.2f;
-        [SerializeField] AudioClip destroySFX;
-        [SerializeField] AudioClip hitSFX;
+        [SerializeField] AudioSource destroySFX;
+        [SerializeField] AudioSource hitSFX;
         [SerializeField] float destroyDelaySeconds = 1f;
         [SerializeField] float currentHealth;
         [SerializeField] GameObject objectToHideOnDeath;
@@ -93,7 +93,7 @@ namespace SC.Combat
         {
             if (destroySFX != null)
             {
-                AudioSource.PlayClipAtPoint(destroySFX, transform.position);
+                destroySFX.Play();
             }
         }
 
@@ -101,7 +101,7 @@ namespace SC.Combat
         {
             if (hitSFX != null)
             {
-                AudioSource.PlayClipAtPoint(hitSFX, transform.position);
+                hitSFX.Play();
             }
         }
 

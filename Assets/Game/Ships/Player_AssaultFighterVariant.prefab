@@ -432,7 +432,7 @@ PrefabInstance:
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
       propertyPath: timeBetweenShots
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
@@ -460,6 +460,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8638160265163745499}
     m_Modifications:
+    - target: {fileID: 269194988901016576, guid: d4057d2f45b93184e8e20b56339de696,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f2821fc1d23646259af2167fc82a481, type: 3}
     - target: {fileID: 701227192715568346, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
       propertyPath: m_Name
@@ -528,8 +533,13 @@ PrefabInstance:
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
       propertyPath: timeBetweenShots
-      value: 0.75
+      value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
+        type: 3}
+      propertyPath: firingAudioSource
+      value: 
+      objectReference: {fileID: 4538655465820374573}
     - target: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,
         type: 3}
       propertyPath: temperatureIncreasePerShot
@@ -537,6 +547,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4057d2f45b93184e8e20b56339de696, type: 3}
+--- !u!82 &4538655465820374573 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 269194988901016576, guid: d4057d2f45b93184e8e20b56339de696,
+    type: 3}
+  m_PrefabInstance: {fileID: 4413761229082419757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &6502333558751767265 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7456898409532311756, guid: d4057d2f45b93184e8e20b56339de696,

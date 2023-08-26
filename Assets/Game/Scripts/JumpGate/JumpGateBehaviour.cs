@@ -15,7 +15,7 @@ namespace SC.JumpGate
         [SerializeField] bool makeHiddenOnArrival = true;
         [SerializeField] bool makeSafeOnJump = true;
         [SerializeField] float jumpTimeScale = 1f;
-        [SerializeField] AudioClip jumpSound;
+        [SerializeField] AudioSource jumpSound;
 
 
         Move move;
@@ -140,7 +140,7 @@ namespace SC.JumpGate
         {
             if (jumpSound != null)
             {
-                AudioSource.PlayClipAtPoint(jumpSound, transform.position);
+                jumpSound.Play();
             }
         }
     }

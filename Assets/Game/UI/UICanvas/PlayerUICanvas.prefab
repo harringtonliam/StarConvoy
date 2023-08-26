@@ -1402,6 +1402,7 @@ MonoBehaviour:
   messageText: {fileID: 236427279336588156}
   redTextMessage: {fileID: 4645869121406410535}
   damageMessage: Damage Taken
+  messageBackgroundImage: {fileID: 1231667707244057967}
 --- !u!1 &236427280655250830
 GameObject:
   m_ObjectHideFlags: 0

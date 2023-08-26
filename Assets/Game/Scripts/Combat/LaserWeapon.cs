@@ -13,7 +13,7 @@ namespace SC.Combat
         [SerializeField] float timeBetweenShots = 1f;
         [SerializeField] float range = 500f;
         [SerializeField] ParticleSystem muzzleFlash;
-        [SerializeField] AudioClip firingSound;
+        [SerializeField] AudioSource firingAudioSource;
         [SerializeField] GameObject hitVFX;
         [SerializeField] CombatTarget currentTarget;
         [SerializeField] float maxTemperature = 100f;
@@ -147,9 +147,9 @@ namespace SC.Combat
 
         private void PlayFiringSound()
         {
-            if (firingSound != null)
+            if (firingAudioSource != null)
             {
-                AudioSource.PlayClipAtPoint(firingSound, transform.position);
+                firingAudioSource.Play();
             }
         }
 

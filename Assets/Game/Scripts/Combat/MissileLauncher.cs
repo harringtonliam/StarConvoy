@@ -16,7 +16,7 @@ namespace SC.Combat
         [SerializeField] Transform spawnPoint;
         [SerializeField] Transform targetingPoint;
         [SerializeField] CombatTarget currentTarget;
-        [SerializeField] AudioClip firingSound;
+        [SerializeField] AudioSource firingAudioSource;
 
         private int currentNumberOfMissiles;
         bool canShoot = true;
@@ -172,9 +172,9 @@ namespace SC.Combat
 
         private void PlayFiringSound()
         {
-            if (firingSound != null)
+            if (firingAudioSource != null)
             {
-                AudioSource.PlayClipAtPoint(firingSound, transform.position);
+                firingAudioSource.Play();
             }
         }
     }

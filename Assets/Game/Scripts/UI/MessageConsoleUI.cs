@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using SC.Messaging;
 using SC.Combat;
 using TMPro;
@@ -14,6 +15,7 @@ namespace SC.UI
         [SerializeField] TextMeshProUGUI messageText;
         [SerializeField] TextMeshProUGUI redTextMessage;
         [SerializeField] string damageMessage = "Damage Taken";
+        [SerializeField] Image messageBackgroundImage;
 
         GameObject player;
         MessageReceiver messageReceiver;
@@ -28,6 +30,25 @@ namespace SC.UI
             playerHealth.healthUpdated += StartDisplayDamageMessage;
             messageText.text = string.Empty;
             redTextMessage.text = string.Empty;
+        }
+
+        public void StartErrorProcedure()
+        {
+            messageBackgroundImage.color = Color.red;
+            StartCoroutine(DisplayErrorMessage());
+        }
+
+        private IEnumerator DisplayErrorMessage()
+        {
+            bool isErrorProcedureRunning = true;
+
+            while (isErrorProcedureRunning)
+            {
+                messageText.text = "System Error";
+                yield return new WaitForSeconds(1f);
+                messageText.text = string.Empty;
+                yield return new WaitForSeconds(1f);
+            }
         }
 
         private void OnDisable()
