@@ -18,17 +18,21 @@ namespace SC.SceneControl
             savingWrapper = FindObjectOfType<SavingWrapper>();
         }
 
-        public void StartNewGame(string saveGameName)
+        public void StartNewGame()
         {
             savingWrapper.DeleteDefaultSaveFile();
-            TransitionToNextScene(saveGameName);
+            TransitionToNextScene();
         }
 
-        public void TransitionToNextScene(string saveGameName)
+        public void TransitionToNextScene()
         {
-            StartCoroutine(Transition(saveGameName));
+            StartCoroutine(Transition(GetSaveGameName()));
         }
 
+        private string GetSaveGameName()
+        {
+            return sceneToLoad;
+        }
 
         private IEnumerator Transition(string saveGameName)
         {

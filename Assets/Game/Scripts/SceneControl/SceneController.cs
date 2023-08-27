@@ -6,8 +6,6 @@ using System;
 using SC.Combat;
 using SC.JumpGate;
 using SC.Attributes;
-using SC.Saving;
-using System.Text.RegularExpressions;
 
 namespace SC.SceneControl
 {
@@ -103,7 +101,6 @@ namespace SC.SceneControl
 
         void PauseScene()
         {
-            
             Time.timeScale = 0f;
         }
 
@@ -130,20 +127,17 @@ namespace SC.SceneControl
 
         public void MoveToNextScene()
         {
-            string saveGameName = GetSaveGameName(); 
-            sceneTransition.TransitionToNextScene(saveGameName);
+
+            sceneTransition.TransitionToNextScene();
         }
 
         public void StartNewGame()
         {
-            string saveGameName = GetSaveGameName();
-            sceneTransition.StartNewGame(saveGameName);
+
+            sceneTransition.StartNewGame();
         }
 
-        private string GetSaveGameName()
-        {
-            return SceneManager.GetActiveScene().name;
-        }
+
 
 
         public void RestartCurrentScene()

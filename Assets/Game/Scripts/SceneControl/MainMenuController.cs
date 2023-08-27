@@ -26,21 +26,11 @@ namespace SC.SceneControl
             }
         }
 
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
 
         public void StartNewGame()
         {
-            sceneTransition.TransitionToNextScene("");
+            sceneTransition.TransitionToNextScene();
         }
 
         public void ExitGame()

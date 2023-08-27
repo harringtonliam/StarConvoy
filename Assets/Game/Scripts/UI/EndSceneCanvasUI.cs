@@ -22,13 +22,12 @@ namespace SC.UI
         // Start is called before the first frame update
         void OnEnable()
         {
-            StartCoroutine(EnabledBehaviour());
+            EnabledBehaviour();
 
         }
 
-        IEnumerator EnabledBehaviour()
+        void EnabledBehaviour()
         {
-            yield return new WaitForSeconds(2f);
             SceneController.Instance.onSceneEnded += ShowEndSceneUI;
             SceneController.Instance.onPlayerDestroyed += ShowPlayerDestroyedUI;
         }

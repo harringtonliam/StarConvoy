@@ -1,9 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using SC.Saving;
 using System;
-//using RPG.Core;
+
 
 namespace SC.SceneControl
 {
@@ -51,7 +52,6 @@ namespace SC.SceneControl
             {
                 onSaveUpated();
             }
-            
         }
 
         public void QuickSave()

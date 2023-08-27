@@ -54,7 +54,7 @@ namespace SC.UI
 
         public void QuitButtonClicked()
         {
-
+            SceneController.Instance.LoadMainMenu();
         }
     }
 
