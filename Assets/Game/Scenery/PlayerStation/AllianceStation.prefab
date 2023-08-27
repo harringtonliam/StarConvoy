@@ -90,6 +90,7 @@ MonoBehaviour:
   destroyVFXs: []
   delayBetweenDestroyVFX: 0.2
   destroySFX: {fileID: 0}
+  hitSFX: {fileID: 0}
   destroyDelaySeconds: 2
   currentHealth: 5000
   objectToHideOnDeath: {fileID: 0}
@@ -612,6 +613,21 @@ PrefabInstance:
     - target: {fileID: 4106807547668112, guid: ae5e9d0da5672704e9fd3367770b99cb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 198239321507536684, guid: ae5e9d0da5672704e9fd3367770b99cb,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 198239321507536684, guid: ae5e9d0da5672704e9fd3367770b99cb,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.454902
+      objectReference: {fileID: 0}
+    - target: {fileID: 198239321507536684, guid: ae5e9d0da5672704e9fd3367770b99cb,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.30588236
       objectReference: {fileID: 0}
     - target: {fileID: 199907038606679118, guid: ae5e9d0da5672704e9fd3367770b99cb,
         type: 3}

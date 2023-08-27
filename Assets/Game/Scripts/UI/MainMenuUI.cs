@@ -11,15 +11,18 @@ namespace SC.UI
     {
         [SerializeField] Button newGameButton;
         [SerializeField] Button loadSavedGameButton;
+        [SerializeField] Button controlsButton;
         [SerializeField] Button exitGameButton;
         [SerializeField] NewGameUI newGameUI;
         [SerializeField] LoadGameUI loadGameUI;
+        [SerializeField] GameObject controlsUI;
 
         // Start is called before the first frame update
         void Start()
         {
             newGameButton.onClick.AddListener(NewGameButtonClicked);
             loadSavedGameButton.onClick.AddListener(LoadSavedGameButtonClicked);
+            controlsButton.onClick.AddListener(DisplayControlsBurrobClicked);
             exitGameButton.onClick.AddListener(ExitGameButtonClicked);
         }
 
@@ -33,6 +36,11 @@ namespace SC.UI
         {
             loadGameUI.ShowHideUI(true);
 
+        }
+
+        public void DisplayControlsBurrobClicked()
+        {
+            controlsUI.SetActive(true);
         }
 
         public void ExitGameButtonClicked()
