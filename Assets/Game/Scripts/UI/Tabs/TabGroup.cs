@@ -14,6 +14,11 @@ namespace SC.UI.Tabs
         public TabButton selectedTab;
         public List<GameObject> objectsToSwap;
 
+        private void Start()
+        {
+            OnTabSelected(selectedTab);
+        }
+
         public void Subscribe(TabButton button)
         {
             if (tabButtons == null)
@@ -35,11 +40,16 @@ namespace SC.UI.Tabs
         public void OnTabExit(TabButton button)
         {
             ResetTabs();
-            button.backGround.sprite = tabIdle;
+            if (selectedTab == null || button != selectedTab)
+            {
+                button.backGround.sprite = tabIdle;
+            }
+
         }   
         
         public void OnTabSelected(TabButton button)
         {
+            Debug.Log("OnTabSelected " + button.transform.GetSiblingIndex().ToString());
             selectedTab = button;
             ResetTabs();
             button.backGround.sprite = tabActive;
@@ -59,10 +69,14 @@ namespace SC.UI.Tabs
 
         public void ResetTabs()
         {
-            foreach ( TabButton button in tabButtons)
+            Debug.Log("reset " + selectedTab.name);
+            foreach (TabButton button in tabButtons)
             {
-                if (selectedTab != null && button ==selectedTab) { continue; }
-                button.backGround.sprite = tabIdle;
+                if (selectedTab != null && button != selectedTab)
+                {
+                    button.backGround.sprite = tabIdle;
+                }
+
             }
         }
 

@@ -30,15 +30,9 @@ namespace SC.UI.Tabs
         // Start is called before the first frame update
         void Start()
         {
-            backGround = GetComponent<Image>();
-            tabGroup.Subscribe(this);
+            //tabGroup.Subscribe(this);
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
     }
 
 }

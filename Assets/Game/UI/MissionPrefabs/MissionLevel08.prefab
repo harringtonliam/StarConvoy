@@ -69,24 +69,23 @@ MonoBehaviour:
   m_text: 'I''m putting the entire sector on a war footing.  As a result we''re evacuating
     all civilian personnel from this habitat.
 
-    
 
-    There is a double convoy
-    heading to the nearby jump gate cluster.  Escort them there safely.
 
-    
+    There is a double convoy heading
+    to the nearby jump gate cluster.  Escort them there safely.
 
-    I''m
-    pleased to say the weapons on all our escort fighters have been upgraded, so
-    there is no excuse for failure.
+
+
+    I''m pleased
+    to say the weapons on all our escort fighters have been upgraded, so there is
+    no excuse for failure.
 
 
     Let''s get this done!
 
-    
 
-    Acting
-    Admiral Aubrey
+
+    Acting Admiral Aubrey
 
 '
   m_isRightToLeft: 0
@@ -452,7 +451,7 @@ PrefabInstance:
     - target: {fileID: 7249375280612435807, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
       propertyPath: m_Name
-      value: MissionLevel7
+      value: MissionLevel08
       objectReference: {fileID: 0}
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
@@ -497,7 +496,7 @@ PrefabInstance:
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 800
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}

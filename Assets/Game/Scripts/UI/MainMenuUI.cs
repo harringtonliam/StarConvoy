@@ -15,7 +15,7 @@ namespace SC.UI
         [SerializeField] Button exitGameButton;
         [SerializeField] NewGameUI newGameUI;
         [SerializeField] LoadGameUI loadGameUI;
-        [SerializeField] GameObject controlsUI;
+        [SerializeField] InstructionsUI instructionsUI;
 
         // Start is called before the first frame update
         void Start()
@@ -40,7 +40,7 @@ namespace SC.UI
 
         public void DisplayControlsBurrobClicked()
         {
-            controlsUI.SetActive(true);
+            instructionsUI.ToggleUI(true);
         }
 
         public void ExitGameButtonClicked()

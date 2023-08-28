@@ -67,13 +67,14 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Our agents have found the location of the Raider base.  Its a space station
-    near a ruined  Imperial outpost.\r\n\r\nYou're orders are to lead the assault
-    on the Raider station.  A Jump gate will transport you to the vicinity of the
-    station.  When you arrive eliminate the defences and destroy the station.  Our
-    force will be composed of yourself  in an Assault Fighter, accompanied by two
-    Escort Fighters.  This will be more than sufficient for the mission.  \r\n\r\nDo
-    not fail!  Come back victorious or not at all.\r\n\r\nLet's get this done!\r\n\r\nActing
-    Admiral Aubrey\r\n"
+    near a ruined  Imperial outpost.\r\nYou're orders are to lead the assault on
+    the Raider station.  A Jump gate will transport you to the vicinity of the station. 
+    When you arrive eliminate the defences and destroy the station.  Our force will
+    be composed of yourself  in an Assault Fighter, accompanied by two Escort Fighters. 
+    This will be more than sufficient for the mission.  \r\nWe think the station
+    has advanced defense systems which may make some of your Targeting Systems ineffective,
+    so you will need to find a weekness.\n\rLet's get this done!\r\n\rActing Admiral
+    Aubrey\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
@@ -115,7 +116,7 @@ MonoBehaviour:
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
+  m_paragraphSpacing: 50
   m_charWidthMaxAdj: 0
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
@@ -437,7 +438,7 @@ PrefabInstance:
     - target: {fileID: 7249375280612435807, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
       propertyPath: m_Name
-      value: MissionFinalScene
+      value: MissionLevel10
       objectReference: {fileID: 0}
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
@@ -482,7 +483,7 @@ PrefabInstance:
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 800
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}

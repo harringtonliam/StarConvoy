@@ -433,7 +433,7 @@ PrefabInstance:
     - target: {fileID: 7249375280612435807, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
       propertyPath: m_Name
-      value: MissionLevel3
+      value: MissionLevel04
       objectReference: {fileID: 0}
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
@@ -478,7 +478,7 @@ PrefabInstance:
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 800
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: 8899993398940597418, guid: 3791a336912cd774fbdc53385618a198,
         type: 3}
