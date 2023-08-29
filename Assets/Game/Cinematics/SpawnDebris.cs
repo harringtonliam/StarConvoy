@@ -16,6 +16,15 @@ namespace SC.Cinematics
         [SerializeField] float explosionRadius = 300f;
 
 
+        public void StopPlayerShip()
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Move playerMove = player.GetComponent<Move>();
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            playerController.EnableDIsablePlayerControl(false);
+            playerMove.SetCurrentSpeed(0f);
+        }
+
         public void PositionPlayerShip()
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");

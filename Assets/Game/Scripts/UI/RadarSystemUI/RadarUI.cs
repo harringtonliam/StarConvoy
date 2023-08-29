@@ -50,11 +50,14 @@ namespace SC.UI.RadarSystemUI
             Transform targetLocatorToUse = targetLocatorAboveUI;
             if(targetPositionRelativeToPlayer.y < 0f)
             {
+
                 targetLocatorToUse = targetLocatorBelowUI;
+                targetLocatorAboveUI.localScale= new Vector3(1f, 0.1f, 1f);
             }
             else
             {
                 targetLocatorToUse = targetLocatorAboveUI;
+                targetLocatorBelowUI.localScale = new Vector3(1f, 0.1f, 1f);
             }
 
 

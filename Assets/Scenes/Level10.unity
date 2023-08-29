@@ -3863,7 +3863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1977833196
 Transform:
   m_ObjectHideFlags: 0
@@ -5774,6 +5774,16 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8350550899107626805, guid: 33e6b1f0fb0ba3542bc8240caded08d5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -475.17212
+      objectReference: {fileID: 0}
+    - target: {fileID: 8350550899107626805, guid: 33e6b1f0fb0ba3542bc8240caded08d5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 41.279297
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33e6b1f0fb0ba3542bc8240caded08d5, type: 3}
 --- !u!114 &44635731194047362 stripped
@@ -6045,6 +6055,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7be2a14d9d69909439b4f1e810e10ff7, type: 2}
     - {fileID: 11400000, guid: 3aa677cda42618c4297742da44253a29, type: 2}
     - {fileID: 11400000, guid: d9697aca0c978bc4f8dbf565beb8178c, type: 2}
+    - {fileID: 11400000, guid: 5528a9d949484b343a4bf3f4b3ce9ddd, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -6107,6 +6118,20 @@ MonoBehaviour:
         - m_Target: {fileID: 44635731194047362}
           m_TargetAssemblyTypeName: SC.UI.MessageConsoleUI, Assembly-CSharp
           m_MethodName: StartErrorProcedure
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2225289096984695174}
+          m_TargetAssemblyTypeName: SC.Cinematics.SpawnDebris, Assembly-CSharp
+          m_MethodName: StopPlayerShip
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
