@@ -4362,16 +4362,6 @@ PrefabInstance:
       propertyPath: endSceneConditions.endOnAllConvoySafe
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5682410024952167455, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
-        type: 3}
-      propertyPath: cursorSettings.Array.data[1].cursorHotspot.x
-      value: 64
-      objectReference: {fileID: 0}
-    - target: {fileID: 5682410024952167455, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
-        type: 3}
-      propertyPath: cursorSettings.Array.data[1].cursorHotspot.y
-      value: 64
-      objectReference: {fileID: 0}
     - target: {fileID: 7758067363223438214, guid: 9dd3ac9b9748ed44cbd75bfb86b989d8,
         type: 3}
       propertyPath: m_Name

@@ -41,6 +41,7 @@ namespace SC.SceneControl
 
         public void Load()
         {
+            Debug.Log("Saving Wrapper Load " + defaultSaveFile);
             GetComponent<SavingSystem>().Load(defaultSaveFile);  
         }
 

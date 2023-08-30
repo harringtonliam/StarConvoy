@@ -5792,12 +5792,30 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 44635731194047361}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 44635731194047365}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5447768ca71db5f4f9cfcc954e27de2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &44635731194047363 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 44635732282615829, guid: 33e6b1f0fb0ba3542bc8240caded08d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 44635731194047361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &44635731194047364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 44635731171723435, guid: 33e6b1f0fb0ba3542bc8240caded08d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 44635731194047361}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &44635731194047365 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 44635731871899862, guid: 33e6b1f0fb0ba3542bc8240caded08d5,
+    type: 3}
+  m_PrefabInstance: {fileID: 44635731194047361}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &652933398535604630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6036,6 +6054,10 @@ MonoBehaviour:
   positionShipAt: {fileID: 1825146432}
   explosivePower: 6000
   explosionRadius: 600
+  playerUIS:
+  - {fileID: 44635731194047363}
+  - {fileID: 44635731194047364}
+  - {fileID: 44635731194047365}
 --- !u!114 &2225289096984695175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6056,6 +6078,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 3aa677cda42618c4297742da44253a29, type: 2}
     - {fileID: 11400000, guid: d9697aca0c978bc4f8dbf565beb8178c, type: 2}
     - {fileID: 11400000, guid: 5528a9d949484b343a4bf3f4b3ce9ddd, type: 2}
+    - {fileID: 11400000, guid: 601e01921db7a5848baccab39905e30f, type: 2}
+    - {fileID: 11400000, guid: 8dd40571a72d17242a0ec55697e8722c, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -6132,6 +6156,34 @@ MonoBehaviour:
         - m_Target: {fileID: 2225289096984695174}
           m_TargetAssemblyTypeName: SC.Cinematics.SpawnDebris, Assembly-CSharp
           m_MethodName: StopPlayerShip
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2225289096984695174}
+          m_TargetAssemblyTypeName: SC.Cinematics.SpawnDebris, Assembly-CSharp
+          m_MethodName: HidePlayerUI
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2225289096984695174}
+          m_TargetAssemblyTypeName: SC.Cinematics.SpawnDebris, Assembly-CSharp
+          m_MethodName: ShowPlayerUI
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

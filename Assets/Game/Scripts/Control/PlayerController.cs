@@ -8,7 +8,7 @@ namespace SC.Control
 {
     public class PlayerController : MonoBehaviour
     {
-        public void EnableDIsablePlayerControl(bool enable)
+        public void EnableDisablePlayerControl(bool enable)
         {
             if (gameObject.tag != "Player") return;
             SpeedControl speedControl = GetComponent<SpeedControl>();

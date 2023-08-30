@@ -22,6 +22,8 @@ namespace SC.JumpGate
         MessageSender messageSender;
         CombatTarget combatTarget;
         AIMovementControl aIMovementControl;
+        bool isJumping = false;
+        Transform currentJumpDestination;
 
 
 
@@ -34,19 +36,34 @@ namespace SC.JumpGate
             aIMovementControl = GetComponent<AIMovementControl>();
         }
 
+        private void Update()
+        {
+            StayTargetedAtJumpDestinateion();
+        }
+
 
         public void StartJumpProcess(float jumpSpeed, Transform jumpDestination)
         {
+            isJumping = true;
+            currentJumpDestination = jumpDestination;
             EnableDisablePlayerControls(false);
             SetAIMovementTarget(jumpDestination);
             SendJumpingMessage();
 
-            transform.LookAt(jumpDestination);
+            StayTargetedAtJumpDestinateion();
             PlayJumpVFX();
             PlayJumpSound();
             move.SetCurrentSpeed(jumpSpeed, true);
             combatTarget.SetIsSafe(makeSafeOnJump);
             Time.timeScale = jumpTimeScale;
+        }
+
+        private void StayTargetedAtJumpDestinateion()
+        {
+            if (isJumping)
+            {
+                transform.LookAt(currentJumpDestination);
+            }
         }
 
         private void SetAIMovementTarget(Transform jumpDestination)
@@ -62,7 +79,7 @@ namespace SC.JumpGate
             PlayerController playerController = GetComponent<PlayerController>();
             if (playerController != null)
             {
-                playerController.EnableDIsablePlayerControl(enable);
+                playerController.EnableDisablePlayerControl(enable);
             }
         }
 
@@ -85,6 +102,7 @@ namespace SC.JumpGate
 
         public void StartArrivalProcess()
         {
+            isJumping = false;
             Time.timeScale = 1f;
             MakeHidden();
             BringToAStop();

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -53,11 +54,21 @@ namespace SC.UI
             CreateDeatilsUi("Weapons", string.Empty);
             CreateDeatilsUi("Laser Weapons", weaponController.LaserWeapons.Length.ToString());
 
-            CreateDeatilsUi("Laser Range", weaponController.LaserWeapons[0].Range.ToString());
+            StringBuilder laserRange = new StringBuilder();
+            StringBuilder laserDamage = new StringBuilder();
+            StringBuilder laserRateOfFire = new StringBuilder();
+            for (int i = 0; i < weaponController.LaserWeapons.Length; i++)
+            {
+                laserRange.Append(weaponController.LaserWeapons[i].Range.ToString() + " / ");
+                laserDamage.Append(weaponController.LaserWeapons[i].Damage.ToString() + " / ");
+                laserRateOfFire.Append(weaponController.LaserWeapons[i].GetRateOfFire().ToString("#0.##") + " / ");
+            }
 
-            CreateDeatilsUi("Laser Damage", weaponController.LaserWeapons[0].Damage.ToString());
+            CreateDeatilsUi("Laser Range", laserRange.ToString());
 
-            CreateDeatilsUi("Laser Rate of Fire", weaponController.LaserWeapons[0].GetRateOfFire().ToString());
+            CreateDeatilsUi("Laser Damage", laserDamage.ToString());
+
+            CreateDeatilsUi("Laser Rate of Fire", laserRateOfFire.ToString());
         }
 
         private void SetMissleLauchers()

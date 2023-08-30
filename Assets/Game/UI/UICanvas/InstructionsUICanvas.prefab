@@ -165,8 +165,7 @@ MonoBehaviour:
     The Head Up Display will show the laser temperature.\r\nLaser Weapons \u2013
     The number of lasers your ship is armed with\r\nLaser Range \u2013 The distance
     the lasers can shoot\r\nLaser Damage \u2013 The amount of damage each laser can
-    do\r\nLaser Rate of Fire \u2013 The time between each laser shot if you keep
-    the Fire button pressed.  Lower numbers mean the lasers fire more often.\r\n"
+    do\r\nLaser Rate of Fire \u2013  The number of shots per second\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,

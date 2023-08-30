@@ -22,12 +22,9 @@ namespace SC.SafeZone
 
         private void BringToAStop()
         {
-
-            Debug.Log("Safe zone behaviour bring into a stop");
             AIMovementControl aIMovementControl = GetComponent<AIMovementControl>();
             if (aIMovementControl != null)
             {
-                Debug.Log("Safe zone behaviour disabling speed control ");
                 aIMovementControl.SetDesiredSpeed(0f);
                 aIMovementControl.SetCanManeuver(false);
             }

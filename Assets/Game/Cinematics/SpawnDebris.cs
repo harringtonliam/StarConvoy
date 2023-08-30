@@ -14,6 +14,7 @@ namespace SC.Cinematics
         [SerializeField] Transform positionShipAt;
         [SerializeField] float explosivePower = 50f;
         [SerializeField] float explosionRadius = 300f;
+        [SerializeField] GameObject[] playerUIS;
 
 
         public void StopPlayerShip()
@@ -21,7 +22,7 @@ namespace SC.Cinematics
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Move playerMove = player.GetComponent<Move>();
             PlayerController playerController = player.GetComponent<PlayerController>();
-            playerController.EnableDIsablePlayerControl(false);
+            playerController.EnableDisablePlayerControl(false);
             playerMove.SetCurrentSpeed(0f);
         }
 
@@ -30,7 +31,7 @@ namespace SC.Cinematics
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             Move playerMove = player.GetComponent<Move>();
             PlayerController playerController = player.GetComponent<PlayerController>();
-            playerController.EnableDIsablePlayerControl(false);
+            playerController.EnableDisablePlayerControl(false);
             player.transform.position = positionShipAt.position;
             player.transform.rotation = positionShipAt.rotation;
             playerMove.SetCurrentSpeed(playerMove.MaxSpeed);
@@ -51,9 +52,24 @@ namespace SC.Cinematics
             //newObject.transform.parent = this.transform;
 
             AIMovementControl aIMovementControl = newObject.GetComponent<AIMovementControl>();
+        }
 
+        public void HidePlayerUI()
+        {
+            ToggelPlayerUI(false);
+        }
 
+        public void ShowPlayerUI()
+        {
+            ToggelPlayerUI(true);
+        }
 
+        private void ToggelPlayerUI(bool isActive)
+        {
+            for (int i = 0; i < playerUIS.Length; i++)
+            {
+                playerUIS[i].SetActive(isActive);
+            }
         }
 
         public void EndGame()

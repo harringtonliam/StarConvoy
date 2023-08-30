@@ -36,6 +36,7 @@ namespace SC.SceneControl
 
         private IEnumerator Transition(string saveGameName)
         {
+            Debug.Log("***** ** Transition " + saveGameName);
             DontDestroyOnLoad(gameObject);
             Fader fader = FindObjectOfType<Fader>();
             //yield return fader.FadeOut(fadeTime);

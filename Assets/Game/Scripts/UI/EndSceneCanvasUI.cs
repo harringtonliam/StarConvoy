@@ -4,6 +4,7 @@ using UnityEngine;
 using SC.SceneControl;
 using TMPro;
 using SC.Attributes;
+using SC.Control;
 
 namespace SC.UI
 {
@@ -46,6 +47,7 @@ namespace SC.UI
 
         private void ShowEndSceneUI()
         {
+            player.GetComponent<PlayerController>().EnableDisablePlayerControl(false);
             uiCanvas.SetActive(true);
             CursorControl.Instance.SetNewCursor(CursorType.UICursor);
             DisplayScore();
@@ -53,6 +55,7 @@ namespace SC.UI
 
         private void ShowPlayerDestroyedUI()
         {
+            player.GetComponent<PlayerController>().EnableDisablePlayerControl(false);
             playerDestroyedUICanvas.SetActive(true);
         }
 
@@ -84,6 +87,7 @@ namespace SC.UI
 
         public void PlayAgainButtonClicked()
         {
+            player.GetComponent<PlayerController>().EnableDisablePlayerControl(true);
             SceneController.Instance.RestartCurrentScene();
         }
 

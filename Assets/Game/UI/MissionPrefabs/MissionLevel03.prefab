@@ -280,7 +280,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Escort convoy Gamao to Alliance Station Ehi.   \nSome of the ships in
-    the convoy are due an overhaul, so allowances will needed for them."
+    the convoy are due an overhaul, so you'll need to make allowances for them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,

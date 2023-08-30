@@ -191,11 +191,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_EscortInterceptorVariant
       objectReference: {fileID: 0}
-    - target: {fileID: 8781886594066850290, guid: e0aff17e78e1f5c4b9bf8e5a452679f5,
-        type: 3}
-      propertyPath: uniqueIdentifier
-      value: b16136a6-bc11-4926-8856-5b3d046edd9d
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0aff17e78e1f5c4b9bf8e5a452679f5, type: 3}
 --- !u!114 &9276494 stripped
@@ -1133,7 +1128,7 @@ PrefabInstance:
     - target: {fileID: 4308969309711992711, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA001
+      value: AA003
       objectReference: {fileID: 0}
     - target: {fileID: 5040694576315567041, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -2651,7 +2646,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA003
+      value: AA001
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
