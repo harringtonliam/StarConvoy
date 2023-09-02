@@ -15,6 +15,7 @@ namespace SC.Combat
         [SerializeField] bool isHidden = false;
         [SerializeField] bool isAddToTargetStore = true;
         [SerializeField] bool isExcludedFromConvoy = false;
+        [SerializeField] bool denyMissileLock = false;
 
         Health health;
 
@@ -29,6 +30,8 @@ namespace SC.Combat
         {
             uniqueIdentifier = newId;
         }
+
+        public bool DenyMissileLock {  get { return denyMissileLock; } }
 
         public Faction GetFaction()
         {

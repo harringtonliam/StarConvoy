@@ -62,6 +62,7 @@ MonoBehaviour:
   - {fileID: 4079959631342640209}
   delayBetweenDestroyVFX: 0.2
   destroySFX: {fileID: 0}
+  hitSFX: {fileID: 0}
   destroyDelaySeconds: 1
   currentHealth: 300
   objectToHideOnDeath: {fileID: 0}
@@ -87,6 +88,7 @@ MonoBehaviour:
   isHidden: 0
   isAddToTargetStore: 1
   isExcludedFromConvoy: 0
+  denyMissileLock: 1
 --- !u!114 &2510717216445923433
 MonoBehaviour:
   m_ObjectHideFlags: 0

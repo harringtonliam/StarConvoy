@@ -1981,6 +1981,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 44635731195201139}
     m_Modifications:
+    - target: {fileID: 8050163944189528837, guid: 21c66275bcd2b444292cb1e788468e1e,
+        type: 3}
+      propertyPath: m_text
+      value: "Contact was lost with our soldier's fighter during a mission against
+        a suspected Raider base. \n\nUnfortunately enemy activity in the sector make
+        search and rescue operations impossible.\r\n\nWe continue to hope for our
+        soldier's return, but should the worst have happened know our hero's sacrifice
+        will not have been in vain.  \r\n\nWe strive for ultimate victory no matter
+        what the cost!\r\n"
+      objectReference: {fileID: 0}
     - target: {fileID: 8336361285167704466, guid: 21c66275bcd2b444292cb1e788468e1e,
         type: 3}
       propertyPath: m_Pivot.x

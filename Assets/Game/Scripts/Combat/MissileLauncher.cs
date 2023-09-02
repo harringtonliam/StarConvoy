@@ -103,7 +103,7 @@ namespace SC.Combat
             if (raycastForward)
             {
                 CombatTarget target = hit.transform.GetComponent<CombatTarget>();
-                if (target != null && target == currentTarget)
+                if (target != null && target == currentTarget && !target.DenyMissileLock)
                 {
                     if (!isLockingStarted)
                     {

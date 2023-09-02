@@ -768,9 +768,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Contact was lost with our soldier's fighter during a mission against a
     suspected Raider base. \n\nUnfortunately enemy activity in the sector make search
-    and rescue operations impossible.\r\n\nWe continue to hope for our soldiers return,
-    but should the worst have happened know our hero's sacrifice will not have been
-    in vain.  \r\n\nWe strive for ultimate victory no matter what the cost!\r\n"
+    and rescue operations impossible.\r\n\nWe continue to hope for our soldier's
+    return, but should the worst have happened know our hero's sacrifice will not
+    have been in vain.  \r\n\nWe strive for ultimate victory no matter what the cost!\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -1060,54 +1060,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
+      propertyPath: playerJumpDestination
+      value: 
+      objectReference: {fileID: 1183942886}
+    - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
+        type: 3}
       propertyPath: jumpDestinations.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[0]
       value: 
-      objectReference: {fileID: 1183942886}
+      objectReference: {fileID: 788495226}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[1]
       value: 
-      objectReference: {fileID: 788495226}
+      objectReference: {fileID: 1588131500}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[2]
       value: 
-      objectReference: {fileID: 1588131500}
+      objectReference: {fileID: 1453422309}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[3]
       value: 
-      objectReference: {fileID: 1453422309}
+      objectReference: {fileID: 493593501}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[4]
       value: 
-      objectReference: {fileID: 493593501}
+      objectReference: {fileID: 3019047}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[5]
       value: 
-      objectReference: {fileID: 3019047}
+      objectReference: {fileID: 1616714625}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[6]
       value: 
-      objectReference: {fileID: 1616714625}
+      objectReference: {fileID: 624809875}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[7]
       value: 
-      objectReference: {fileID: 624809875}
+      objectReference: {fileID: 1271583302}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[8]
       value: 
-      objectReference: {fileID: 1271583302}
+      objectReference: {fileID: 842683705}
     - target: {fileID: 1321909932530350954, guid: b9e95604bc5891644a919c910f398961,
         type: 3}
       propertyPath: jumpDestinations.Array.data[9]
@@ -2671,7 +2676,7 @@ PrefabInstance:
     - target: {fileID: 4350947669705318613, guid: d434953e5890dba459f3fdc7a5e9dbe2,
         type: 3}
       propertyPath: m_Name
-      value: JumpDestination
+      value: PlayerJumpDestination
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d434953e5890dba459f3fdc7a5e9dbe2, type: 3}

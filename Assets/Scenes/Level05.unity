@@ -1633,7 +1633,7 @@ PrefabInstance:
     - target: {fileID: 778517003880926484, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 778517003880926484, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
@@ -2077,7 +2077,7 @@ PrefabInstance:
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 300
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -4012,7 +4012,7 @@ PrefabInstance:
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -300
+      value: -2000
       objectReference: {fileID: 0}
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -4022,7 +4022,7 @@ PrefabInstance:
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -4032,7 +4032,7 @@ PrefabInstance:
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -4047,7 +4047,7 @@ PrefabInstance:
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5688017147409755877, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -4210,8 +4210,8 @@ Transform:
   - {fileID: 93574510}
   - {fileID: 1150736975}
   - {fileID: 1380000033}
-  - {fileID: 344716351}
   - {fileID: 801447962}
+  - {fileID: 344716351}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

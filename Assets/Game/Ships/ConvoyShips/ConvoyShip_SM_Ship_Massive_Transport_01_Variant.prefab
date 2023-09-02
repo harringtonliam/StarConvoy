@@ -379,6 +379,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8184214452975690367, guid: 6b8ba38237cfc1b4d936191927d132b8,
         type: 3}
+      propertyPath: availableMessages.Array.data[2].messageText
+      value: Starting Jump Procedure.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184214452975690367, guid: 6b8ba38237cfc1b4d936191927d132b8,
+        type: 3}
       propertyPath: availableMessages.Array.data[3].messageText
       value: We have arrived at the Station safely
       objectReference: {fileID: 0}

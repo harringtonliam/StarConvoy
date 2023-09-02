@@ -4108,7 +4108,7 @@ PrefabInstance:
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: closestApproach
-      value: 200
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -4155,7 +4155,7 @@ PrefabInstance:
     - target: {fileID: 2836661779241882400, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_Radius
-      value: 75
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 3003830955616679952, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}

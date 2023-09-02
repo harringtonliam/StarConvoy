@@ -94,7 +94,7 @@ namespace SC.Combat
         {
 
             bool indexChanged = false;
-            if (currentTarget == null)
+            if (currentTarget == null || currentTarget.GetIsHidden())
             {
                 currentTargetIndex = 0;
                 indexChanged = true;

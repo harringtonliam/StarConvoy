@@ -694,6 +694,11 @@ PrefabInstance:
       propertyPath: makeHiddenOnArrival
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6929877576438702053, guid: 576c9f164c347d148894e1986baf3004,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 576c9f164c347d148894e1986baf3004, type: 3}
 --- !u!1001 &393724410
@@ -2617,7 +2622,7 @@ PrefabInstance:
     - target: {fileID: 3261828741004392312, guid: 3410f624755b5624ea03cd76bddd7911,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3261828741004392312, guid: 3410f624755b5624ea03cd76bddd7911,
         type: 3}
@@ -3955,7 +3960,7 @@ PrefabInstance:
     - target: {fileID: 8900898718751165999, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8900898718751165999, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}

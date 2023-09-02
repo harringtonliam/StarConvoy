@@ -11,6 +11,7 @@ namespace SC.JumpGate
     {
         [SerializeField] float jumpSpeed = 3000f;
         [SerializeField] Transform[] jumpDestinations;
+        [SerializeField] Transform playerJumpDestination;
         [SerializeField] MessageSender messageSender;
 
 
@@ -31,7 +32,14 @@ namespace SC.JumpGate
             JumpGateBehaviour jumpGateBehaviour = other.GetComponent<JumpGateBehaviour>();
             if (jumpGateBehaviour == null) return;
 
-            jumpGateBehaviour.StartJumpProcess(jumpSpeed, jumpDestinations[jumpDestiationIndex]);
+            Transform jumpDestinationToUse = jumpDestinations[jumpDestiationIndex];
+
+            if (other.gameObject.tag == "Player" && playerJumpDestination != null)
+            {
+                jumpDestinationToUse = playerJumpDestination;
+            }
+
+            jumpGateBehaviour.StartJumpProcess(jumpSpeed, jumpDestinationToUse);
             jumpDestiationIndex++;
             if (jumpDestiationIndex >= jumpDestinations.Length)
             {
