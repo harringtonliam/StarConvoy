@@ -672,6 +672,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
+      propertyPath: maxHealth
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
       propertyPath: destroyVFX
       value: 
       objectReference: {fileID: 8312451197677225488}

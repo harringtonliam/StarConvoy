@@ -9,10 +9,13 @@ namespace SC.CollisionDetection
 
     public class CollisionDetector : MonoBehaviour
     {
-        [SerializeField] GameObject parent;
+        [SerializeField] float maxCollisionAvoidanceTime = 10f;
 
 
         AIMovementControl aIMovementControl;
+
+        float timeSinceCollisionAvoidanceStarted = 0f;
+        bool collisionAvoidanceStarted = false;
 
         // Start is called before the first frame update
         void Start()
@@ -23,10 +26,29 @@ namespace SC.CollisionDetection
         // Update is called once per frame
         void Update()
         {
-
+            if (collisionAvoidanceStarted)
+            {
+                timeSinceCollisionAvoidanceStarted += Time.deltaTime;
+            }
+            if (collisionAvoidanceStarted && timeSinceCollisionAvoidanceStarted >= maxCollisionAvoidanceTime)
+            {
+                StopCollisionAvoidance();
+            }
         }
 
+
+
         private void OnTriggerEnter(Collider other)
+        {
+            StartCollisinAvoidance(other);
+
+        }
+        private void OnTriggerExit(Collider other)
+        {
+            StopCollisionAvoidance();
+        }
+
+        private void StartCollisinAvoidance(Collider other)
         {
             if (other.GetComponent<CombatTarget>() == null) return;
             if (other.gameObject.tag == "Player") return;
@@ -34,14 +56,16 @@ namespace SC.CollisionDetection
             var directionToOther = other.transform.position - transform.position;
             var awayFromTheOther = new Vector3(directionToOther.x * -1, directionToOther.y * -1, directionToOther.z * -1);
             aIMovementControl.SetCollisionAvoidanceDirection(awayFromTheOther, true);
-
+            timeSinceCollisionAvoidanceStarted = 0f;
+            collisionAvoidanceStarted = true;
         }
 
-
-        private void OnTriggerExit(Collider other)
+        private void StopCollisionAvoidance()
         {
             aIMovementControl.SetCollisionAvoidanceDirection(false);
+            collisionAvoidanceStarted = false;
         }
+
     }
 
 }

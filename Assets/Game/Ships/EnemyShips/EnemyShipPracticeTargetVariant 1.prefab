@@ -1654,7 +1654,7 @@ PrefabInstance:
     - target: {fileID: 65419368628003333, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 773549695718595229, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
@@ -1679,13 +1679,18 @@ PrefabInstance:
     - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: maxHealth
-      value: 20
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: destroyVFX
       value: 
       objectReference: {fileID: 8312451197677225488}
+    - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: currentHealth
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 1511354681413788279, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: objectToHideOnDeath
@@ -1827,6 +1832,11 @@ PrefabInstance:
       propertyPath: currentSpeed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3047713338756449907, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3985022169583691331, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_IsActive
@@ -1840,7 +1850,7 @@ PrefabInstance:
     - target: {fileID: 5397628054040721169, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6668896336619458931, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}

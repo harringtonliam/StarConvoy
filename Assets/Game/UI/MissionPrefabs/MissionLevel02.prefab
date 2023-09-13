@@ -272,8 +272,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: This will be your first active service.  Your orders are to escort convoy
-    Asfalto to the sector jump gate.   When they have all jumped, follow them through.
+  m_text: This will be your first active service mission.  Your orders are to escort
+    convoy Asfalto to the sector jump gate.   When they have all jumped, follow them
+    through.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,

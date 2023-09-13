@@ -89,6 +89,11 @@ PrefabInstance:
       propertyPath: currentHealth
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 2559849076839161639, guid: dece10ac34ddb5e4080feaf49490211a,
+        type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5362497563675194476, guid: dece10ac34ddb5e4080feaf49490211a,
         type: 3}
       propertyPath: range

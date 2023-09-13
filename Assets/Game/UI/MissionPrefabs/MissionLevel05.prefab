@@ -349,7 +349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I\u2019ve decided to consolidated our supply chain into larger convoys
+  m_text: "I\u2019ve decided to consolidate our supply chain into larger convoys
     to make them easier to protect\r\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}

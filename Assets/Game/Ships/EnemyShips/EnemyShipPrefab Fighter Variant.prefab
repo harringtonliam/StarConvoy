@@ -139,6 +139,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
+      propertyPath: closestApproach
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
       propertyPath: laserWeapons.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -168,6 +173,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 308a860d73cb20f49b7c81c2ed1ce790,
         type: 3}
+    - target: {fileID: 2836661779241882400, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: m_Radius
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 3003830955616679952, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: m_Name
