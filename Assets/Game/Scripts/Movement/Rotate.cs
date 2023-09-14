@@ -13,7 +13,6 @@ namespace SC.Movement
     public class Rotate : MonoBehaviour
     {
         [SerializeField] float turnSpeed = 100f;
-        [SerializeField] Transform rotationTarget;
 
         private Camera mainCamera;
 
@@ -68,11 +67,11 @@ namespace SC.Movement
                 transform.Rotate(Vector3.right * rotationThisFrame * verticalInput);
             }
 
-            if (Input.GetKey(KeyCode.G))
+            if (Input.GetKey(KeyCode.B))
             {
                 transform.Rotate(-Vector3.forward * rotationThisFrame);
             }
-            else if (Input.GetKey(KeyCode.J))
+            else if (Input.GetKey(KeyCode.M))
             {
                 transform.Rotate(Vector3.forward * rotationThisFrame);
             }

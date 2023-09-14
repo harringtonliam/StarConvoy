@@ -1196,8 +1196,8 @@ MonoBehaviour:
   m_text: "Rotate Upwards \u2013 Move mouse upwards, or W key, or Up Arrow key\r\nRotate
     Downwards \u2013 Move mouse upwards, or W key, or Up Arrow key\r\nRotate Left
     \u2013 Move mouse upwards, or W key, or Up Arrow key\r\nRotate Right \u2013 Move
-    mouse upwards, or W key, or Up Arrow key\r\nIncrease Speed \u2013 Y Key\r\nDecrease
-    Speed \u2013 H Key\r\nSpin Left \u2013 G Key\r\nSpin Right \u2013 J Key\r\nFire
+    mouse upwards, or W key, or Up Arrow key\r\nIncrease Speed \u2013 H Key\r\nDecrease
+    Speed \u2013 N Key\r\nSpin Left \u2013 B Key\r\nSpin Right \u2013 M Key\r\nFire
     Lasers \u2013 Left Mouse Button, or left ctrl\r\nFire Missile \u2013 Right Mouse
     button, or left alt\r\nScroll Through Targets \u2013 Mouse Wheel\r\nSet Current
     Target \u2013 T key\r\nAbort Mission \u2013 Esc key\r\n"

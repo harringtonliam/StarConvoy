@@ -140,7 +140,12 @@ PrefabInstance:
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
       propertyPath: closestApproach
-      value: 250
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
+        type: 3}
+      propertyPath: breakOffDistance
+      value: 1400
       objectReference: {fileID: 0}
     - target: {fileID: 2253552555050320551, guid: a7f27e1e2ee67be4b9ced45146c70129,
         type: 3}
