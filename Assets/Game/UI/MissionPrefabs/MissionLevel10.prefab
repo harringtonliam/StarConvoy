@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 480, y: 375.3184}
+  m_SizeDelta: {x: 480, y: 470.0683}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4352722931010265800
 CanvasRenderer:
@@ -71,10 +71,9 @@ MonoBehaviour:
     the Raider station.  A Jump gate will transport you to the vicinity of the station. 
     When you arrive eliminate the defences and destroy the station.  Our force will
     be composed of yourself  in an Assault Fighter, accompanied by two Escort Fighters. 
-    This will be more than sufficient for the mission.  \r\nWe think the station
-    has advanced defense systems which may make some of your Targeting Systems ineffective,
-    so you will need to find a weekness.\n\rLet's get this done!\r\n\rActing Admiral
-    Aubrey\r\n"
+    \r\nWe think the station has advanced defense systems, which may make some of
+    your Targeting Systems ineffective, so you will need to find a weekness.\n\rLet's
+    get this done!\r\n\rActing Admiral Aubrey\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
@@ -102,8 +101,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -245,7 +244,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 480, y: 182}
+  m_SizeDelta: {x: 240, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6261399807079653306
 CanvasRenderer:
@@ -380,8 +379,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

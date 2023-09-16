@@ -53,7 +53,7 @@ namespace SC.UI
 
         private void SetCursor(CursorSetting cursorSetting)
         {
-            Cursor.SetCursor(cursorSetting.cursorTexture2D, cursorSetting.cursorHotspot, CursorMode.ForceSoftware);
+            Cursor.SetCursor(cursorSetting.cursorTexture2D, cursorSetting.cursorHotspot, CursorMode.Auto);
         }
 
     }

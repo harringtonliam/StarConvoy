@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 480, y: 254.3035}
+  m_SizeDelta: {x: 480, y: 402.5535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4352722931010265800
 CanvasRenderer:
@@ -67,11 +67,12 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "I\u2019m taking the command ship Victory to sector Delto.   You\u2019ll
-    be flying escort, along with two corvettes.  To try and avoid enemy patrols we\u2019ll
-    be travelling via a disused jump gate.    Hopefully they won\u2019t look for
-    us there.\r\n\nWhen we reach the jump gate we\u2019ll have to bring it back online. 
-    That\u2019s when we will be at our most vulnerable.  One the gate is active we\u2019ll
-    travel through.  Follow us once we are safe.\r\n\nRear Admiral de Gama \r\n\n\n"
+    be flying escort, along with two corvettes.  \n\nTo try and avoid enemy patrols
+    we\u2019ll be travelling via a disused jump gate.    Hopefully they won\u2019t
+    look for us there.\r\n\nWhen we reach the jump gate we\u2019ll have to bring
+    it back online.  That\u2019s when we will be at our most vulnerable.  One the
+    gate is active we\u2019ll travel through.  Follow us once we are safe.\r\n\nRear
+    Admiral de Gama \r\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
@@ -99,8 +100,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -377,8 +378,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
