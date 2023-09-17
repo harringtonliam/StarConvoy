@@ -2753,7 +2753,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: Missile Lock Aquired - Track the Current Target for 2 seconds to get
-        a  lock.  Missiles wil only fire when locked
+        a  lock.  Missiles will only fire when locked
       objectReference: {fileID: 0}
     - target: {fileID: 4694181092832359982, guid: 8302656faea94fd47b0c0d2c43d15698,
         type: 3}
