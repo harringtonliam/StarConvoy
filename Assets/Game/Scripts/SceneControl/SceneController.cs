@@ -17,6 +17,7 @@ namespace SC.SceneControl
         [SerializeField] float endSceneDelaySeconds = 2f;
         [SerializeField] EndSceneConditions endSceneConditions;
         [SerializeField] bool isPauseSceneOnStart = true;
+        [SerializeField] bool abortEndsScene = false;
 
         [Serializable]
         public struct EndSceneConditions
@@ -45,6 +46,8 @@ namespace SC.SceneControl
         public event Action onPlayerDestroyed;
 
         public string SceneTitle {  get { return sceneTitle; } }
+       
+        private bool isPaused = false;
 
 
         private void Awake()
@@ -95,7 +98,11 @@ namespace SC.SceneControl
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                EndScene();
+                AbortScene();
+            }
+            if (Input.GetKeyDown(KeyCode.P))
+            {
+                TogglePause();
             }
         }
 
@@ -104,7 +111,18 @@ namespace SC.SceneControl
             Time.timeScale = 0f;
         }
 
-        
+        private void TogglePause()
+        {
+            isPaused = !isPaused;
+            if(isPaused)
+            {
+                PauseScene();
+            }
+            else
+            {
+                Time.timeScale = 1f;
+            }
+        }
 
         public void StartScene()
         {
@@ -112,6 +130,18 @@ namespace SC.SceneControl
             playerJumpGateBehaviour.EnableDisablePlayerControls(enablePlayerControlsOnSceneStart);
         }
         
+
+        private void AbortScene()
+        {
+            if (abortEndsScene)
+            {
+                EndScene();
+            }
+            else
+            {
+                RestartCurrentScene();
+            }
+        }
 
         public void EndScene()
         {
