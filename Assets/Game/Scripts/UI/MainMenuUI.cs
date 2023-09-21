@@ -46,8 +46,7 @@ namespace SC.UI
 
         public void ExitGameButtonClicked()
         {
-            MainMenuController.Instance.ExitGame();
-
+            Application.Quit();
         }
     }
 
