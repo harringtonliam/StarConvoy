@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.017879054, g: 0.027623817, b: 0.038314264, a: 1}
+  m_IndirectSpecularColor: {r: 0.017932627, g: 0.027650919, b: 0.03794283, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -956,7 +956,7 @@ PrefabInstance:
     - target: {fileID: 3822242272309065441, guid: 8bcbddb416519a942a6c445f632a975c,
         type: 3}
       propertyPath: shipDetails.captainName
-      value: Captain Kent
+      value: Captain Cent
       objectReference: {fileID: 0}
     - target: {fileID: 3822242272309065441, guid: 8bcbddb416519a942a6c445f632a975c,
         type: 3}

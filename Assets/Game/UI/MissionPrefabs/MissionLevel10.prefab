@@ -67,13 +67,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Our agents have found the location of the Raider base.  Its a space station
-    near a ruined  Imperial outpost.\r\nYou're orders are to lead the assault on
-    the Raider station.  A Jump gate will transport you to the vicinity of the station. 
-    When you arrive eliminate the defences and destroy the station.  Our force will
-    be composed of yourself  in an Assault Fighter, accompanied by two Escort Fighters. 
-    \r\nWe think the station has advanced defense systems, which may make some of
-    your Targeting Systems ineffective, so you will need to find a weekness.\n\rLet's
-    get this done!\r\n\rActing Admiral Aubrey\r\n"
+    near a ruined Imperial outpost.\r\nYou're orders are to lead the assault on the
+    Raider Station.  A Jump gate will transport you to the location.  When you arrive
+    eliminate the defences and destroy the station.  Our force will be composed of
+    yourself  in an Assault Fighter, accompanied by two Escort Fighters.  \r\nWe
+    think the station has advanced defense systems, which may make some of your Targeting
+    Systems ineffective, so you will need to find a weekness.\n\rLet's get this done!\r\n\rActing
+    Admiral Aubrey\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,

@@ -361,7 +361,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA005
+      value: AAAB1
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
@@ -604,7 +604,7 @@ PrefabInstance:
     - target: {fileID: 6370124249179889178, guid: 3410f624755b5624ea03cd76bddd7911,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA002
+      value: AAAA2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3410f624755b5624ea03cd76bddd7911, type: 3}
@@ -852,7 +852,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA011
+      value: AAAE1
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
@@ -1128,7 +1128,7 @@ PrefabInstance:
     - target: {fileID: 4308969309711992711, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA003
+      value: AAAA3
       objectReference: {fileID: 0}
     - target: {fileID: 5040694576315567041, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -1233,7 +1233,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA009
+      value: AAAD1
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
@@ -1646,7 +1646,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA012
+      value: AAAE2
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
@@ -1741,7 +1741,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA006
+      value: AAAB2
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
@@ -1841,7 +1841,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA010
+      value: AAAD2
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
@@ -1936,7 +1936,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA007
+      value: AAAC1
       objectReference: {fileID: 0}
     - target: {fileID: 5073853220308120471, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
@@ -2404,7 +2404,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA008
+      value: AAAC2
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: 133d77f297f28ef438bfa8252e1ef795,
         type: 3}
@@ -2646,7 +2646,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA001
+      value: AAAA1
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
@@ -2817,12 +2817,12 @@ PrefabInstance:
     - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
       propertyPath: shipDetails.shipName
-      value: Cheap Serenity Knockff
+      value: Cheap Serenity Knockoff
       objectReference: {fileID: 0}
     - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
       propertyPath: shipDetails.captainName
-      value: Captain Mal Reynolds
+      value: Captain Reynolds
       objectReference: {fileID: 0}
     - target: {fileID: 4489141830007203542, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
@@ -3101,7 +3101,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA004
+      value: AAAA4
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}

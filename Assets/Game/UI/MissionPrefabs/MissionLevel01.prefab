@@ -67,7 +67,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'These will fire at you and the freighters.   Once you launch from the
-    station, fly ahead of the freighters, and use your targeting systems and weapons
+    station fly ahead of the freighters, and use your targeting systems and weapons
     to locate and destroy the targets.
 
     Your mission ends when the freighters
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'You will be piloting an Alliance Escort Fighter, armed with twin lasers
+  m_text: 'You will be piloting an Alliance Escort Fighter armed with twin lasers
     and four homing missiles.
 
     The freighters are controlled by automatic pilots. 

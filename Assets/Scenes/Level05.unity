@@ -1157,7 +1157,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shipDetails.captainSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 332fbca902145db4bbc74a34cf1ac1d7,
+      objectReference: {fileID: 21300000, guid: cf7270ba7e625994bb9250cbc2cd9f25,
         type: 3}
     - target: {fileID: 4472238735416742852, guid: 8bcbddb416519a942a6c445f632a975c,
         type: 3}
@@ -1321,7 +1321,7 @@ PrefabInstance:
     - target: {fileID: 4308969309711992711, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA001
+      value: AAAAA
       objectReference: {fileID: 0}
     - target: {fileID: 5040694576315567041, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -1498,6 +1498,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShipPrefab Fighter Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: 3410f624755b5624ea03cd76bddd7911,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: AAACB
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3410f624755b5624ea03cd76bddd7911, type: 3}
@@ -1934,7 +1939,7 @@ PrefabInstance:
     - target: {fileID: 3822242272309065441, guid: 8bcbddb416519a942a6c445f632a975c,
         type: 3}
       propertyPath: shipDetails.captainName
-      value: Captain Parkin
+      value: Captain Harkin
       objectReference: {fileID: 0}
     - target: {fileID: 3822242272309065441, guid: 8bcbddb416519a942a6c445f632a975c,
         type: 3}
@@ -2042,7 +2047,7 @@ PrefabInstance:
     - target: {fileID: 4308969309711992711, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA001
+      value: AAAAB
       objectReference: {fileID: 0}
     - target: {fileID: 5040694576315567041, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
@@ -2450,7 +2455,7 @@ PrefabInstance:
     - target: {fileID: 2765095282450272860, guid: 3410f624755b5624ea03cd76bddd7911,
         type: 3}
       propertyPath: shipDetails.shipName
-      value: Raider Fighter Wave2 01
+      value: Raider Fighter Wave1 01
       objectReference: {fileID: 0}
     - target: {fileID: 3261828741004392312, guid: 3410f624755b5624ea03cd76bddd7911,
         type: 3}
@@ -2511,6 +2516,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShipPrefab Fighter Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: 3410f624755b5624ea03cd76bddd7911,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: AAABA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3410f624755b5624ea03cd76bddd7911, type: 3}
@@ -2849,7 +2859,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA003
+      value: AAAAD
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
@@ -3133,6 +3143,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShipPrefab Fighter Variant (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: 3410f624755b5624ea03cd76bddd7911,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: AAABB
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3410f624755b5624ea03cd76bddd7911, type: 3}
 --- !u!4 &1354316784 stripped
@@ -3248,6 +3263,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EnemyShipPrefab Fighter Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 6370124249179889178, guid: 3410f624755b5624ea03cd76bddd7911,
+        type: 3}
+      propertyPath: uniqueIdentifierPrefix
+      value: AAACA
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3410f624755b5624ea03cd76bddd7911, type: 3}
@@ -3423,7 +3443,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shipDetails.captainSprite
       value: 
-      objectReference: {fileID: 21300000, guid: ab82d1c2f27a34b47b0f4090fa4b6560,
+      objectReference: {fileID: 21300000, guid: bf02ee45e86d29746883c5bffe8dfb40,
         type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dce92ffce29455145884dba2cb707cf5, type: 3}
@@ -3593,7 +3613,7 @@ PrefabInstance:
     - target: {fileID: 1055308570048161613, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA004
+      value: AAAAE
       objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
@@ -3977,7 +3997,7 @@ PrefabInstance:
     - target: {fileID: 4308969309711992711, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}
       propertyPath: uniqueIdentifierPrefix
-      value: AA001
+      value: AAAAC
       objectReference: {fileID: 0}
     - target: {fileID: 5040694576315567041, guid: 16fabb043a2d7dc4abd8646af4b4b7f5,
         type: 3}

@@ -1581,7 +1581,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shipDetails.captainSprite
       value: 
-      objectReference: {fileID: 21300000, guid: d60e3d9f17f4de547b9f9173d8016a5c,
+      objectReference: {fileID: 21300000, guid: 19c7cb57e8812eb4eb066fe4ce7a97bf,
         type: 3}
     - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
@@ -1805,6 +1805,12 @@ PrefabInstance:
       propertyPath: shipDetails.captainName
       value: Captain Rubber Duck
       objectReference: {fileID: 0}
+    - target: {fileID: 3822242272309065441, guid: 8bcbddb416519a942a6c445f632a975c,
+        type: 3}
+      propertyPath: shipDetails.captainSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a1a990a83697a2c4a878448b55911386,
+        type: 3}
     - target: {fileID: 4472238735416742852, guid: 8bcbddb416519a942a6c445f632a975c,
         type: 3}
       propertyPath: m_Name

@@ -349,8 +349,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Following the loss of our station we are going to withdraw from the sector,
-    and consolidate our forces at a safe distance.
+  m_text: Following the loss of our station we are going to withdraw from the sector,and
+    consolidate our forces at a safe distance.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,

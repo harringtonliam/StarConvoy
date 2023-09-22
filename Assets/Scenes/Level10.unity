@@ -1539,7 +1539,7 @@ PrefabInstance:
     - target: {fileID: 3241030796533271073, guid: b374124be9606db44a356ec5a83a6867,
         type: 3}
       propertyPath: shipDetails.captainName
-      value: Lieutenant Thrace
+      value: Lieutenant Thraco
       objectReference: {fileID: 0}
     - target: {fileID: 7143550466882883208, guid: b374124be9606db44a356ec5a83a6867,
         type: 3}
@@ -3722,7 +3722,7 @@ PrefabInstance:
     - target: {fileID: 3241030796533271073, guid: b374124be9606db44a356ec5a83a6867,
         type: 3}
       propertyPath: shipDetails.captainName
-      value: Captain Adama
+      value: Captain Adamo
       objectReference: {fileID: 0}
     - target: {fileID: 3241030796533271073, guid: b374124be9606db44a356ec5a83a6867,
         type: 3}
