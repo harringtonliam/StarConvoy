@@ -11,7 +11,7 @@ namespace SC.SceneControl
     public class SavingWrapper : MonoBehaviour
     {
         [SerializeField] float fadeTime = 0.2f;
-        [SerializeField] Fader fader;
+        //[SerializeField] Fader fader;
 
         const string defaultSaveFile = "autosave";
         const string quickSaveFile = "quicksave";
@@ -30,8 +30,8 @@ namespace SC.SceneControl
         private IEnumerator LoadLastScene(string savedGame)
         {
             yield return  GetComponent<SavingSystem>().LoadLastScene(savedGame);
-            fader.FadeOutImmediate();
-            yield return fader.FadeIn(fadeTime); ;
+            //fader.FadeOutImmediate();
+            //yield return fader.FadeIn(fadeTime); ;
         }
     
         public void LoadSavedGame(string savedGame)

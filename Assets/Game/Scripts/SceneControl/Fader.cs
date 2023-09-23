@@ -19,7 +19,7 @@ namespace SC.SceneControl
         private void Start()
         {
 
-            canvasGroup.alpha = 0;
+            //canvasGroup.alpha = 0;
         }
 
         public void FadeOutImmediate()

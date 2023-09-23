@@ -1057,7 +1057,7 @@ PrefabInstance:
         type: 3}
       propertyPath: shipDetails.captainSprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4ce17fb7b65e1864cb334789cecb35bd,
+      objectReference: {fileID: 21300000, guid: 212b02c89635e6e4aa6781cb2ff27d0b,
         type: 3}
     - target: {fileID: 4644354118630746768, guid: dce92ffce29455145884dba2cb707cf5,
         type: 3}
