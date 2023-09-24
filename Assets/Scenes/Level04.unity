@@ -3103,11 +3103,31 @@ PrefabInstance:
       propertyPath: uniqueIdentifierPrefix
       value: AAAA4
       objectReference: {fileID: 0}
+    - target: {fileID: 5073853220308120471, guid: e55778c8f4422004093a16b2f1a9ac7a,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
+        type: 3}
+      propertyPath: turnSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: combatTarget
       value: 
       objectReference: {fileID: 1676198270}
+    - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
+        type: 3}
+      propertyPath: closestApproach
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 5579857086668141721, guid: e55778c8f4422004093a16b2f1a9ac7a,
+        type: 3}
+      propertyPath: breakOffDistance
+      value: 1100
+      objectReference: {fileID: 0}
     - target: {fileID: 8114809568289352459, guid: e55778c8f4422004093a16b2f1a9ac7a,
         type: 3}
       propertyPath: shipDetails.shipName

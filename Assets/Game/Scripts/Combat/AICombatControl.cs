@@ -18,6 +18,7 @@ namespace SC.Combat
         [SerializeField] bool useRandomTargetSelection = true;
         [SerializeField] LaserWeapon[] laserWeapons;
         [SerializeField] bool debugLogs = false;
+        [SerializeField] float maxTimeAllowedForBreakOff = 30f;
 
         //Vector3 currentMoveTarget;
 
@@ -27,6 +28,7 @@ namespace SC.Combat
         AIMovementControl aIMovementControl;
 
         CombatTarget thisShipCombatTarget;
+        float breakOffDuration = 0f;
    
         // Start is called before the first frame update
         void Start()
@@ -146,6 +148,7 @@ namespace SC.Combat
             }
             else if(!movingAwayFromCombatTarget)
             {
+                ResetBreakOffDuration();
                 movingAwayFromCombatTarget = true;
                 CalculateNewMovementTarget();
             }
@@ -155,14 +158,27 @@ namespace SC.Combat
             }
         }
 
+        private void ResetBreakOffDuration()
+        {
+            if (!movingAwayFromCombatTarget)
+            {
+                breakOffDuration = 0f;
+            }
+        }
+
         private void CheckBreakOff()
         {
+            if(movingAwayFromCombatTarget)
+            {
+                breakOffDuration += Time.deltaTime;
+            }
             if (CheckCombatTarget() == false) return;
             float distanceToBreakOffPoint = Vector3.Distance(aIMovementControl.GetCurrentMoveTarget(), transform.position);
             LogDebugStatement("Check breakoff distance " +  distanceToBreakOffPoint.ToString() + " <? " + breakOffTolerance.ToString());
-            if (distanceToBreakOffPoint <= breakOffTolerance)
+            if (distanceToBreakOffPoint <= breakOffTolerance || breakOffDuration> maxTimeAllowedForBreakOff)
             {
                 movingAwayFromCombatTarget = false;
+                breakOffDuration = 0f;
                 aIMovementControl.SetCurrentMoveTarget(combatTarget.transform.position);
             }
         }
