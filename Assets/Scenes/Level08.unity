@@ -6041,7 +6041,7 @@ PrefabInstance:
     - target: {fileID: 2970170501950672862, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
       propertyPath: spawnFrequecy
-      value: 120
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 2970170501950672862, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
@@ -6132,7 +6132,7 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnCollection.shipToSpawnPrefabs.Array.data[2]
       value: 
-      objectReference: {fileID: 8900898718751165998, guid: e55778c8f4422004093a16b2f1a9ac7a,
+      objectReference: {fileID: 3261828741004392313, guid: 3410f624755b5624ea03cd76bddd7911,
         type: 3}
     - target: {fileID: 4319289585215102891, guid: bf5ab003c5b4a9844a6b61e725794196,
         type: 3}
