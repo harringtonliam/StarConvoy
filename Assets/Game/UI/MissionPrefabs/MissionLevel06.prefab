@@ -348,7 +348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The riders  have fallen into my trap! Our large convoys have lured the
+  m_text: The Raiders have fallen into my trap! Our large convoys have lured the
     enemy into committing significant numbers of ships to attacking them.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
