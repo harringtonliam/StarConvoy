@@ -40,13 +40,15 @@ namespace SC.Movement
 
         private void RespondToSpeedInput()
         {
-            if (!isEnabled) return;     
+            if (!isEnabled) return;
 
-            if (Input.GetKey(KeyCode.H))
+            float forwardInput = Input.GetAxis("Forward");
+
+            if (forwardInput > 0f)
             {
                 move.ChangeSpeed(1f);
             }
-            else if (Input.GetKey(KeyCode.N))
+            else if (forwardInput < 0f)
             {
                 move.ChangeSpeed(-1f);
             }

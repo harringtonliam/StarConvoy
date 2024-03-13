@@ -45,7 +45,7 @@ namespace SC.SceneControl
             savingWrapper.Load();
             savingWrapper.AutoSave();
             savingWrapper.Save(saveGameName);
-            yield return fader.FadeIn(fadeTime);
+            //yield return fader.FadeIn(fadeTime);
             Destroy(gameObject);
         }
     }

@@ -50,6 +50,12 @@ namespace SC.Movement
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
+            float forwardInput = Input.GetAxis("Forward");
+            if (forwardInput != 0f)
+            {
+                Debug.Log("ForwardInput = " + forwardInput.ToString());
+            }
+
             PerformRotation(horizontalInput, verticalInput);
         }
 

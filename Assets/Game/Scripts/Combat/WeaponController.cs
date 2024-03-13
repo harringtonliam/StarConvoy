@@ -70,6 +70,7 @@ namespace SC.Combat
 
             if (Input.GetButtonDown("Fire2"))
             {
+                Debug.Log("Fire 2 button pressed");
                 missileLaunchers[missileLauncherIndex].Shoot();
                 missileLauncherIndex++;
                 if (missileLauncherIndex >= missileLaunchers.Length)
