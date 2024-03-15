@@ -19,7 +19,12 @@ namespace SC.Movement
         public float TurnSpeed { get { return turnSpeed; } }
 
         public bool isEnabled;
+
+        private float horizontalRotateSpeed;
+        private float verticalRotateSpeed;
     
+        public float HorizontalRodateSpeed {  get { return horizontalRotateSpeed; } }
+        public float VerticalRodateSpeed { get { return verticalRotateSpeed; } }
 
         // Start is called before the first frame update
         void Start()
@@ -50,11 +55,6 @@ namespace SC.Movement
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
-            float forwardInput = Input.GetAxis("Forward");
-            if (forwardInput != 0f)
-            {
-                Debug.Log("ForwardInput = " + forwardInput.ToString());
-            }
 
             PerformRotation(horizontalInput, verticalInput);
         }
@@ -63,14 +63,20 @@ namespace SC.Movement
         {
             if (!isEnabled) return;
 
+            float adjustedHorizontalInput = horizontalInput * Mathf.Pow(Mathf.Abs(horizontalInput), 5);
+            float adjustedVerticalInput = verticalInput * Mathf.Pow(Mathf.Abs(verticalInput), 5);
+
+
             float rotationThisFrame = turnSpeed * Time.deltaTime;
             if (horizontalInput < 0f || horizontalInput > 0f)
             {
-                transform.Rotate(Vector3.up * rotationThisFrame * horizontalInput);
+                horizontalRotateSpeed =  rotationThisFrame * adjustedHorizontalInput;
+                transform.Rotate(Vector3.up * horizontalRotateSpeed);
             }
             if (verticalInput < 0f || verticalInput > 0f)
             {
-                transform.Rotate(Vector3.right * rotationThisFrame * verticalInput);
+                verticalRotateSpeed = rotationThisFrame * adjustedVerticalInput;
+                transform.Rotate(Vector3.right * verticalRotateSpeed);
             }
 
             if (Input.GetKey(KeyCode.B))

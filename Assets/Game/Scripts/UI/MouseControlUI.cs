@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using SC.Movement;
 using SC.Control;
+using TMPro;
 
 namespace SC.UI
 {
@@ -11,6 +12,8 @@ namespace SC.UI
     {
         [SerializeField] float deadZoneRadius = 10f;
         [SerializeField] Rotate rotate;
+        [SerializeField] TextMeshProUGUI xRotateText = null;
+        [SerializeField] TextMeshProUGUI yRotateText = null;
 
         bool isMouseControlEnabled  = true;
  
@@ -24,6 +27,10 @@ namespace SC.UI
         // Update is called once per frame
         void Update()
         {
+
+            xRotateText.text = rotate.HorizontalRodateSpeed.ToString("####0.00000");
+            yRotateText.text = rotate.VerticalRodateSpeed.ToString("####0.00000");
+
             if (!isMouseControlEnabled) return;
 
             Vector2 mouse = Input.mousePosition;
@@ -38,6 +45,8 @@ namespace SC.UI
             {
                 rotate.PerformRotation(horizontalInput, verticaInput * -1f);
             }
+
+
         }
 
         public void EnableMouseControl()
@@ -56,7 +65,6 @@ namespace SC.UI
                 isMouseControlEnabled = false;
             }
         }
-
 
         public void OnPointerEnter(PointerEventData eventData)
         {
