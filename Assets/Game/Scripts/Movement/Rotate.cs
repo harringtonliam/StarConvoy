@@ -2,14 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SC.Core;
 
 
 namespace SC.Movement
 {
-
-
-
-
     public class Rotate : MonoBehaviour
     {
         [SerializeField] float turnSpeed = 100f;
@@ -22,15 +19,20 @@ namespace SC.Movement
 
         private float horizontalRotateSpeed;
         private float verticalRotateSpeed;
-    
-        public float HorizontalRodateSpeed {  get { return horizontalRotateSpeed; } }
-        public float VerticalRodateSpeed { get { return verticalRotateSpeed; } }
+        float adjustedHorizontalInput;
+        float adjustedVerticalInput;
+        float gameControllerSensitivity = 0.5f;
+        bool usingGameController = false;
+
+        public float HorizontalRodateSpeed {  get { return adjustedHorizontalInput; } }
+        public float VerticalRodateSpeed { get { return adjustedVerticalInput; } }
 
         // Start is called before the first frame update
         void Start()
         {
-            //isEnabled = true;
             mainCamera = Camera.main;
+            gameControllerSensitivity = PlayerPrefs.GetFloat(PlayerSettings.JoystickSensitivityKey);
+            usingGameController = PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseControllerSetting;
         }
 
 
@@ -55,17 +57,30 @@ namespace SC.Movement
         {
             float horizontalInput = Input.GetAxis("Horizontal");
             float verticalInput = Input.GetAxis("Vertical");
+            float spinInput = Input.GetAxis("Spin");
 
-            PerformRotation(horizontalInput, verticalInput);
+            PerformRotation(horizontalInput, verticalInput, spinInput);
         }
 
         public void PerformRotation(float horizontalInput, float verticalInput)
         {
+            PerformRotation(horizontalInput, verticalInput, 0f);
+        }    
+
+        public void PerformRotation(float horizontalInput, float verticalInput, float spinInput)
+        {
             if (!isEnabled) return;
 
-            float adjustedHorizontalInput = horizontalInput * Mathf.Pow(Mathf.Abs(horizontalInput), 5);
-            float adjustedVerticalInput = verticalInput * Mathf.Pow(Mathf.Abs(verticalInput), 5);
-
+            if (usingGameController)
+            {
+                adjustedVerticalInput = verticalInput * gameControllerSensitivity;
+                adjustedHorizontalInput = horizontalInput * gameControllerSensitivity;
+            }
+            else
+            {
+                adjustedVerticalInput = verticalInput;
+                adjustedHorizontalInput = horizontalInput;
+            }
 
             float rotationThisFrame = turnSpeed * Time.deltaTime;
             if (horizontalInput < 0f || horizontalInput > 0f)
@@ -79,14 +94,11 @@ namespace SC.Movement
                 transform.Rotate(Vector3.right * verticalRotateSpeed);
             }
 
-            if (Input.GetKey(KeyCode.B))
+            if (spinInput < 0f || spinInput > 0f)
             {
-                transform.Rotate(-Vector3.forward * rotationThisFrame);
+                transform.Rotate(Vector3.forward * rotationThisFrame * spinInput);
             }
-            else if (Input.GetKey(KeyCode.M))
-            {
-                transform.Rotate(Vector3.forward * rotationThisFrame);
-            }
+
         }
     }
 

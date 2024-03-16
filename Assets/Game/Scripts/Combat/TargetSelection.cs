@@ -49,7 +49,7 @@ namespace SC.Combat
 
         private void RespondToSwitchToTargetInSights()
         {
-            if (Input.GetKeyDown(KeyCode.T) && targetInSights != null)
+            if (Input.GetButtonDown("Fire3") && targetInSights != null)
             {
                 currentTarget = targetInSights;
                 TargetChanged();
@@ -99,7 +99,7 @@ namespace SC.Combat
                 currentTargetIndex = 0;
                 indexChanged = true;
             }
-            if (Input.GetAxis("Mouse ScrollWheel") > 0)
+            if (Input.GetAxis("Mouse ScrollWheel") > 0  || Input.GetButtonDown("NextTarget"))
             {
                 currentTargetIndex++;
 

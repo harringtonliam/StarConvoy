@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SC.Control
+namespace SC.Core
 {
     public class PlayerSettings : MonoBehaviour
     {
-        [SerializeField] float JoystickSensitivityDefault = 0.75f;
+        [SerializeField] float JoystickSensitivityDefault = 0.5f;
         [SerializeField] string MouseOrControllerDefault = UseControllerSetting;
 
         public const string MouseOrControllerKey = "MouseOrController";

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using SC.Movement;
-using SC.Control;
+using SC.Core;
 using TMPro;
 
 namespace SC.UI
