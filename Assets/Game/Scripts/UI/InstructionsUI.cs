@@ -27,6 +27,14 @@ namespace SC.UI
 
         private void CloseButtonClicked()
         {
+            try
+            {
+                PlayerPrefs.Save();
+            }
+            catch(System.Exception ex)
+            {
+                Debug.Log("Unable to save play prefs " + ex.Message);
+            }
             ToggleUI(false);
         }
 

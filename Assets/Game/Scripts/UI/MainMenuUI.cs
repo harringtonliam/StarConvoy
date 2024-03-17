@@ -11,11 +11,11 @@ namespace SC.UI
     {
         [SerializeField] Button newGameButton;
         [SerializeField] Button loadSavedGameButton;
-        [SerializeField] Button settingsButton;
+        [SerializeField] Button instructionsButton;
         [SerializeField] Button exitGameButton;
         [SerializeField] NewGameUI newGameUI;
         [SerializeField] LoadGameUI loadGameUI;
-        [SerializeField] SettingsUI settingsUI;
+        [SerializeField] InstructionsUI instructionsUI;
 
         // Start is called before the first frame update
         void Start()
@@ -23,7 +23,7 @@ namespace SC.UI
             CursorControl.Instance.SetNewCursor(CursorType.UICursor);
             newGameButton.onClick.AddListener(NewGameButtonClicked);
             loadSavedGameButton.onClick.AddListener(LoadSavedGameButtonClicked);
-            settingsButton.onClick.AddListener(DisplaySettingsButtonClicked);
+            instructionsButton.onClick.AddListener(DisplayInstructionsButtonClicked);
             exitGameButton.onClick.AddListener(ExitGameButtonClicked);
         }
 
@@ -39,9 +39,9 @@ namespace SC.UI
 
         }
 
-        public void DisplaySettingsButtonClicked()
+        public void DisplayInstructionsButtonClicked()
         {
-            settingsUI.ToggleUI(true);
+            instructionsUI.ToggleUI(true);
         }
 
         public void ExitGameButtonClicked()
