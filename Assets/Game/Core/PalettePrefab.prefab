@@ -160,7 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3137255, g: 0.53333336, b: 0.56078434, a: 1}
+  m_Color: {r: 0.6392157, g: 0.6666667, b: 0.7137255, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -209,8 +209,77 @@ Transform:
   - {fileID: 4750567021229056958}
   - {fileID: 4190997043081105664}
   - {fileID: 8858379180442276107}
+  - {fileID: 3063892242275918989}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3065679012926083619
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 4872060496325064782}
+    m_Modifications:
+    - target: {fileID: 1927873383869000, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_Name
+      value: SM_Chr_ScifiWorlds_Soldier_Male_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137052840136428428, guid: d5af36cb8d44f3143acdef723cf8f7c3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d90dbc8fca21d5347bbe6442049fc7b1, type: 2}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d5af36cb8d44f3143acdef723cf8f7c3, type: 3}
+--- !u!4 &3063892242275918989 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4040787008042670, guid: d5af36cb8d44f3143acdef723cf8f7c3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3065679012926083619}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4195484892203620480
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -338,7 +407,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 73847fc4fb99162448a1fe0fd636c712, type: 2}
+      objectReference: {fileID: 2100000, guid: e871de2d3a078f445b028b75b70ee154, type: 2}
+    - target: {fileID: 137874875598006656, guid: 0418708de6c1f5d4799def6776f61029,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d8dfda64987cff5419b3497636a384d6, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

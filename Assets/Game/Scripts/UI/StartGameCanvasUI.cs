@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SC.SceneControl;
+using SC.Core;
 
 
 namespace SC.UI
@@ -48,7 +49,11 @@ namespace SC.UI
         public void StartButtonClicked()
         {
             ToggleUI();
-            CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
+            if(PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey)== PlayerSettings.UseMouseSetting)
+            {
+                CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
+            }
+            
             SceneController.Instance.StartScene();
         }
 

@@ -18,21 +18,45 @@ namespace SC.UI
         {
             mouseAndKeyBoardToggle.onValueChanged.AddListener(delegate { ToggleMouseAndKeyboard(mouseAndKeyBoardToggle); });
             mouseAndKeyBoardToggle.onValueChanged.AddListener(delegate { ToggleGameController(gameControllerToggle); });
+            DisplayCurrentSetting();
         }
 
-
+        private void DisplayCurrentSetting()
+        {
+            if (PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseMouseSetting)
+            {
+                mouseAndKeyBoard.SetActive(true);
+                gameController.SetActive(false);
+                mouseAndKeyBoardToggle.isOn = true;
+            }
+            else
+            {
+                gameController.SetActive(true);
+                mouseAndKeyBoard.SetActive(false);
+                gameControllerToggle.isOn = true;
+            }
+        }
 
         private void ToggleMouseAndKeyboard(Toggle change)
         {
             mouseAndKeyBoard.SetActive(change.isOn);
-            PlayerPrefs.SetString(PlayerSettings.MouseOrControllerKey, PlayerSettings.UseMouseSetting);
+            if (change.isOn) 
+            {
+                PlayerPrefs.SetString(PlayerSettings.MouseOrControllerKey, PlayerSettings.UseMouseSetting);
+            }
+            
         }
 
-        public void ToggleGameController(Toggle change)
+        private void ToggleGameController(Toggle change)
         {
             gameController.SetActive(change.isOn);
-            PlayerPrefs.SetString(PlayerSettings.MouseOrControllerKey, PlayerSettings.UseControllerSetting);
+            if (change.isOn)
+            {
+                PlayerPrefs.SetString(PlayerSettings.MouseOrControllerKey, PlayerSettings.UseControllerSetting);
+            }
+
         }
+
     }
 
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using SC.Movement;
+using SC.Core;
 
 
 namespace SC.UI
@@ -35,7 +36,10 @@ namespace SC.UI
         public void LauchButtonClicked()
         {
             uiCanvas.SetActive(false);
-            CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
+            if (PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseMouseSetting)
+            {
+                CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
+            }
             Move playerMove = player.GetComponent<Move>();
             playerMove.SetCurrentSpeed(playerMove.MaxSpeed * launchSpeedFraction);
             
