@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 namespace SC.Core
@@ -15,7 +16,8 @@ namespace SC.Core
         public const string InvertJoystickKey = "InvertJoystickUpDown";
         public const string InvertJoystickUpdownTrueSetting = "true";
         public const string JoystickSensitivityKey = "JoystickSensitivity";
-   
+
+        public event Action onSettingsUpdated;
 
         // Start is called before the first frame update
         void Start()
@@ -23,6 +25,13 @@ namespace SC.Core
             DefaultSettings();
         }
 
+        public void SettingsUpdated()
+        {
+            if (onSettingsUpdated != null)
+            {
+                onSettingsUpdated();
+            }
+        }
 
         private void DefaultSettings()
         {

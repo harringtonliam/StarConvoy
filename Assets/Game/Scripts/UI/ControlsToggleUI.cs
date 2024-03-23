@@ -13,11 +13,19 @@ namespace SC.UI
         [SerializeField] GameObject mouseAndKeyBoard;
         [SerializeField] GameObject gameController;
 
+
+        private PlayerSettings playerSettings;
+
         // Start is called before the first frame update
         void Start()
         {
             mouseAndKeyBoardToggle.onValueChanged.AddListener(delegate { ToggleMouseAndKeyboard(mouseAndKeyBoardToggle); });
             mouseAndKeyBoardToggle.onValueChanged.AddListener(delegate { ToggleGameController(gameControllerToggle); });
+
+            var player = GameObject.FindGameObjectWithTag("Player");
+            playerSettings = player.GetComponent<PlayerSettings>();
+            
+
             DisplayCurrentSetting();
         }
 
@@ -43,6 +51,7 @@ namespace SC.UI
             if (change.isOn) 
             {
                 PlayerPrefs.SetString(PlayerSettings.MouseOrControllerKey, PlayerSettings.UseMouseSetting);
+                playerSettings.SettingsUpdated();
             }
             
         }
@@ -53,6 +62,7 @@ namespace SC.UI
             if (change.isOn)
             {
                 PlayerPrefs.SetString(PlayerSettings.MouseOrControllerKey, PlayerSettings.UseControllerSetting);
+                playerSettings.SettingsUpdated();
             }
 
         }
