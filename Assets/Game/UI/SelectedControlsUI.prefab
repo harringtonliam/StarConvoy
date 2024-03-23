@@ -54,7 +54,7 @@ MonoBehaviour:
   displayImage: {fileID: 76929373459225766}
   displayConfigurations:
   - mouseOrControllerSettingValue: mouse
-    textToDisplay: Mouse and keyboard selected
+    textToDisplay: Mouse & keyboard selected
     spriteToDisplay: {fileID: 21300000, guid: 2df1ccc7485be28429b03e50c08b9448, type: 3}
   - mouseOrControllerSettingValue: controller
     textToDisplay: Game controller selected
@@ -94,7 +94,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 25, y: 0}
-  m_SizeDelta: {x: -50, y: 0}
+  m_SizeDelta: {x: -70, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1768880279235787385
 CanvasRenderer:
@@ -228,7 +228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 25, y: 0}
+  m_AnchoredPosition: {x: 35, y: 0}
   m_SizeDelta: {x: 50, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5328551774711680912
