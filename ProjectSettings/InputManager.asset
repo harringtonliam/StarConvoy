@@ -537,8 +537,8 @@ InputManager:
     m_Name: Spin
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: b
-    positiveButton: m
+    negativeButton: m
+    positiveButton: b
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1

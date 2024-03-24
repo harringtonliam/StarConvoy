@@ -8,7 +8,7 @@ namespace SC.Core
     public class PlayerSettings : MonoBehaviour
     {
         [SerializeField] float JoystickSensitivityDefault = 0.5f;
-        [SerializeField] string MouseOrControllerDefault = UseControllerSetting;
+        [SerializeField] string MouseOrControllerDefault = UseMouseSetting;
 
         public const string MouseOrControllerKey = "MouseOrController";
         public const string UseMouseSetting = "mouse";
@@ -23,6 +23,7 @@ namespace SC.Core
         void Start()
         {
             DefaultSettings();
+            SettingsUpdated();
         }
 
         public void SettingsUpdated()

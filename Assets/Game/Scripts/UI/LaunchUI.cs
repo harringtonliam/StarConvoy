@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using SC.Movement;
 using SC.Core;
+using UnityEngine.EventSystems;
 
 
 namespace SC.UI
@@ -31,6 +32,14 @@ namespace SC.UI
         {
             CursorControl.Instance.SetNewCursor(CursorType.UICursor);
             uiCanvas.SetActive(isShownAtSceneStart);
+        }
+
+        private void Update()
+        {
+            if(Input.GetButtonDown("Fire1")  && !EventSystem.current.IsPointerOverGameObject())
+            {
+                LauchButtonClicked();
+            }
         }
 
         public void LauchButtonClicked()

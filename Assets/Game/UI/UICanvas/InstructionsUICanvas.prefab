@@ -421,9 +421,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Your ship\u2019s primary weapon system are the lasers.  Depending on ship
     type, you\u2019ll have between two and four lasers fitted.  To fire the lasers
-    press the Left Mouse Button.   They will fire continuously while the button is
-    pressed.   It usually takes multiple hits from a laser to destroy a target.\r\nEvery
-    time they are used the lasers will heat up slightly.  Once they reach their maximum
+    press the Fire button.   They will fire continuously while the button is pressed.  
+    It usually takes multiple hits from a laser to destroy a target.\r\nEvery time
+    they are used the lasers will heat up slightly.  Once they reach their maximum
     operating temperature they will stop firing until they have a chance to cool
     down.  It is best to fire them only when needed.\r\n"
   m_isRightToLeft: 0
@@ -573,7 +573,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mouse And Keyboard
+  m_Text: Mouse And Keyboard (recommended)
 --- !u!1 &714204625768456920
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +844,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Missiles are very powerful weapons, just one hit with a missile will destroy
     a target.\r\nMissiles can only be launched when a missile lock is acquired.\r\nTo
-    acquire a Missile Lock, track the Current Target in your sights for two seconds.\r"
+    acquire a Missile Lock, track the Current Target in your sights for one second.\r"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
@@ -1492,7 +1492,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Click the Right Mouse Button to launch a missile.  '
+  m_text: 'Click the Right Mouse Button or Button B on a game controller to launch
+    a missile.  '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e89ef8c59226ae846a7f88f7fc1987b0, type: 2}
   m_sharedMaterial: {fileID: 396531267178090662, guid: e89ef8c59226ae846a7f88f7fc1987b0,
@@ -1739,18 +1740,21 @@ MonoBehaviour:
   sensitivityText: {fileID: 7226642271419399264}
   slider: {fileID: 718900753190765236}
   sensitivityValues:
-  - sliderValue: 3
+  - sliderValue: 4
     sensitivityValue: 1
     descriptiveText: Very High
-  - sliderValue: 2
+  - sliderValue: 3
     sensitivityValue: 0.75
     descriptiveText: High
-  - sliderValue: 1
+  - sliderValue: 2
     sensitivityValue: 0.5
     descriptiveText: Normal
+  - sliderValue: 1
+    sensitivityValue: 0.4
+    descriptiveText: Low
   - sliderValue: 0
     sensitivityValue: 0.25
-    descriptiveText: Low
+    descriptiveText: Very Low
 --- !u!1 &2129739940356175808
 GameObject:
   m_ObjectHideFlags: 0
@@ -3681,7 +3685,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 550, y: -50}
-  m_SizeDelta: {x: 350, y: 50}
+  m_SizeDelta: {x: 550, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &5056583597415965760
 MonoBehaviour:
@@ -5046,7 +5050,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 7243649687350177567}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3
+  m_MaxValue: 4
   m_WholeNumbers: 1
   m_Value: 1
   m_OnValueChanged:
@@ -5693,7 +5697,7 @@ PrefabInstance:
     - target: {fileID: 967884372753032464, guid: 1f49ac2e1289fd241911f02669ab310d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1000
+      value: 1100
       objectReference: {fileID: 0}
     - target: {fileID: 967884372753032464, guid: 1f49ac2e1289fd241911f02669ab310d,
         type: 3}
