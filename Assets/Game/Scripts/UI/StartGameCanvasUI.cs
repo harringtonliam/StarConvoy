@@ -53,13 +53,21 @@ namespace SC.UI
             {
                 CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
             }
-            
             SceneController.Instance.StartScene();
+            StartCoroutine(CentreTheCursor());
         }
 
         public void QuitButtonClicked()
         {
             SceneController.Instance.LoadMainMenu();
+        }
+
+        private IEnumerator CentreTheCursor()
+        {
+            Debug.Log("CentreTheCursor");
+            Cursor.lockState = CursorLockMode.Locked;
+            yield return null;
+            Cursor.lockState = CursorLockMode.None;
         }
     }
 

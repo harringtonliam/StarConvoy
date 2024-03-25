@@ -24,6 +24,8 @@ namespace SC.Movement
         float gameControllerSensitivity = 0.5f;
         bool usingGameController = false;
 
+        PlayerSettings playerSettings;
+
         public float HorizontalRodateSpeed {  get { return adjustedHorizontalInput; } }
         public float VerticalRodateSpeed { get { return adjustedVerticalInput; } }
 
@@ -31,11 +33,29 @@ namespace SC.Movement
         void Start()
         {
             mainCamera = Camera.main;
-            gameControllerSensitivity = PlayerPrefs.GetFloat(PlayerSettings.JoystickSensitivityKey);
+
             usingGameController = PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseControllerSetting;
+            playerSettings = GetComponent<PlayerSettings>();
+            if (playerSettings != null)
+            {
+                playerSettings.onSettingsUpdated += GetGameControllerSensitivity;
+            }
+            GetGameControllerSensitivity();
+
         }
 
+        private void OnDisable()
+        {
+            try
+            {
+                playerSettings.onSettingsUpdated -= GetGameControllerSensitivity;
+            }
+            catch (Exception)
+            {
 
+                Debug.Log("Unable to unscribe playerSettins");
+            }
+        }
 
         // Update is called once per frame
         void Update()
@@ -60,6 +80,11 @@ namespace SC.Movement
             float spinInput = Input.GetAxis("Spin");
 
             PerformRotation(horizontalInput, verticalInput, spinInput);
+        }
+
+        private void GetGameControllerSensitivity()
+        {
+            gameControllerSensitivity = PlayerPrefs.GetFloat(PlayerSettings.JoystickSensitivityKey);
         }
 
         public void PerformRotation(float horizontalInput, float verticalInput)

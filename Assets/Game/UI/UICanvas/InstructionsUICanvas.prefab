@@ -1741,20 +1741,20 @@ MonoBehaviour:
   slider: {fileID: 718900753190765236}
   sensitivityValues:
   - sliderValue: 4
-    sensitivityValue: 1
-    descriptiveText: Very High
+    sensitivityValue: 1.5
+    descriptiveText: Highest
   - sliderValue: 3
-    sensitivityValue: 0.75
+    sensitivityValue: 1.25
     descriptiveText: High
   - sliderValue: 2
-    sensitivityValue: 0.5
+    sensitivityValue: 1
     descriptiveText: Normal
   - sliderValue: 1
-    sensitivityValue: 0.4
+    sensitivityValue: 0.75
     descriptiveText: Low
   - sliderValue: 0
-    sensitivityValue: 0.25
-    descriptiveText: Very Low
+    sensitivityValue: 0.5
+    descriptiveText: Lowest
 --- !u!1 &2129739940356175808
 GameObject:
   m_ObjectHideFlags: 0
