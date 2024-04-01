@@ -365,8 +365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f6f97aeaa0d5b48aa30cf2c377ec4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JoystickSensitivityDefault: 0.5
-  MouseOrControllerDefault: controller
+  JoystickSensitivityDefault: 1
+  MouseOrControllerDefault: mouse
 --- !u!1 &136415074781837248
 GameObject:
   m_ObjectHideFlags: 0

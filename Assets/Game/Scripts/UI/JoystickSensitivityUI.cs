@@ -21,9 +21,13 @@ namespace SC.UI
             public string descriptiveText;
         }
 
+        private PlayerSettings playerSettings;
+
         // Start is called before the first frame update
         void Start()
         {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            playerSettings = player.GetComponent<PlayerSettings>();
             slider.onValueChanged.AddListener(delegate { SliderChanged(); });
             ShowCurrentValues();
         }
@@ -51,6 +55,7 @@ namespace SC.UI
                 if (Mathf.Approximately(slider.value, sensitivityValues[i].sliderValue))
                 {
                     PlayerPrefs.SetFloat(PlayerSettings.JoystickSensitivityKey, sensitivityValues[i].sensitivityValue);
+                    playerSettings.SettingsUpdated();
                     sensitivityText.text = sensitivityValues[i].descriptiveText;
                     break;
                 }

@@ -36,7 +36,7 @@ namespace SC.UI
 
         private void Update()
         {
-            if(Input.GetButtonDown("Fire1")  && !EventSystem.current.IsPointerOverGameObject())
+            if(Input.GetButtonDown("Fire1") && !EventSystem.current.IsPointerOverGameObject())
             {
                 LauchButtonClicked();
             }

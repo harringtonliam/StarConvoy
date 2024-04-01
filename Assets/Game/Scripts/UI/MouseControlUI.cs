@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using SC.Movement;
 using SC.Core;
 using TMPro;
+using static UnityEngine.EventSystems.EventTrigger;
 
 namespace SC.UI
 {
@@ -19,18 +20,36 @@ namespace SC.UI
  
         private Vector2 screenCenter;
 
+        PlayerSettings playerSettings;
+
         private void Start()
         {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            playerSettings = player.GetComponent<PlayerSettings>();
+            if (playerSettings != null)
+            {
+                playerSettings.onSettingsUpdated += EnableMouseControl;
+            }
+
             EnableMouseControl();
+        }
+
+        private void OnDisable()
+        {
+            try
+            {
+                playerSettings.onSettingsUpdated -= EnableMouseControl;
+
+            }
+            catch (System.Exception)
+            {
+                Debug.Log("MouseControlUI Ondisable unable to unsubscribe playerSettings");
+            }
         }
 
         // Update is called once per frame
         void Update()
         {
-
-            xRotateText.text = rotate.HorizontalRodateSpeed.ToString("####0.00000");
-            yRotateText.text = rotate.VerticalRodateSpeed.ToString("####0.00000");
-
             if (!isMouseControlEnabled) return;
 
             Vector2 mouse = Input.mousePosition;
@@ -41,12 +60,13 @@ namespace SC.UI
             float horizontalInput = centred.x / (Screen.width / 2);
             float verticaInput = centred.y / (Screen.height / 2);
 
+            //xRotateText.text = centred.x.ToString("####0.00000") + " / " + centred.y.ToString("####0.00000");
+            //yRotateText.text = distanceFromScreenCentre.ToString();
+
             if (distanceFromScreenCentre > deadZoneRadius)
             {
                 rotate.PerformRotation(horizontalInput, verticaInput * -1f);
             }
-
-
         }
 
         public void EnableMouseControl()

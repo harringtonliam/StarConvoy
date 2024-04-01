@@ -108,7 +108,7 @@ RectTransform:
   m_Father: {fileID: 1071251481846294609}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.33333334, y: 1}
+  m_AnchorMax: {x: 0.25, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1741,10 +1741,10 @@ MonoBehaviour:
   slider: {fileID: 718900753190765236}
   sensitivityValues:
   - sliderValue: 4
-    sensitivityValue: 1.5
+    sensitivityValue: 1.2
     descriptiveText: Highest
   - sliderValue: 3
-    sensitivityValue: 1.25
+    sensitivityValue: 1.1
     descriptiveText: High
   - sliderValue: 2
     sensitivityValue: 1
@@ -4409,8 +4409,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 5516997155675877371}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.33333334, y: 0}
-  m_AnchorMax: {x: 0.33333334, y: 1}
+  m_AnchorMin: {x: 0.25, y: 0}
+  m_AnchorMax: {x: 0.25, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}

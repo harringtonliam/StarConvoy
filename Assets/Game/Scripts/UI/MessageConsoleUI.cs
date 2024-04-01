@@ -56,17 +56,35 @@ namespace SC.UI
             try
             {
                 messageReceiver.onMessageReceived -= StartDisplayMessage;
+
             }
             catch (Exception ex)
             {
-                Debug.Log("MessageConsoleUI OnDisable " + ex.Message);
+                Debug.Log("MessageConsoleUI OnDisable StartDisplayMessage " + ex.Message);
+            }
+
+            try
+            {
+                playerHealth.healthUpdated -= StartDisplayDamageMessage;
+            }
+            catch (Exception ex)
+            {
+
+                Debug.Log("MessageConsoleUI OnDisable StartDisplayDamageMessage " + ex.Message); 
             }
 
         }
 
         private void StartDisplayDamageMessage()
         {
-            StartCoroutine(DisplayDamageMessage());
+            try
+            {
+                StartCoroutine(DisplayDamageMessage());
+            }
+            catch (Exception ex)
+            {
+                Debug.Log("StartDisplayDamageMessage " + ex.Message);
+            }
 
         }
 

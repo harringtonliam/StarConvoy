@@ -371,6 +371,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 356425583610121609}
     m_Modifications:
+    - target: {fileID: 2760102403672803587, guid: 27355c2eb5a9f5d459579b8289349158,
+        type: 3}
+      propertyPath: firingAudioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5227167827582002453, guid: 27355c2eb5a9f5d459579b8289349158,
         type: 3}
       propertyPath: m_Name
@@ -622,6 +627,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 356425583610121609}
     m_Modifications:
+    - target: {fileID: 2760102403672803587, guid: 27355c2eb5a9f5d459579b8289349158,
+        type: 3}
+      propertyPath: firingAudioSource
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5227167827582002453, guid: 27355c2eb5a9f5d459579b8289349158,
         type: 3}
       propertyPath: m_Name

@@ -16,9 +16,13 @@ namespace SC.UI
         [SerializeField] string isOntext = "Push stick up to go down";
         [SerializeField] string isOfftext = "Push stick up to go up";
 
+        private PlayerSettings playerSettings;
+
         // Start is called before the first frame update
         void Start()
         {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            playerSettings = player.GetComponent<PlayerSettings>();
             toggle.onValueChanged.AddListener(delegate { ToggleInvertJoystick(toggle); });
             DisplayCurrentValue();
         }
@@ -47,6 +51,7 @@ namespace SC.UI
             {
                 PlayerPrefs.SetString(PlayerSettings.InvertJoystickKey, "");
             }
+            playerSettings.SettingsUpdated();
             DisplayCurrentValue();
         }
     }

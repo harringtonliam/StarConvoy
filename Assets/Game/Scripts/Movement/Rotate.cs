@@ -19,10 +19,11 @@ namespace SC.Movement
 
         private float horizontalRotateSpeed;
         private float verticalRotateSpeed;
-        float adjustedHorizontalInput;
-        float adjustedVerticalInput;
-        float gameControllerSensitivity = 0.5f;
-        bool usingGameController = false;
+        private float adjustedHorizontalInput;
+        private float adjustedVerticalInput;
+        private float gameControllerSensitivity = 0.5f;
+        private bool usingGameController = false;
+        private bool invertJoystickYaxis = false;
 
         PlayerSettings playerSettings;
 
@@ -34,13 +35,12 @@ namespace SC.Movement
         {
             mainCamera = Camera.main;
 
-            usingGameController = PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseControllerSetting;
             playerSettings = GetComponent<PlayerSettings>();
             if (playerSettings != null)
             {
-                playerSettings.onSettingsUpdated += GetGameControllerSensitivity;
+                playerSettings.onSettingsUpdated += GetGameControllerSettings;
             }
-            GetGameControllerSensitivity();
+            GetGameControllerSettings();
 
         }
 
@@ -48,7 +48,7 @@ namespace SC.Movement
         {
             try
             {
-                playerSettings.onSettingsUpdated -= GetGameControllerSensitivity;
+                playerSettings.onSettingsUpdated -= GetGameControllerSettings;
             }
             catch (Exception)
             {
@@ -82,9 +82,12 @@ namespace SC.Movement
             PerformRotation(horizontalInput, verticalInput, spinInput);
         }
 
-        private void GetGameControllerSensitivity()
+        private void GetGameControllerSettings()
         {
+            Debug.Log("Rotate GetGameControllerSettings");
+            usingGameController = PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseControllerSetting;
             gameControllerSensitivity = PlayerPrefs.GetFloat(PlayerSettings.JoystickSensitivityKey);
+            invertJoystickYaxis = PlayerPrefs.GetString(PlayerSettings.InvertJoystickKey) == PlayerSettings.InvertJoystickUpdownTrueSetting;
         }
 
         public void PerformRotation(float horizontalInput, float verticalInput)
@@ -100,6 +103,7 @@ namespace SC.Movement
             {
                 adjustedVerticalInput = verticalInput * gameControllerSensitivity;
                 adjustedHorizontalInput = horizontalInput * gameControllerSensitivity;
+                InvertJoystickYValue();
             }
             else
             {
@@ -124,6 +128,14 @@ namespace SC.Movement
                 transform.Rotate(Vector3.forward * rotationThisFrame * spinInput);
             }
 
+        }
+
+        private void InvertJoystickYValue()
+        {
+            if (invertJoystickYaxis)
+            {
+                adjustedVerticalInput = adjustedVerticalInput * -1;
+            }
         }
     }
 
