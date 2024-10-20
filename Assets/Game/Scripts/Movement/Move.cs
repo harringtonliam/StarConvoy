@@ -40,7 +40,7 @@ namespace SC.Movement
         // Update is called once per frame
         void Update()
         {
-            rigidbody.velocity = transform.forward * currentSpeed;
+            rigidbody.linearVelocity = transform.forward * currentSpeed;
         }
 
         public void ChangeSpeed(float changeToSpeed)
