@@ -1,4 +1,7 @@
+using SC.SceneControl;
+using SC.Core;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace SC.UI
 {
@@ -6,6 +9,7 @@ namespace SC.UI
     {
         [SerializeField] GameObject uiCanvas;
         [SerializeField] bool isShownAtSceneStart = false;
+        [SerializeField] Button closeButton;
 
 
         void Start()
@@ -19,10 +23,20 @@ namespace SC.UI
             uiCanvas.SetActive(isShownAtSceneStart);
         }
 
-        public void HideUi()
+        public void ShowHideUI(bool isVisible)
         {
-            uiCanvas.SetActive(false);
+            uiCanvas.SetActive(isVisible);
         }
+
+        public void CloseButtonClicked()
+        {
+            ShowHideUI(false);
+
+            SceneController.Instance.StartScene();
+         }
+
+
+
 
     }
 

@@ -13,6 +13,7 @@ namespace SC.UI
         [SerializeField] GameObject uiCanvas = null;
         [SerializeField] public Texture2D onEnableCursorTexture2D;
         [SerializeField] public Vector2 cursorHotspot;
+        [SerializeField] TutotialUI tutorialUI;
 
 
         GameObject player;
@@ -53,8 +54,18 @@ namespace SC.UI
             {
                 CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
             }
-            SceneController.Instance.StartScene();
-            StartCoroutine(CentreTheCursor());
+
+            if (tutorialUI != null)
+            {
+                tutorialUI.ShowHideUI(true);
+            }
+            else
+            {
+                SceneController.Instance.StartScene();
+                StartCoroutine(CentreTheCursor());
+            }    
+
+
         }
 
         public void QuitButtonClicked()
