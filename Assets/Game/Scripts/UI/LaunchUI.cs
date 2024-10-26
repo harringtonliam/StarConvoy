@@ -42,6 +42,11 @@ namespace SC.UI
             }
         }
 
+        public void ShowHideUI(bool isVisible)
+        {
+            uiCanvas.SetActive(isVisible);
+        }
+
         public void LauchButtonClicked()
         {
             uiCanvas.SetActive(false);

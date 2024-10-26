@@ -9,6 +9,7 @@ namespace SC.Core
     {
         [SerializeField] float JoystickSensitivityDefault = 0.5f;
         [SerializeField] string MouseOrControllerDefault = UseMouseSetting;
+        [SerializeField] string TutorialToggleDefault = TutorialOn;
 
         public const string MouseOrControllerKey = "MouseOrController";
         public const string UseMouseSetting = "mouse";
@@ -16,6 +17,9 @@ namespace SC.Core
         public const string InvertJoystickKey = "InvertJoystickUpDown";
         public const string InvertJoystickUpdownTrueSetting = "true";
         public const string JoystickSensitivityKey = "JoystickSensitivity";
+        public const string TutorialToggle = "TutorialToggle";
+        public const string TutorialOff = "Off";
+        public const string TutorialOn = "On";
 
         public event Action onSettingsUpdated;
 
@@ -36,11 +40,26 @@ namespace SC.Core
 
         private void DefaultSettings()
         {
-            if(PlayerPrefs.HasKey(MouseOrControllerKey)) return;
-            PlayerPrefs.SetString(MouseOrControllerKey, MouseOrControllerDefault);
-            PlayerPrefs.SetString(InvertJoystickKey, InvertJoystickUpdownTrueSetting);
-            PlayerPrefs.SetFloat(JoystickSensitivityKey, JoystickSensitivityDefault);
-            PlayerPrefs.Save();
+            bool needToSave = false;
+            if (!PlayerPrefs.HasKey(TutorialToggle))
+            {
+                PlayerPrefs.SetString(TutorialToggle, TutorialOn);
+                needToSave = true;
+            }
+
+            if(!PlayerPrefs.HasKey(MouseOrControllerKey))
+            {
+                PlayerPrefs.SetString(MouseOrControllerKey, MouseOrControllerDefault);
+                PlayerPrefs.SetString(InvertJoystickKey, InvertJoystickUpdownTrueSetting);
+                PlayerPrefs.SetFloat(JoystickSensitivityKey, JoystickSensitivityDefault);
+                needToSave = true;
+            }
+
+            if(needToSave)
+            {
+                PlayerPrefs.Save();
+            }
+
         }
     }
 

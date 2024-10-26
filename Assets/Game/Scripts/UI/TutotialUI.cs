@@ -9,8 +9,6 @@ namespace SC.UI
     {
         [SerializeField] GameObject uiCanvas;
         [SerializeField] bool isShownAtSceneStart = false;
-        [SerializeField] Button closeButton;
-
 
         void Start()
         {

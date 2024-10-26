@@ -55,7 +55,7 @@ namespace SC.UI
                 CursorControl.Instance.SetNewCursor(CursorType.GameCursor);
             }
 
-            if (tutorialUI != null)
+            if (tutorialUI != null && PlayerPrefs.GetString(PlayerSettings.TutorialToggle) == PlayerSettings.TutorialOn)
             {
                 tutorialUI.ShowHideUI(true);
             }
