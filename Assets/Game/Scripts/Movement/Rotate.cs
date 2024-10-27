@@ -84,7 +84,7 @@ namespace SC.Movement
 
         private void GetGameControllerSettings()
         {
-            Debug.Log("Rotate GetGameControllerSettings");
+            //Debug.Log("Rotate GetGameControllerSettings");
             usingGameController = PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseControllerSetting;
             gameControllerSensitivity = PlayerPrefs.GetFloat(PlayerSettings.JoystickSensitivityKey);
             invertJoystickYaxis = PlayerPrefs.GetString(PlayerSettings.InvertJoystickKey) == PlayerSettings.InvertJoystickUpdownTrueSetting;

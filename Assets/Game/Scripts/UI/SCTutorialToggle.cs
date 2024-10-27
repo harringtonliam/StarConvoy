@@ -20,7 +20,13 @@ namespace sc.ui
             tutorialToggle = GetComponent<Toggle>();
             tutorialToggle.onValueChanged.AddListener(delegate { ToggleTutorial(tutorialToggle); });
 
+            //Debug.Log("Player prefs tutorial toggle " + PlayerPrefs.GetString(PlayerSettings.TutorialToggle));
+
             if(PlayerPrefs.GetString(PlayerSettings.TutorialToggle) != PlayerSettings.TutorialOn)
+            {
+                tutorialToggle.isOn = false;
+            }
+            else
             {
                 tutorialToggle.isOn = true;
             }
@@ -36,6 +42,7 @@ namespace sc.ui
             {
                 PlayerPrefs.SetString(PlayerSettings.TutorialToggle, PlayerSettings.TutorialOff);
             }
+            PlayerPrefs.Save();
             playerSettings.SettingsUpdated();
 
         }

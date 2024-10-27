@@ -12,12 +12,14 @@ namespace SC.Movement
         [SerializeField] bool canControlSpeed = true;
         [SerializeField] bool canManeuver = true;
         [SerializeField] float desiredSpeed;
+        [SerializeField] GameObject engines;
 
 
         Move move;
         Vector3 currentMoveTarget;
         Vector3 collisionAviodanceDirection;
         bool collisonAvoidanceOn = false;
+        bool isEnginesOn = true;
 
         // Start is called before the first frame update
         void Start()
@@ -88,10 +90,12 @@ namespace SC.Movement
 
             if (move.CurrentSpeed < desiredSpeed)
             {
+                ToggleEngines(true);
                 move.ChangeSpeed(1f);
             }
             else if (move.CurrentSpeed > desiredSpeed)
             {
+                ToggleEngines(false);
                 move.ChangeSpeed(-1f);
             }
         }
@@ -121,6 +125,13 @@ namespace SC.Movement
 
             // Calculate a rotation a step closer to the target and applies rotation to this object
             transform.rotation = Quaternion.LookRotation(newDirection);
+        }
+
+        private void ToggleEngines(bool enginesOn)
+        {
+            if (engines == null ) return;
+            if (enginesOn == engines.activeSelf) { return; }
+            engines.SetActive(enginesOn);
         }
 
 

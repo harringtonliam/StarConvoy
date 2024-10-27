@@ -14,6 +14,7 @@ namespace SC.UI
         [SerializeField] public Texture2D onEnableCursorTexture2D;
         [SerializeField] public Vector2 cursorHotspot;
         [SerializeField] TutotialUI tutorialUI;
+        [SerializeField] LaunchUI launchUI;
 
 
         GameObject player;
@@ -57,15 +58,21 @@ namespace SC.UI
 
             if (tutorialUI != null && PlayerPrefs.GetString(PlayerSettings.TutorialToggle) == PlayerSettings.TutorialOn)
             {
-                tutorialUI.ShowHideUI(true);
+                ShowHideTutorialUI(true);
             }
             else
             {
+                ShowHideTutorialUI(false);
+                if (launchUI != null) { launchUI.ShowHideUI(true); }
                 SceneController.Instance.StartScene();
                 StartCoroutine(CentreTheCursor());
             }    
+        }
 
-
+        private void ShowHideTutorialUI(bool show)
+        {
+            if (tutorialUI == null) return;
+            tutorialUI.ShowHideUI(show);
         }
 
         public void QuitButtonClicked()

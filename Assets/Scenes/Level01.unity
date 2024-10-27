@@ -216,178 +216,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 57373963}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &91107348
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 893754718}
-    m_Modifications:
-    - target: {fileID: 1504033368178866561, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_text
-      value: Damage & Speed
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -682.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 318
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1695738225135840494, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_text
-      value: 'Damage
-
-        The amount of damage your ship has taken'
-      objectReference: {fileID: 0}
-    - target: {fileID: 3655118762633505005, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUIDamage
-      objectReference: {fileID: 0}
-    - target: {fileID: 4188456278665758454, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_text
-      value: C
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -38
-      objectReference: {fileID: 0}
-    - target: {fileID: 9220781505578103442, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_text
-      value: 'Damage
-
-        The amount of damage your ship has taken'
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: cb2b9ff711a794a4588fceef01876b8f, type: 3}
 --- !u!1001 &139805292
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -396,11 +224,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 35744351}
     m_Modifications:
-    - target: {fileID: 323816930793038614, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUITargeting
-      objectReference: {fileID: 0}
     - target: {fileID: 692704497967845674, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -425,64 +248,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 929879132918975757, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: G
-      objectReference: {fileID: 0}
-    - target: {fileID: 1204238552699668727, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUIMissile
-      objectReference: {fileID: 0}
-    - target: {fileID: 1259182133620029559, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: I
-      objectReference: {fileID: 0}
-    - target: {fileID: 1299732384699024991, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1299732384699024991, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 1299732384699024991, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -225.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1369572797106704137, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 1369572797106704137, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -68
-      objectReference: {fileID: 0}
-    - target: {fileID: 1742793516502525676, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: E
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798458073521753172, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Radar
-
-        Shows the position of the Current Target relative to
-        you.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 1864620639872259692, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUITargetInSights
       objectReference: {fileID: 0}
     - target: {fileID: 1872732814158939394, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
@@ -492,71 +257,13 @@ PrefabInstance:
         Your ship will automatically select the Current
         Target.
 
-        But you can use the Mouse Scroll Wheel to switch to another
+        You can use the mouse Scroll Wheel to switch to another
         target. '
       objectReference: {fileID: 0}
-    - target: {fileID: 2344939617786065339, guid: eac0cae148677a34eb103b05101dfd9c,
+    - target: {fileID: 3163145550165598969, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2344939617786065339, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2344939617786065339, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2344939617786065339, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1312.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2344939617786065339, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 342
-      objectReference: {fileID: 0}
-    - target: {fileID: 2400280063523841813, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Targeting
-
-        When the dot is in middle of the display, your ship
-        is facing the  Current Target'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2442871182067202713, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2442871182067202713, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2442871182067202713, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2442871182067202713, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1428
-      objectReference: {fileID: 0}
-    - target: {fileID: 2442871182067202713, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3506659621975180524, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 240
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3510305589782532888, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
@@ -565,6 +272,10 @@ PrefabInstance:
 
         Left Mouse Button - Fire
 
+        Every shot will increase
+        the laser''s temperature.   When they reach maximum tempreature they need
+        to cool down before they will fire again
+
 '
       objectReference: {fileID: 0}
     - target: {fileID: 3605764653919928332, guid: eac0cae148677a34eb103b05101dfd9c,
@@ -572,261 +283,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: TutorialCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3765813537007688282, guid: eac0cae148677a34eb103b05101dfd9c,
+    - target: {fileID: 4270476159053566021, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765813537007688282, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765813537007688282, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765813537007688282, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765813537007688282, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765813537007688282, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -421.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3765813537007688282, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 322.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3857262012448492788, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Missiles
-
-        Button B - Fire
-
-        Hold Target in sights for
-        1 second to get a lock before firing'
+      propertyPath: m_SizeDelta.y
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 4270476159053566021, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4382452548118106735, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Identity of the ship currently in your sights
-
-
-        Contoller Button
-        X - Make it the Current Target'
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401421424024044737, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 4401421424024044737, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -720
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811509232686938676, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811509232686938676, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 130
-      objectReference: {fileID: 0}
-    - target: {fileID: 4811509232686938676, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -67
-      objectReference: {fileID: 0}
-    - target: {fileID: 5274050526004574569, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Targeting
-
-        When the dot is in middle of the display, your ship
-        is facing the  Current Target'
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292332689632599790, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: Close Tutorial
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1320515902}
-    - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: ShowHideUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: SC.UI.LaunchUI, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6102962814554644349, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUICurrent
-      objectReference: {fileID: 0}
-    - target: {fileID: 6177307958832617003, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUIRadar
-      objectReference: {fileID: 0}
-    - target: {fileID: 6200849183856038357, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 6397837535568121188, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_text
-      value: 'Lasers
-
-        Button A - Fire'
+      value: "Lasers\nButton A - Fire\nEvery shot will increase the lasers\u2019
+        temperature.   When they reach maximum temperature they need to cool down
+        before they can fire again"
       objectReference: {fileID: 0}
     - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
+      propertyPath: m_SizeDelta.x
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -610.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 319.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6641650243722064230, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'H
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711420288055867440, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: F
-      objectReference: {fileID: 0}
-    - target: {fileID: 6771457119500980872, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Missiles
-
-        Right Mouse Button - Fire
-
-        Hold Target in
-        sights for 1 second to get a lock before firing'
-      objectReference: {fileID: 0}
-    - target: {fileID: 6803641771429088206, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6803641771429088206, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6803641771429088206, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6803641771429088206, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -822
-      objectReference: {fileID: 0}
-    - target: {fileID: 6803641771429088206, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 220.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6871351155181391694, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 130
+      value: 350
       objectReference: {fileID: 0}
-    - target: {fileID: 6871351155181391694, guid: eac0cae148677a34eb103b05101dfd9c,
+    - target: {fileID: 6733237737965227707, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -68.5
+      propertyPath: m_text
+      value: Messages from other ships in the convoy will display here
       objectReference: {fileID: 0}
     - target: {fileID: 7976869377841001847, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
@@ -928,84 +420,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8090329396113526224, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090329396113526224, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090329396113526224, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090329396113526224, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090329396113526224, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090329396113526224, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 1518
-      objectReference: {fileID: 0}
-    - target: {fileID: 8090329396113526224, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 357
-      objectReference: {fileID: 0}
-    - target: {fileID: 8109816434391913000, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Radar
-
-        Shows the position of the Current Target relative to
-        you.'
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164673443177202822, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164673443177202822, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164673443177202822, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164673443177202822, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164673443177202822, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164673443177202822, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8164673443177202822, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 313.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8179657944147024766, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_text
@@ -1014,42 +428,12 @@ PrefabInstance:
         Your ship will automatically select the Current
         Target.
 
-        But you can use the Controller Y Button to switch to another
+        You can use the controller Y Button to switch to another
         target. '
       objectReference: {fileID: 0}
-    - target: {fileID: 8458241077690214268, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: D
-      objectReference: {fileID: 0}
-    - target: {fileID: 8665114542038796984, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUI Messages
-      objectReference: {fileID: 0}
-    - target: {fileID: 8836044619835218275, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUISpeed
-      objectReference: {fileID: 0}
-    - target: {fileID: 8942093247874802411, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: gameControllerTextObject
-      value: 
-      objectReference: {fileID: 756316671}
-    - target: {fileID: 9077076101311072615, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_Name
-      value: TutorialObjectUILaser
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 365452948792846388, guid: eac0cae148677a34eb103b05101dfd9c, type: 3}
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 3782864826457251516, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 1894692693}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eac0cae148677a34eb103b05101dfd9c, type: 3}
 --- !u!114 &139805293 stripped
@@ -1780,12 +1164,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 751201490}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &756316671 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 106522622356373708, guid: eac0cae148677a34eb103b05101dfd9c,
-    type: 3}
-  m_PrefabInstance: {fileID: 139805292}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &779885034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1909,7 +1287,7 @@ PrefabInstance:
     - target: {fileID: 1496619436972543611, guid: c4f197ceb7a82e6449d902069ebfb876,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1496619436972543611, guid: c4f197ceb7a82e6449d902069ebfb876,
         type: 3}
@@ -2181,12 +1559,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 685966533b8ef414f9c66c25c0990575, type: 3}
---- !u!224 &893754718 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 3782864826457251516, guid: eac0cae148677a34eb103b05101dfd9c,
-    type: 3}
-  m_PrefabInstance: {fileID: 139805292}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &923759700
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3489,7 +2861,7 @@ PrefabInstance:
     - target: {fileID: 1496619436972543611, guid: c4f197ceb7a82e6449d902069ebfb876,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -500
+      value: -300
       objectReference: {fileID: 0}
     - target: {fileID: 1496619436972543611, guid: c4f197ceb7a82e6449d902069ebfb876,
         type: 3}
@@ -4384,12 +3756,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1842992097}
   m_PrefabAsset: {fileID: 0}
---- !u!224 &1894692693 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-    type: 3}
-  m_PrefabInstance: {fileID: 91107348}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1930488591 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 37058483314071048, guid: c3101ef6bc8d2824b8b8721a77674d68,
@@ -5186,6 +4552,11 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 44635732011433150, guid: 33e6b1f0fb0ba3542bc8240caded08d5,
+        type: 3}
+      propertyPath: launchUI
+      value: 
+      objectReference: {fileID: 1320515902}
     - target: {fileID: 44635732011433150, guid: 33e6b1f0fb0ba3542bc8240caded08d5,
         type: 3}
       propertyPath: tutorialUI
