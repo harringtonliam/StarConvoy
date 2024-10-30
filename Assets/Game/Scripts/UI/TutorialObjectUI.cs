@@ -12,8 +12,13 @@ namespace SC.UI
 
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
-        {   
-            if(PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseControllerSetting &&
+        {
+            ApplyPlayerPrefs();
+        }
+
+        public void ApplyPlayerPrefs()
+        {
+            if (PlayerPrefs.GetString(PlayerSettings.MouseOrControllerKey) == PlayerSettings.UseControllerSetting &&
                 gameControllerTextObject != null)
             {
                 gameControllerTextObject.SetActive(true);

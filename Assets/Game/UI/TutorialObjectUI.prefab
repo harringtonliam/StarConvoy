@@ -211,6 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tutorialObjectContainer: {fileID: 5677229846595547382}
+  tutorialObjectUI: {fileID: 3954598682054541502}
 --- !u!1 &3655118762633505005
 GameObject:
   m_ObjectHideFlags: 0

@@ -236,11 +236,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 692704497967845674, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 692704497967845674, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -249,77 +244,21 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1872732814158939394, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Current Target
-
-        Your ship will automatically select the Current
-        Target.
-
-        You can use the mouse Scroll Wheel to switch to another
-        target. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 3163145550165598969, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3510305589782532888, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Lasers
-
-        Left Mouse Button - Fire
-
-        Every shot will increase
-        the laser''s temperature.   When they reach maximum tempreature they need
-        to cool down before they will fire again
-
-'
-      objectReference: {fileID: 0}
     - target: {fileID: 3605764653919928332, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_Name
       value: TutorialCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4270476159053566021, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 140
-      objectReference: {fileID: 0}
-    - target: {fileID: 4270476159053566021, guid: eac0cae148677a34eb103b05101dfd9c,
+    - target: {fileID: 4538269616253129626, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -67
+      value: -14.499939
       objectReference: {fileID: 0}
     - target: {fileID: 5292332689662930119, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1320515902}
-    - target: {fileID: 6397837535568121188, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: "Lasers\nButton A - Fire\nEvery shot will increase the lasers\u2019
-        temperature.   When they reach maximum temperature they need to cool down
-        before they can fire again"
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 6416727318841547722, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 350
-      objectReference: {fileID: 0}
-    - target: {fileID: 6733237737965227707, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: Messages from other ships in the convoy will display here
-      objectReference: {fileID: 0}
     - target: {fileID: 7976869377841001847, guid: eac0cae148677a34eb103b05101dfd9c,
         type: 3}
       propertyPath: m_Pivot.x
@@ -419,17 +358,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8179657944147024766, guid: eac0cae148677a34eb103b05101dfd9c,
-        type: 3}
-      propertyPath: m_text
-      value: 'Current Target
-
-        Your ship will automatically select the Current
-        Target.
-
-        You can use the controller Y Button to switch to another
-        target. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

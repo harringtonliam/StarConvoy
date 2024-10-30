@@ -15,7 +15,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &926520784502522523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -641,22 +641,22 @@ PrefabInstance:
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
-        type: 3}
-      propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
+        type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -706,12 +706,12 @@ PrefabInstance:
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 1710
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -720
+      value: 358.5
       objectReference: {fileID: 0}
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -807,7 +807,7 @@ PrefabInstance:
     - target: {fileID: 4225473544748453930, guid: d0c77253a6817a942841a7e35bb6bfc5,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4225473544748453930, guid: d0c77253a6817a942841a7e35bb6bfc5,
         type: 3}
@@ -817,7 +817,7 @@ PrefabInstance:
     - target: {fileID: 4225473544748453930, guid: d0c77253a6817a942841a7e35bb6bfc5,
         type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4225473544748453930, guid: d0c77253a6817a942841a7e35bb6bfc5,
         type: 3}
@@ -867,12 +867,12 @@ PrefabInstance:
     - target: {fileID: 4225473544748453930, guid: d0c77253a6817a942841a7e35bb6bfc5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4225473544748453930, guid: d0c77253a6817a942841a7e35bb6bfc5,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -80
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4225473544748453930, guid: d0c77253a6817a942841a7e35bb6bfc5,
         type: 3}
@@ -1390,7 +1390,7 @@ PrefabInstance:
     - target: {fileID: 1695738225135840494, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_text
-      value: 
+      value: Messages from other ships in the convoy will display here
       objectReference: {fileID: 0}
     - target: {fileID: 2011682497489379792, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -1429,13 +1429,33 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7910064689452047093, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910064689452047093, guid: cb2b9ff711a794a4588fceef01876b8f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7910064689452047093, guid: cb2b9ff711a794a4588fceef01876b8f,
+        type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 191.00006
+      value: 41.00006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 116
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -1445,7 +1465,7 @@ PrefabInstance:
     - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 125.000046
+      value: -14.499939
       objectReference: {fileID: 0}
     - target: {fileID: 9220781505578103442, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -1515,12 +1535,12 @@ PrefabInstance:
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 151.5
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 1606972282116209216, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -1585,9 +1605,9 @@ PrefabInstance:
     - target: {fileID: 1695738225135840494, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_text
-      value: 'Lasers
-
-        Button A - Fire'
+      value: "Lasers\nButton A - Fire\nEvery shot will increase the lasers\u2019
+        temperature.   When they reach maximum temperature they need to cool down
+        before they can fire again"
       objectReference: {fileID: 0}
     - target: {fileID: 3655118762633505005, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -1607,7 +1627,7 @@ PrefabInstance:
     - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 62
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -1617,7 +1637,7 @@ PrefabInstance:
     - target: {fileID: 8359262317474394575, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -41.5
+      value: -67
       objectReference: {fileID: 0}
     - target: {fileID: 9220781505578103442, guid: cb2b9ff711a794a4588fceef01876b8f,
         type: 3}
@@ -1625,6 +1645,10 @@ PrefabInstance:
       value: 'Lasers
 
         Left Mouse Button - Fire
+
+        Every shot will increase
+        the laser''s temperature.   When they reach maximum tempreature they need
+        to cool down before they will fire again
 
 '
       objectReference: {fileID: 0}
@@ -1949,7 +1973,7 @@ PrefabInstance:
         Your ship will automatically select the Current
         Target.
 
-        But you can use the Controller Y Button to switch to another
+        You can use the controller Y Button to switch to another
         target. '
       objectReference: {fileID: 0}
     - target: {fileID: 3655118762633505005, guid: cb2b9ff711a794a4588fceef01876b8f,
@@ -1997,7 +2021,7 @@ PrefabInstance:
         Your ship will automatically select the Current
         Target.
 
-        But you can use the Mouse Scroll Wheel to switch to another
+        You can use the mouse Scroll Wheel to switch to another
         target. '
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -7,9 +7,14 @@ namespace SC.UI
     {
 
         [SerializeField] GameObject tutorialObjectContainer;
+        [SerializeField] TutorialObjectUI tutorialObjectUI;
 
-         void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
+        void IPointerEnterHandler.OnPointerEnter(PointerEventData eventData)
         {
+            if (tutorialObjectUI != null)
+            {
+                tutorialObjectUI.ApplyPlayerPrefs();
+            }
             tutorialObjectContainer.SetActive(true);
         }
 
